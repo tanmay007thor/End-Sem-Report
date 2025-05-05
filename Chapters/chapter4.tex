@@ -1,107 +1,113 @@
-
-
 \subsection{Testing Data Distribution Analysis}
 
 \textbf{Why Ensure Balanced Testing Data?}
 \begin{itemize}
-    \item Prevents bias toward majority classes.
-    \item Ensures the model’s performance is fairly evaluated.
-    \item Helps achieve reliable generalization across all sleep stages.
+	\item Prevents bias toward majority classes.
+	\item Ensures fair evaluation across all sleep stages.
+	\item Enhances generalization reliability.
 \end{itemize}
 
-The figure below shows the normalized class distribution during testing. Each class maintains an equalized density, avoiding class imbalance. This confirms that the model’s evaluation is not biased toward any specific sleep stage.
+The figure below shows the normalized class distribution during testing, confirming balance and the absence of class imbalance.
 
-\textbf{Sampling Density Plot Showing Balanced Class Distribution:}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/sample distribution plot pdf.png}
-    \caption{Balanced class distribution across the test set.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/sample_distribution_plot_pdf.png}
+	\caption{Balanced class distribution across the test set.}
 \end{figure}
 
-\subsection{Model Performance: Training vs Testing}
+\subsection{Model Performance: Accuracy and Loss Trends}
 
-Figures below demonstrate the accuracy and loss curves during training and testing, providing a clear visual comparison of model performance:
+Figures below illustrate the model's training vs testing accuracy and loss progression over epochs.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/accuracy plot.png}
-    \caption{Accuracy Curve: Training vs Testing.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/accuracy_plot.png}
+	\caption{Accuracy Curve: Training vs Testing.}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/loss plot.png}
-    \caption{Loss Curve: Training vs Testing.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/loss_plot.png}
+	\caption{Loss Curve: Training vs Testing.}
 \end{figure}
 
-\subsection{Model Evaluation: Confusion Matrix}
+\subsection{Model Evaluation: Confusion Matrix and Evolution Metrics}
 
-Performance metrics are calculated to ensure a comprehensive evaluation of the model's performance across all classes. We use precision, recall, and F1-score to assess the model:
+To evaluate classification performance, we compute the confusion matrix and derive the following metrics:
 
 \[
-\text{Precision} = \frac{TP}{TP + FP}
+\text{Precision} = \frac{TP}{TP + FP}, \quad
+\text{Recall} = \frac{TP}{TP + FN}, \quad
+\text{F1-Score} = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
 \]
+
+Additionally, we compute the evolution matrix \( E \) that captures the transition probabilities between predicted and true classes:
+
 \[
-\text{Recall} = \frac{TP}{TP + FN}
-\]
-\[
-\text{F1-Score} = \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+E(i, j) = \frac{C(i, j)}{\sum_{k} C(i, k)}
 \]
 
-These metrics ensure a balanced evaluation of model performance across all sleep stages.
+Where \( C(i, j) \) is the confusion matrix count for true class \( i \) predicted as class \( j \).
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/confusion matrix samples.png}
-    \caption{Confusion Matrix showing model performance across sleep stages.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/confusion_matrix_samples.png}
+	\caption{Confusion Matrix showing model performance across sleep stages.}
 \end{figure}
 
-\subsection{Gradient Analysis: Training Progression}
+\subsection{Gradient Analysis Across Training}
 
-Understanding model training dynamics:
+Model training stability was assessed via gradient trends:
 
-\textbf{Early Training (Epochs 0-5):} High loss with accuracy starting to improve.  
-\textbf{Mid Training (Epochs 5-15):} Loss steadily decreases with stable gradient flow.  
-\textbf{Late Training (Epochs 15-20):} Accuracy plateaus with no severe overfitting.
+\begin{itemize}
+	\item \textbf{Epochs 0–5:} High loss, gradual accuracy increase.
+	\item \textbf{Epochs 5–15:} Stable gradient flow and decreasing loss.
+	\item \textbf{Epochs 15–20:} Accuracy plateaus, no overfitting.
+\end{itemize}
 
-\textbf{Conclusion:} The training process remains stable, with no vanishing or exploding gradients.
+\textbf{Conclusion:} Training remained stable with no vanishing/exploding gradients.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/3d gradient.png}
-    \caption{Gradient 3D Surface: Training vs Validation Metrics.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/3d_gradient.png}
+	\caption{Gradient 3D Surface: Training vs Validation Metrics.}
 \end{figure}
 
-\subsection{Performance Metrics: Precision, Recall, F1-Score}
+\subsection{Performance Metrics: Class-wise Scores}
 
-Evaluating model performance across all classes using key metrics:
+Key metrics computed per class to understand classification effectiveness:
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/precision_plot.png}
-    \caption{Precision Scores per Class.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/precision_plot.png}
+	\caption{Precision Scores per Class.}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/recall_plot.png}
-    \caption{Recall Scores per Class.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/recall_plot.png}
+	\caption{Recall Scores per Class.}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/f1_score_plot.png}
-    \caption{F1 Scores per Class.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/f1_score_plot.png}
+	\caption{F1 Scores per Class.}
 \end{figure}
 
-\subsection{Feature Importance Analysis with LIME}
+\subsection{Feature Importance Analysis using LIME}
 
-Understanding the contribution of different channels to model predictions, we used LIME (Local Interpretable Model-agnostic Explanations) to analyze feature importance. The analysis showed that the \textbf{EMG submental} and \textbf{EEG Pz-Oz} channels contribute the most to predictions, while the \textbf{EOG horizontal} channel has minimal importance, indicating lower relevance for classification.
+We used LIME to interpret feature contributions. The results highlight:
 
-This insight helps optimize feature selection and improve model efficiency.
+\begin{itemize}
+	\item \textbf{Most influential:} EMG submental, EEG Pz-Oz
+	\item \textbf{Least influential:} EOG horizontal
+\end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/feature importance chanels analysis.png}
-    \caption{Feature Importance Analysis for 4 Channels.}
+This helps refine feature selection and optimize performance.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/paper3/Analysis Plots/feature_importance_chanels_analysis.png}
+	\caption{Feature Importance Analysis for 4 Channels using LIME.}
 \end{figure}

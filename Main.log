@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.7)  30 APR 2025 10:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.7)  5 MAY 2025 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1162,20 +1162,7 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
 d
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (Main.aux (Title/title.aux) (Title/approval.aux) (Title/acknowledgement.aux) 
-(Title/dedication.aux) (Title/declaration.aux) (Title/abstract.aux)
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-)
+(Title/dedication.aux) (Title/declaration.aux) (Title/abstract.aux))
 \openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
@@ -1265,10 +1252,10 @@ ers/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 \openout2 = `Title/title.aux'.
 
  (Title/title.tex
-<img/pdpu_logo.png, id=92, 308.15125pt x 326.21875pt>
+<img/pdpu_logo.png, id=152, 308.15125pt x 326.21875pt>
 File: img/pdpu_logo.png Graphic file (type png)
 <use img/pdpu_logo.png>
-Package pdftex.def Info: img/pdpu_logo.png  used on input line 19.
+Package pdftex.def Info: img/pdpu_logo.png  used on input line 24.
 (pdftex.def)             Requested size: 81.90262pt x 86.70142pt.
 ) [2
 
@@ -1314,107 +1301,130 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 [][]\OT1/ptm/b/n/17.28 Abstract[]|
  []
 
+
+Overfull \hbox (4.6768pt too wide) in paragraph at lines 5--6
+\OT1/ptm/m/n/12 sleep dis-or-ders, con-ven-tion-ally done through man-ual in-te
+r-pre-ta-tion of polysomnog-
+ []
+
+
+Overfull \hbox (0.27129pt too wide) in paragraph at lines 5--6
+\OT1/ptm/m/n/12 learn-ing to so-phis-ti-cated deep learn-ing ar-chi-tec-tures. 
+Ini-tial tri-als on the SleepEDF
+ []
+
+
+Overfull \hbox (2.39731pt too wide) in paragraph at lines 5--6
+\OT1/ptm/m/n/12 81.13% ac-cu-racy, which proved to have bet-ter abil-ity to mod
+el tem-po-ral se-quences. 
+ []
+
 ) [4
 
 
 
 ] (Main.toc
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 8.
+ 6.
 
 (C:\Users\Tanmay Rathod\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm
 .fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 8.
+ 6.
 
 (C:\Users\Tanmay Rathod\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm
 .fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 8.
+ 6.
 
 (C:\Users\Tanmay Rathod\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm
 .fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 8.
+ 6.
 
 (C:\Users\Tanmay Rathod\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm
 .fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
  [5
 
 
 
-])
+] [6])
 \tf@toc=\write4
 \openout4 = `Main.toc'.
 
- [6] (Main.lof)
+ [7] (Main.lof
+Overfull \hbox (2.37245pt too wide) in paragraph at lines 6--6
+ [][] [][][]\OT1/ptm/m/n/12 Architecture of Ma-chine Learn-ing Clas-si-fiers fo
+r Sleep Stage Clas- 
+ []
+
+[8
+
+])
 \tf@lof=\write5
 \openout5 = `Main.lof'.
 
- [7
-
-] (Main.lot)
+ [9] (Main.lot)
 \tf@lot=\write6
 \openout6 = `Main.lot'.
 
- [8
+ [10
 
 ]
 Chapter 1.
 (Chapters/introduction.tex
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (18.02pt too wide) in paragraph at lines 6--7
+\OT1/ptm/m/n/12 sleep and the di-ag-no-sis of sleep dis-or-ders. Sleep is di-vi
+ded into five ma-jor stages|N1,
+ []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 
-      [1
+l.7 
+     [1
 
 
 ]
-<img/Sleep EDF Data Visulization.png, id=205, 816.04875pt x 819.06pt>
-File: img/Sleep EDF Data Visulization.png Graphic file (type png)
-<use img/Sleep EDF Data Visulization.png>
-Package pdftex.def Info: img/Sleep EDF Data Visulization.png  used on input lin
-e 31.
-(pdftex.def)             Requested size: 195.0pt x 195.71606pt.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 13.
+
+
+Overfull \hbox (1.71222pt too wide) in paragraph at lines 19--20
+\OT1/ptm/m/n/12 The Sleep-EDF (Sleep Eu-ro-pean Data For-mat) cor-pus, pop-u-la
+r among re-searchers,
+ []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 
-      [2 <./img/Sleep EDF Data Visulization.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-9.
-
-(C:\Users\Tanmay Rathod\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.f
-d
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))
+l.22 
+      [2]
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.217 	\chapter
-               [Literature Review]{Literature Review} [3]
+l.53 
+      [3]) [4]
 Chapter 2.
 (Chapters/Chapter2.tex
 Overfull \hbox (0.35542pt too wide) in paragraph at lines 4--5
@@ -1428,171 +1438,380 @@ Overfull \hbox (15.96689pt too wide) in paragraph at lines 4--5
 -ag-ing self-supervised
  []
 
-[4
+[5
 
-]) [5]
+]) [6]
 Chapter 3.
 
-Overfull \hbox (23.35222pt too wide) in paragraph at lines 221--221
-|\OT1/ptm/b/n/24.88 SleepGCN-Transformer Hy-brid Graph
+Overfull \hbox (6.38481pt too wide) in paragraph at lines 222--222
+|\OT1/ptm/b/n/24.88 Automated Sleep Stag-ing Sys-tem with
+ []
+
+(Chapters/paper1.tex [7
+
+] [8]
+
+! LaTeX Error: File `"img/paper 1/EEG_Filter_chanel"' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...inewidth]{"img/paper 1/EEG_Filter_chanel"}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps,.ep
+s
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[9] [10]
+
+! LaTeX Error: File `"img/paper 1/Architechture1"' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 ...7\linewidth]{"img/paper 1/Architechture1"}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps,.ep
+s
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[11]
+Underfull \hbox (badness 1142) in paragraph at lines 79--80
+\OT1/ptm/m/n/12 For fur-ther en-hance-ment, we em-ployed a soft vot-ing en-sem-
+ble that com-
  []
 
 
-Overfull \hbox (11.38626pt too wide) in paragraph at lines 221--221
-\OT1/ptm/b/n/24.88 Con-vo-lu-tion and Trans-fomer Net-work
+Underfull \hbox (badness 6188) in paragraph at lines 79--80
+\OT1/cmtt/m/n/12 learning[]rate=0.1\OT1/ptm/m/n/12 ), a \OT1/ptm/b/n/12 Ran-dom
+ For-est Clas-si-fier \OT1/ptm/m/n/12 (\OT1/cmtt/m/n/12 n[]estimators=50\OT1/pt
+m/m/n/12 ,
  []
 
-(Chapters/chapter 3.tex
-<img/Architechture.png, id=221, 1411.2725pt x 774.895pt>
-File: img/Architechture.png Graphic file (type png)
-<use img/Architechture.png>
-Package pdftex.def Info: img/Architechture.png  used on input line 9.
-(pdftex.def)             Requested size: 390.0pt x 214.13138pt.
- [6
+[12]
+
+LaTeX Warning: File `../img/paper_1/Random_forest/random_forest_confusion_matri
+x.png' not found on input line 95.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Random_forest/random_forest_co
+nfusion_matrix.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 ...forest/random_forest_confusion_matrix.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[13]
+
+LaTeX Warning: File `../img/paper_1/Random_forest/accuracy_curve.png' not found
+ on input line 101.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Random_forest/accuracy_curve.p
+ng' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 ...paper_1/Random_forest/accuracy_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[14]
+
+LaTeX Warning: File `../img/paper_1/Random_forest/loss_curve.png' not found on 
+input line 107.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Random_forest/loss_curve.png' 
+not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 ...img/paper_1/Random_forest/loss_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[15]
+
+LaTeX Warning: File `../img/paper_1/Random_forest/precision_per_class.png' not 
+found on input line 113.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Random_forest/precision_per_cl
+ass.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 ..._1/Random_forest/precision_per_class.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[16]
+
+LaTeX Warning: File `../img/paper_1/Bagging_Boosting/BG_confusion_matrix.png' n
+ot found on input line 123.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Bagging_Boosting/BG_confusion_
+matrix.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 ...Bagging_Boosting/BG_confusion_matrix.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[17]
+
+LaTeX Warning: File `../img/paper_1/Bagging_Boosting/accuracy_curve.png' not fo
+und on input line 129.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Bagging_Boosting/accuracy_curv
+e.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 ...er_1/Bagging_Boosting/accuracy_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[18]
+
+LaTeX Warning: File `../img/paper_1/Bagging_Boosting/loss_curve.png' not found 
+on input line 135.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Bagging_Boosting/loss_curve.pn
+g' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 .../paper_1/Bagging_Boosting/loss_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[19]
+
+LaTeX Warning: File `../img/paper_1/Bagging_Boosting/precision_per_class.png' n
+ot found on input line 141.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Bagging_Boosting/precision_per
+_class.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 ...Bagging_Boosting/precision_per_class.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[20]
+
+LaTeX Warning: File `../img/paper_1/Ensemble_Learning/Ensemble_confusion_matrix
+.png' not found on input line 151.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Ensemble_Learning/Ensemble_con
+fusion_matrix.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...e_Learning/Ensemble_confusion_matrix.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[21]
+
+LaTeX Warning: File `../img/paper_1/Ensemble_Learning/accuracy_curve.png' not f
+ound on input line 157.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Ensemble_Learning/accuracy_cur
+ve.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 ...r_1/Ensemble_Learning/accuracy_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[22]
+
+LaTeX Warning: File `../img/paper_1/Ensemble_Learning/loss_curve.png' not found
+ on input line 163.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Ensemble_Learning/loss_curve.p
+ng' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 ...paper_1/Ensemble_Learning/loss_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[23]
+
+LaTeX Warning: File `../img/paper_1/Ensemble_Learning/precision_per_class.png' 
+not found on input line 169.
+
+
+! Package pdftex.def Error: File `../img/paper_1/Ensemble_Learning/precision_pe
+r_class.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169 ...nsemble_Learning/precision_per_class.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[24]
+
+LaTeX Warning: File `../img/paper_1/gradient_boosting/confusion_matrix.png' not
+ found on input line 179.
+
+
+! Package pdftex.def Error: File `../img/paper_1/gradient_boosting/confusion_ma
+trix.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 ...1/gradient_boosting/confusion_matrix.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[25]
+
+LaTeX Warning: File `../img/paper_1/gradient_boosting/accuracy_curve.png' not f
+ound on input line 185.
+
+
+! Package pdftex.def Error: File `../img/paper_1/gradient_boosting/accuracy_cur
+ve.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185 ...r_1/gradient_boosting/accuracy_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[26]
+
+LaTeX Warning: File `../img/paper_1/gradient_boosting/loss_curve.png' not found
+ on input line 191.
+
+
+! Package pdftex.def Error: File `../img/paper_1/gradient_boosting/loss_curve.p
+ng' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 ...paper_1/gradient_boosting/loss_curve.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[27]
+
+LaTeX Warning: File `../img/paper_1/gradient_boosting/precision_per_class.png' 
+not found on input line 197.
+
+
+! Package pdftex.def Error: File `../img/paper_1/gradient_boosting/precision_pe
+r_class.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197 ...radient_boosting/precision_per_class.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) [28] [29]
+Chapter 4.
+
+Overfull \hbox (33.92683pt too wide) in paragraph at lines 226--226
+|\OT1/ptm/b/n/24.88 Deep Neu-ral Model for Au-to-mated Sleep
+ []
+
+
+Overfull \hbox (0.214pt too wide) in paragraph at lines 226--226
+\OT1/ptm/b/n/24.88 Stag-ing Sys-tem us-ing Single-Channel
+ []
+
+(Chapters/paper2.tex) [30
 
 ]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <./img/Architechture.png (PNG copy)>] [8]
-Overfull \hbox (54.36897pt too wide) in paragraph at lines 110--127
- [][] 
- []
-
-<img/Graph Weightage.png, id=237, 482.80376pt x 322.20375pt>
-File: img/Graph Weightage.png Graphic file (type png)
-<use img/Graph Weightage.png>
-Package pdftex.def Info: img/Graph Weightage.png  used on input line 135.
-(pdftex.def)             Requested size: 195.0pt x 130.1329pt.
-[9] [10 <./img/Graph Weightage.png>]
-<img/Graph Convolution Neural Network.png, id=247, 449.42906pt x 529.22719pt>
-File: img/Graph Convolution Neural Network.png Graphic file (type png)
-<use img/Graph Convolution Neural Network.png>
-Package pdftex.def Info: img/Graph Convolution Neural Network.png  used on inpu
-t line 151.
-(pdftex.def)             Requested size: 272.99881pt x 321.47952pt.
-
-Overfull \hbox (55.54607pt too wide) in paragraph at lines 159--168
- [][] 
- []
-
-[11 <./img/Graph Convolution Neural Network.png>]
-Overfull \hbox (15.82466pt too wide) in paragraph at lines 198--221
- [][] 
- []
-
-<img/transformer.png, id=254, 472.76625pt x 405.01312pt>
-File: img/transformer.png Graphic file (type png)
-<use img/transformer.png>
-Package pdftex.def Info: img/transformer.png  used on input line 225.
-(pdftex.def)             Requested size: 272.99881pt x 233.88188pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12] [13 <./img/transformer.png>] [14]
-Overfull \hbox (2.29755pt too wide) in paragraph at lines 285--286
-[]\OT1/ptm/m/n/12 The PyTorch-based com-pu-ta-tion for Fo-cal Loss with la-bel 
-smooth-ing be-comes: 
- []
-
-[15] [16] [17]) [18]
-Chapter 4.
-(Chapters/chapter4.tex
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3.
-
-<img/sample distribution plot pdf.png, id=288, 552.8655pt x 414.95026pt>
-File: img/sample distribution plot pdf.png Graphic file (type png)
-<use img/sample distribution plot pdf.png>
-Package pdftex.def Info: img/sample distribution plot pdf.png  used on input li
-ne 17.
-(pdftex.def)             Requested size: 312.00119pt x 234.17506pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/accuracy plot.png, id=289, 570.933pt x 370.0224pt>
-File: img/accuracy plot.png Graphic file (type png)
-<use img/accuracy plot.png>
-Package pdftex.def Info: img/accuracy plot.png  used on input line 27.
-(pdftex.def)             Requested size: 312.00119pt x 202.21434pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/loss plot.png, id=290, 570.933pt x 337.5009pt>
-File: img/loss plot.png Graphic file (type png)
-<use img/loss plot.png>
-Package pdftex.def Info: img/loss plot.png  used on input line 33.
-(pdftex.def)             Requested size: 312.00119pt x 184.4416pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[19
-
-] [20 <./img/sample distribution plot pdf.png> <./img/accuracy plot.png>]
-<img/confusion matrix samples.png, id=302, 472.6458pt x 430.2474pt>
-File: img/confusion matrix samples.png Graphic file (type png)
-<use img/confusion matrix samples.png>
-Package pdftex.def Info: img/confusion matrix samples.png  used on input line 5
-5.
-(pdftex.def)             Requested size: 312.00119pt x 284.02324pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[21 <./img/loss plot.png>]
-<img/3d gradient.png, id=308, 546.3612pt x 475.5366pt>
-File: img/3d gradient.png Graphic file (type png)
-<use img/3d gradient.png>
-Package pdftex.def Info: img/3d gradient.png  used on input line 71.
-(pdftex.def)             Requested size: 312.00119pt x 271.55934pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/precision_plot.png, id=309, 433.62pt x 289.08pt>
-File: img/precision_plot.png Graphic file (type png)
-<use img/precision_plot.png>
-Package pdftex.def Info: img/precision_plot.png  used on input line 81.
-(pdftex.def)             Requested size: 312.00119pt x 208.0095pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/recall_plot.png, id=310, 433.62pt x 289.08pt>
-File: img/recall_plot.png Graphic file (type png)
-<use img/recall_plot.png>
-Package pdftex.def Info: img/recall_plot.png  used on input line 87.
-(pdftex.def)             Requested size: 312.00119pt x 208.0095pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/f1_score_plot.png, id=311, 433.62pt x 289.08pt>
-File: img/f1_score_plot.png Graphic file (type png)
-<use img/f1_score_plot.png>
-Package pdftex.def Info: img/f1_score_plot.png  used on input line 93.
-(pdftex.def)             Requested size: 312.00119pt x 208.0095pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[22 <./img/confusion matrix samples.png>]
-
-LaTeX Warning: Text page 23 contains only floats.
-
-[23 <./img/3d gradient.png> <./img/precision_plot.png>] [24 <./img/recall_plot.
-png> <./img/f1_score_plot.png>]
-<img/feature importance chanels analysis.png, id=329, 823.1553pt x 454.5783pt>
-File: img/feature importance chanels analysis.png Graphic file (type png)
-<use img/feature importance chanels analysis.png>
-Package pdftex.def Info: img/feature importance chanels analysis.png  used on i
-nput line 105.
-(pdftex.def)             Requested size: 312.00119pt x 172.30455pt.
-) [25 <./img/feature importance chanels analysis.png>]
 Chapter 5.
-(Title/conclusion.tex) [26
+
+Overfull \hbox (64.8503pt too wide) in paragraph at lines 230--230
+|\OT1/ptm/b/n/24.88 SleepGCN-Transformer: A Hy-brid Graph-
+ []
+
+(chapters/paper3.tex) [31
 
 ]
 Chapter 6.
-(Chapters/reference.tex) [27
+(Title/conclusion.tex) [32
+
+]
+Chapter 7.
+(Chapters/reference.tex) [33
 
 ] (Main.aux (Title/title.aux) (Title/approval.aux)
 (Title/acknowledgement.aux) (Title/dedication.aux) (Title/declaration.aux)
@@ -1603,33 +1822,28 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: A0D65B0739496CE9C37AB0C5D5656650;4252.
+(rerunfilecheck)             Checksum: C24387C2EBEBA4F80D151B504E2CA7CC;7118.
  ) 
 Here is how much of TeX's memory you used:
- 30909 strings out of 474486
- 628626 string characters out of 5739944
- 1938542 words of memory out of 5000000
- 52568 multiletter control sequences out of 15000+600000
- 591212 words of font info for 101 fonts, out of 8000000 for 9000
+ 31358 strings out of 474486
+ 657745 string characters out of 5739944
+ 1935542 words of memory out of 5000000
+ 53007 multiletter control sequences out of 15000+600000
+ 584454 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,13n,133p,2511b,1223s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,12n,133p,2511b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmex10.pfb><C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Tanmay Rathod/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tanmay Rathod/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
-Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:
-/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.
-pfb><C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
-/utmb8a.pfb><C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/u
-rw/times/utmr8a.pfb><C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (38 pages, 1300017 bytes).
+onts/cm/cmsy10.pfb><C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Tanmay Rathod/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Tanmay Rathod/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Tanmay Rathod/App
+Data/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Main.pdf (46 pages, 286535 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 244 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 

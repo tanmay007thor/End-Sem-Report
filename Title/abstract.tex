@@ -1,8 +1,9 @@
 \begin{center}
-\section*{\textcolor{internationalkleinblue}{\textbf{{Abstract}}}}
-\end{center} 
-This project presents \textit{SleepGCN-Transformer}, a hybrid model combining Graph Convolutional Networks (GCN) and Transformer encoders for sleep stage classification. Using the SleepEDF dataset, it incorporates four physiological signals: EEG (Fpz-Cz, Pz-Oz), EMG (submental), and EOG (horizontal). Preprocessing includes 30-second epochs, band-pass filtering (0.3--30 Hz), and graph-based EEG channel representation.
+	\section*{\textcolor{internationalkleinblue}{\textbf{{Abstract}}}}
+\end{center}
 
-The GCN module captures spatial relationships across EEG channels, while the Transformer encoder models temporal dependencies from graph-level embeddings. Focal Loss addresses class imbalances, and a CosineAnnealingLR scheduler optimizes learning rate decay. Training with the AdamW optimizer for 20 epochs achieves 93.12 \% training and 93.04\% validation accuracy.
+Correct and effective sleep stage classification is crucial in the diagnosis of sleep disorders, conventionally done through manual interpretation of polysomnography (PSG) signals. Automated sleep stage classification is investigated in this thesis by a series of increasingly sophisticated models, from traditional machine learning to sophisticated deep learning architectures. Initial trials on the SleepEDF dataset compared models like Random Forest, XGBoost, and ensemble models, which obtained maximum accuracy of 85.35\%, and set the foundation for automated systems to perform consumer-level sleep monitoring. Future work introduced deep learning models like BiLSTM and RNNs, and BiLSTM reached 81.13\% accuracy, which proved to have better ability to model temporal sequences.
 
-Model performance, assessed using precision, recall, and F1-score, demonstrates high efficacy. LIME-based feature importance analysis highlights EMG and EEG Pz-Oz channels as key contributors. This hybrid model exhibits state-of-the-art performance, with future directions focused on enhancing explainability and clinical integration.
+Based on these building blocks, we introduce \textit{SleepGCN-Transformer}, a new hybrid model that combines Graph Convolutional Networks (GCNs) to learn spatial relations between multi-channel EEG, EMG, and EOG signals, and Transformer encoders to learn temporal patterns. The model applies Focal Loss to handle class imbalance and a CosineAnnealingLR scheduler for dynamic learning rate adaptation. Trained with the AdamW optimizer on preprocessed 30-second epochs, SleepGCN-Transformer is 93.12\% training and 93.04\% validation accurate. Feature attribution by LIME indicates EMG and EEG Pz-Oz to be the most significant channels, demonstrating the model's interpretability.
+
+

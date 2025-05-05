@@ -1,47 +1,53 @@
+Sleep is a fundamental aspect of human health that greatly contributes to cognitive function, memory consolidation, and emotional regulation. Proper and quality sleep guarantees proper brain function and overall physical and mental health. Sleep disturbances result in several diseases, such as impaired concentration, mood disorders, and chronic conditions like cardiovascular diseases.
+
+Sleep plays a critical function in sustaining physical and mental well-being. It is not a passive resting state but a sophisticated biological process crucial for memory consolidation, emotional homeostasis, metabolic health, and immune system function. Alterations in sleep quality or sleep patterns can reflect or lead to many health problems, such as insomnia, depression, cardiovascular disease, and neurodegenerative disorders. It is essential for clinicians and scientists to precisely assess sleep stages for the diagnosis of such conditions and the prescription of proper treatment plans.
 
 
-Sleep is an essential component of human health, contributing significantly to cognitive function, memory consolidation, and emotional regulation. Adequate and quality sleep ensures optimal brain performance and supports overall physical and mental well-being. Disruptions in sleep patterns can lead to various health issues, including impaired concentration, mood disorders, and chronic conditions such as cardiovascular diseases.
-
-The classification of sleep stages is fundamental in understanding sleep architecture and diagnosing sleep disorders. Experts categorize sleep into five primary stages—N1, N2, N3, REM, and Wake—based on distinct patterns observed in brain activity. Each sleep stage is characterized by specific brainwave frequencies, which can be detected using electroencephalography (EEG) signals. Accurate classification of these stages is crucial for analyzing sleep quality and identifying abnormalities such as insomnia, sleep apnea, and narcolepsy.
+Staging of the sleep stages is the basis of understanding the architecture of sleep and the diagnosis of sleep disorders. Sleep is divided into five major stages—N1, N2, N3, REM, and Wake—based on unique patterns seen in brain function. Every stage of sleep is associated with particular frequencies of brainwaves, which can be picked up using the technique of electroencephalography (EEG) signals. The precise staging is important to study the quality of sleep and to detect abnormalities like insomnia, sleep apnea, and narcolepsy.
 
 
-Table~\ref{tab:sleep_stages} provides an overview of the frequency ranges associated with each sleep stage. 
 
-\begin{table}[h]
-\centering
-\caption{Frequency ranges of different sleep stages.}
-\begin{tabular}{ll}
-\toprule
-\textbf{Sleep Stage} & \textbf{Frequency Range (Hz)} \\
-\midrule
-Wake (Beta waves)       & 12--30 \\
-N1 (Light Sleep)        & 4--8  \\
-N2 (Moderate Sleep)     & 4--6  \\
-N3 (Deep Sleep, Delta)  & 0.5--4  \\
-REM (Theta waves)       & 4--6  \\
-\bottomrule
-\end{tabular}
-\label{tab:sleep_stages}
+
+
+
+\subsection{The Role of EEG in Sleep Analysis}
+
+Electroencephalography (EEG) is among the major methods of tracking brain activity while asleep. EEG captures electrical activity created by neurons as they fire within the brain, recorded with electrodes applied to the scalp. These electrical signals are critical in distinguishing various stages of sleep since each stage has different patterns of brain wave activity. Whereas other physiological signals are indirect, EEG is a direct view into the electrical activity of the brain and hence the basis for research and diagnosis into sleep.
+
+\subsection{Understanding the SleepEDF Dataset}
+
+The Sleep-EDF (Sleep European Data Format) corpus, popular among researchers, comprises polysomnography (PSG) recordings taken from healthy subjects and mildly disordered sleep patients. Recordings are taken non-invasively and usually overnight in a laboratory setting. In the course of a session, several sensors are applied to the subject's body to record a number of different physiological signals such as EEG (electroencephalogram), EOG (electrooculogram), and EMG (electromyogram).
+
+Specifically, the database contains two EEG channels, namely Fpz-Cz and Pz-Oz, which record frontal and parietal brain activity. Additionally, it contains EOG signals to record eye movements and EMG signals to record muscle activity, particularly around the chin region. The recordings are manually annotated by experienced sleep technicians using visual patterns and set guidelines to mark sleep stages. The last annotation is retained in a hypnogram — a time series plot that shows the changes between various stages of sleep throughout the night.
+
+\subsection{Sleep Stages and Signal Patterns}
+
+Human sleep is commonly divided into five stages: Wake (W), Non-Rapid Eye Movement (NREM) stages N1, N2, and N3, and Rapid Eye Movement (REM). Each stage is characterized by specific frequency patterns in EEG signals:
+
+\begin{table}[H]
+	\centering
+	\caption{Brainwave Types and Their Characteristics in Sleep Staging}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}lll@{}}
+			\toprule
+			\textbf{Wave Type} & \textbf{Frequency Range} & \textbf{Associated Sleep Stage / Behavior} \\ \midrule
+			Alpha waves        & 8–13 Hz                 & Relaxed wakefulness, especially with eyes closed \\
+			Beta waves         & 13–30 Hz                & Alertness and active thinking; decrease during sleep \\
+			Theta waves        & 4–8 Hz                  & Light sleep (Stages N1 and N2) \\
+			Delta waves        & 0.5–4 Hz                & Deep sleep (Stage N3); synchronized neuronal firing \\
+			Sleep spindles \& K-complexes & ~12–15 Hz (spindles)     & Characteristic of Stage N2; used for stage classification \\ 
+			\bottomrule
+		\end{tabular}%
+	}
+	\label{tab:brainwaves}
 \end{table}
 
-To classify sleep stages effectively, bio-signals from multiple physiological channels are analyzed. The primary sources of information for sleep stage classification are EEG (electroencephalogram), EMG (electromyogram), and EOG (electrooculogram) signals. These channels capture brain activity, muscle movement, and eye movemets, respectively, offering a comprehensive view of sleep patterns.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.5\linewidth]{img/Sleep EDF Data Visulization.png}
-    \caption{Sleep EDF Data Visulization}
-    \label{fig:enter-label}
-\end{figure}
 
-Despite the availability of multiple channels in the SleepEDF dataset, not all contribute equally to classification performance. To reduce model complexity without compromising accuracy, we selectively utilize four channels from the nine standard channels provided in the dataset. The selected channels are:
 
-\begin{itemize}
-    \item \textbf{EEG Fpz-Cz}: Captures frontal-to-central brain activity.  
-    \item \textbf{EEG Pz-Oz}: Measures parietal-to-occipital brain activity.  
-    \item \textbf{EMG submental}: Records muscle tone from the chin area.  
-    \item \textbf{EOG horizontal}: Tracks horizontal eye movements.  
-\end{itemize}
+These patterns are extracted from raw EEG signals through filtering and segmentation. Experts use these patterns, along with eye movement and muscle tone data, to classify each 30-second segment (epoch) into one of the five stages.
 
-In this study, we adopt a graph-based modeling approach to capture spatial relationships between the selected channels. Additionally, we employ a Transformer encoder to effectively model temporal dependencies across sleep cycles. To facilitate a better understanding of the input data, we also present visualizations of bio-signals from all channels.
+\subsection{The Need for Automation}
+Manual scoring of sleep stages, while precise, is time-consuming and subject to inter-rater reliability. It takes hours of professional scoring for one night's worth of recording. Automated sleep stage scoring provides a quicker, more scalable, and more possibly consistent solution. Using machine learning and deep learning models, particularly those that can address intricate spatial and temporal patterns in physiological data, we can develop systems that emulate expert opinion and aid in clinical decision-making.
+This thesis suggests just such a system — \textit{SleepGCN-Transformer} — that unifies graph-based representation of EEG sensor relationships with temporal learning from transformers. Our strategy not only targets high classification performance but also contributes to the increasing body of research in interpretable AI in medicine, moving us closer to clinically integrated, explainable, and fully automated sleep diagnostics.
 
-This approach aims to leverage the strengths of both spatial and temporal modeling techniques, resulting in a robust and efficient sleep stage classification framework.

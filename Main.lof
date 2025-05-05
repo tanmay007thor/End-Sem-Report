@@ -1,21 +1,26 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Sleep EDF Data Visulization}}{2}{figure.caption.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Proposed Architecture of GCN-Transformer Hybrid Approach}}{7}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Graph Weight Visulization}}{10}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Graph Convolution Neural Network}}{11}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Enter Caption}}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Filter EEG Chanels}}{9}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of Machine Learning Classifiers for Sleep Stage Classificatio}}{11}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Random Forest Confusion Matrix}}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Forest Accuracy Curve}}{15}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Random Forest Loss Curve}}{16}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Random Forest Precision Per Class}}{17}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Bagging Classifier Confusion Matrix}}{18}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Bagging Classifier Accuracy Curve}}{19}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Bagging Classifier Loss Curve}}{20}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Bagging Classifier Precision Per Class}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ensemble Learning Confusion Matrix}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ensemble Learning Accuracy Curve}}{23}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ensemble Learning Loss Curve}}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Ensemble Learning Precision Per Class}}{25}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Gradient Boosting Confusion Matrix}}{26}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Gradient Boosting Accuracy Curve}}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Gradient Boosting Loss Curve}}{28}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Gradient Boosting Precision Per Class}}{29}{figure.caption.22}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Balanced class distribution across the test set.}}{20}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Accuracy Curve: Training vs Testing.}}{20}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Loss Curve: Training vs Testing.}}{21}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion Matrix showing model performance across sleep stages.}}{22}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Gradient 3D Surface: Training vs Validation Metrics.}}{23}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Precision Scores per Class.}}{23}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Recall Scores per Class.}}{24}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces F1 Scores per Class.}}{24}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Feature Importance Analysis for 4 Channels.}}{25}{figure.caption.23}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
