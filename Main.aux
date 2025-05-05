@@ -2,7 +2,7 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\providecommand \babel@aux [2]{\global \let \babel@toc \@gobbletwo }
+\providecommand\babel@aux[2]{}
 \@nameuse{bbl@beforestart}
 \providecommand \oddpage@label [2]{}
 \providecommand\@newglossary[4]{}
@@ -103,15 +103,15 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Architecture of the Deep Neural Network}}{27}{table.caption.15}\protected@file@percent }
 \newlabel{tab:nn_architecture}{{4.1}{27}{Architecture of the Deep Neural Network}{table.caption.15}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Forward Propagation}{27}{table.caption.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Backward Propagation}{28}{equation.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Activation Functions}{29}{equation.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Recurrent Neural Network (RNN)}{29}{equation.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Backward Propagation}{28}{equation.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Activation Functions}{29}{equation.4.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Recurrent Neural Network (RNN)}{29}{equation.4.4.8}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Recurrent Neural Network Architecture for Sleep Stage Classification}}{30}{table.caption.16}\protected@file@percent }
 \newlabel{tab:rnn_architecture}{{4.2}{30}{Recurrent Neural Network Architecture for Sleep Stage Classification}{table.caption.16}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Long Short-Term Memory (LSTM)}{31}{equation.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Long Short-Term Memory (LSTM)}{31}{equation.4.4.9}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces LSTM Neural Network Architecture for Sleep Stage Classification}}{32}{table.caption.17}\protected@file@percent }
 \newlabel{tab:lstm_architecture}{{4.3}{32}{LSTM Neural Network Architecture for Sleep Stage Classification}{table.caption.17}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Bidirectional Long Short-Term Memory (Bi-LSTM)}{33}{equation.4.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bidirectional Long Short-Term Memory (Bi-LSTM)}{33}{equation.4.4.15}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Bidirectional LSTM Neural Network Architecture for Sleep Stage Classification}}{34}{table.caption.18}\protected@file@percent }
 \newlabel{tab:bi_lstm_architecture}{{4.4}{34}{Bidirectional LSTM Neural Network Architecture for Sleep Stage Classification}{table.caption.18}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}Results and Evaluation}{35}{section.4.5}\protected@file@percent }
@@ -150,14 +150,79 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter_paper3}{{5}{41}{SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{chapter.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Methodology}{41}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Dataset Information}{41}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{41}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{41}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results and Evaluation}{41}{section.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{42}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Proposed Architecture of the sleep GCN- Transformer Architecture}}{42}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:graph-convolution-neural-network--sleepgcntransformer-architechture}{{5.1}{42}{Proposed Architecture of the sleep GCN- Transformer Architecture}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Dataset and Implementation Environment}{42}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{44}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Raw signal channels from the Sleep-EDF dataset}}{44}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:raw_signals}{{5.2}{44}{Raw signal channels from the Sleep-EDF dataset}{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Preprocessed and filtered signal channels}}{44}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:filtered_signals}{{5.3}{44}{Preprocessed and filtered signal channels}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Data Information}{44}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Preprocessing Pipeline}{45}{subsection.5.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Sleep Stage Mapping}}{45}{table.caption.30}\protected@file@percent }
+\newlabel{tab:sleep_stage_mapping}{{5.1}{45}{Sleep Stage Mapping}{table.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Filtering Method}{46}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{46}{section.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Graph Dataset Creation}}{47}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:graph-weightage}{{5.4}{47}{Graph Dataset Creation}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}GCN Architecture}{47}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Transformer Architecture}{49}{subsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Transformer: Key Components and Equations}{50}{subsection.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Training Pipeline}{51}{subsection.5.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results and Evaluation}{52}{section.5.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Loss plot}}{53}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:loss-plot}{{5.5}{53}{Loss plot}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Accuracy plot}}{53}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:accuracy-plot}{{5.6}{53}{Accuracy plot}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces 3D Accuracy vs. Loss}}{53}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:3d-acc-loss-plot}{{5.7}{53}{3D Accuracy vs. Loss}{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces 3D Gradient visualization}}{53}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:3d-gradient}{{5.8}{53}{3D Gradient visualization}{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Sample distribution}}{53}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:sample-distribution-plot-pdf}{{5.9}{53}{Sample distribution}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces AUC vs. ROC Curve}}{53}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:auc-vs-roc-curve}{{5.10}{53}{AUC vs. ROC Curve}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Confusion matrix (percentage)}}{54}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:confusion-matrix-percentatge-wise}{{5.11}{54}{Confusion matrix (percentage)}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Confusion matrix (samples)}}{54}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:confusion-matrix-samples}{{5.12}{54}{Confusion matrix (samples)}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces F1 Score}}{54}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:f1scoreplot}{{5.13}{54}{F1 Score}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Precision}}{54}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:precisionplot}{{5.14}{54}{Precision}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Recall}}{54}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:recallplot}{{5.15}{54}{Recall}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}XAI Visualization with Heatmap and Plots}{55}{subsection.5.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Stage N1}}{55}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:stage-n1}{{5.16}{55}{Stage N1}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Stage N2}}{55}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:stage-n2}{{5.17}{55}{Stage N2}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Stage N3}}{55}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:stage-n3}{{5.18}{55}{Stage N3}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Stage REM}}{55}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:stage-rem}{{5.19}{55}{Stage REM}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Stage Wake}}{55}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:stage-wake}{{5.20}{55}{Stage Wake}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces XAI Visualization}}{55}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:xai4}{{5.21}{55}{XAI Visualization}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Time Complexity Analysis}{55}{subsection.5.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Transformer Encoder Complexity}}{56}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:transformerencoderon2}{{5.22}{56}{Transformer Encoder Complexity}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Data Loading Complexity}}{56}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:dataloadingcomplexitywithlegendupdated}{{5.23}{56}{Data Loading Complexity}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces Evaluation Complexity}}{56}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:evaluationoeval}{{5.24}{56}{Evaluation Complexity}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.25}{\ignorespaces Fully Connected Layer Complexity}}{56}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:fullyconnectedlayero1}{{5.25}{56}{Fully Connected Layer Complexity}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.26}{\ignorespaces GCN Layers Complexity}}{56}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:gcnlayerson}{{5.26}{56}{GCN Layers Complexity}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.27}{\ignorespaces Training Loop Complexity}}{56}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:trainingloopot}{{5.27}{56}{Training Loop Complexity}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Reference}{43}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Reference}{58}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\gdef \@abspage@last{57}
+\gdef \@abspage@last{72}
