@@ -30,19 +30,19 @@
 \contentsline {figure}{\numberline {3.26}{\ignorespaces Box Plot Comparison}}{22}{figure.caption.13}%
 \contentsline {figure}{\numberline {3.27}{\ignorespaces Improved Violin Plot}}{22}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces LSTM Accuracy and Loss Plot}}{35}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces LSTM Confusion Matrix}}{35}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces RNN Accuracy Plot}}{36}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces RNN Confusion Matrix}}{36}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces BiLSTM Accuracy Plot}}{37}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces BiLSTM Confusion Matrix}}{37}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Neural Network Accuracy Comparison}}{38}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Neural Network Confusion Matrix}}{38}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Accuracy Comparison Plot}}{39}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Neural Network Comparison}}{40}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Bi-LSTM Accuracy Plot}}{41}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces LSTM Accuracy and Loss Plot}}{42}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces RNN Accuracy Plot}}{43}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Event Mapping Plot}}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LSTM Accuracy and Loss Plot}}{36}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces LSTM Confusion Matrix}}{36}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RNN Accuracy Plot}}{37}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces RNN Confusion Matrix}}{37}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces BiLSTM Accuracy Plot}}{38}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces BiLSTM Confusion Matrix}}{38}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Neural Network Accuracy Comparison}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Neural Network Confusion Matrix}}{39}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Accuracy Comparison Across All Models}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Bi-LSTM Model Performance}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces LSTM Model Performance}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces RNN Model Performance}}{40}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

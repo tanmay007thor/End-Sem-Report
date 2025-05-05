@@ -1,7 +1,7 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Contents}{v}{Doc-Start}%
 \contentsline {chapter}{List of Figures}{vii}{chapter*.1}%
-\contentsline {chapter}{List of Tables}{ix}{chapter*.2}%
+\contentsline {chapter}{List of Tables}{x}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {subsection}{\numberline {1.0.1}The Role of EEG in Sleep Analysis}{2}{subsection.1.0.1}%
 \contentsline {subsection}{\numberline {1.0.2}Understanding the SleepEDF Dataset}{2}{subsection.1.0.2}%
@@ -33,32 +33,28 @@
 \contentsline {section}{\numberline {4.1}Methodology}{23}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Modeling Approach}{24}{subsection.4.1.1}%
 \contentsline {subsubsection}{Deep Neural Network (DNN)}{24}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Dataset Information}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Dataset Information}{25}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Preprocessing Techniques}{26}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Model Architecture and Learning Framework}{26}{section.4.4}%
 \contentsline {subsubsection}{Deep Neural Network (DNN)}{26}{section.4.4}%
-\contentsline {subsubsection}{Forward Propagation}{27}{table.caption.14}%
+\contentsline {subsubsection}{Forward Propagation}{27}{table.caption.15}%
 \contentsline {subsubsection}{Backward Propagation}{28}{equation.4.2}%
-\contentsline {subsubsection}{Activation Functions}{28}{equation.4.6}%
+\contentsline {subsubsection}{Activation Functions}{29}{equation.4.6}%
 \contentsline {subsubsection}{Recurrent Neural Network (RNN)}{29}{equation.4.8}%
 \contentsline {subsubsection}{Long Short-Term Memory (LSTM)}{31}{equation.4.9}%
 \contentsline {subsubsection}{Bidirectional Long Short-Term Memory (Bi-LSTM)}{33}{equation.4.15}%
 \contentsline {section}{\numberline {4.5}Results and Evaluation}{35}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}LSTM Model}{35}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}RNN Model}{36}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}BiLSTM Model}{37}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Neural Network (NN) Model}{38}{subsection.4.5.4}%
-\contentsline {section}{\numberline {4.6}Comparison of Results}{38}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Comparison Plot}{39}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Neural Network Comparison}{40}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Bi-LSTM Performance}{40}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}LSTM Performance}{41}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}RNN Performance}{42}{subsection.4.6.5}%
-\contentsline {chapter}{\numberline {5}SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{44}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Methodology}{44}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Dataset Information}{44}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{44}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{44}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Results and Evaluation}{44}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Reference}{46}{chapter.7}%
+\contentsline {subsection}{\numberline {4.5.1}LSTM Model}{36}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}RNN Model}{37}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}BiLSTM Model}{38}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Neural Network (NN) Model}{39}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}Comparison of Results}{39}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Comparison Plot}{40}{subsection.4.6.1}%
+\contentsline {chapter}{\numberline {5}SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Methodology}{41}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dataset Information}{41}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{41}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{41}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Results and Evaluation}{41}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{42}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Reference}{43}{chapter.7}%
