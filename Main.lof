@@ -3,23 +3,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Filter EEG Chanels}}{9}{figure.caption.5}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of Machine Learning Classifiers for Sleep Stage Classificatio}}{11}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Random Forest Confusion Matrix}}{14}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Forest Accuracy Curve}}{15}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Random Forest Loss Curve}}{16}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Random Forest Precision Per Class}}{17}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Bagging Classifier Confusion Matrix}}{18}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Bagging Classifier Accuracy Curve}}{19}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Bagging Classifier Loss Curve}}{20}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Bagging Classifier Precision Per Class}}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Ensemble Learning Confusion Matrix}}{22}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Ensemble Learning Accuracy Curve}}{23}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ensemble Learning Loss Curve}}{24}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Ensemble Learning Precision Per Class}}{25}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Gradient Boosting Confusion Matrix}}{26}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Gradient Boosting Accuracy Curve}}{27}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Gradient Boosting Loss Curve}}{28}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Gradient Boosting Precision Per Class}}{29}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of Machine Learning Classifiers for Sleep Stage Classificatio}}{12}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Random Forest Confusion Matrix}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Random Forest Accuracy Curve}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Random Forest Loss Curve}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Random Forest Precision Per Class}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Bagging Classifier Confusion Matrix}}{16}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Bagging Classifier Accuracy Curve}}{16}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Bagging Classifier Loss Curve}}{16}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Bagging Classifier Precision Per Class}}{16}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ensemble Learning Confusion Matrix}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ensemble Learning Accuracy Curve}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ensemble Learning Loss Curve}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Ensemble Learning Precision Per Class}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Gradient Boosting Confusion Matrix}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Gradient Boosting Accuracy Curve}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Gradient Boosting Loss Curve}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Gradient Boosting Precision Per Class}}{18}{figure.caption.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
