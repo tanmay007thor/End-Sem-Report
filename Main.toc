@@ -16,25 +16,30 @@
 \contentsline {paragraph}{B. Data Preprocessing}{10}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Model Architecture and Learning Framework}{11}{section.3.4}%
 \contentsline {section}{\numberline {3.5}K-Fold Cross-Validation}{12}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Random Forest Classifier}{13}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Gradient Boosting Classifier with PCA}{14}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Ensemble Learning (Voting Classifier)}{14}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Results and Evaluation}{15}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Random Forest}{15}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Bagging Classifier}{16}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Ensemble Learning}{16}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Gradient Boosting}{17}{subsection.3.6.4}%
-\contentsline {chapter}{\numberline {4}Deep Neural Model for Automated Sleep Staging System using Single-Channel EEG Signal}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Methodology}{19}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Dataset Information}{19}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Preprocessing Techniques}{19}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Model Architecture and Learning Framework}{19}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Results and Evaluation}{19}{section.4.5}%
-\contentsline {chapter}{\numberline {5}SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Methodology}{20}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Dataset Information}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{20}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{20}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Results and Evaluation}{20}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Reference}{22}{chapter.7}%
+\contentsline {subsection}{\numberline {3.5.1}Random Forest with K-Fold Cross-Validation Pipeline}{14}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Ensemble Classifier with K-Fold Cross-Validation Pipeline}{14}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Gradient Boosting with K-Fold Cross-Validation Pipeline}{14}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Random Forest Classifier}{15}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Gradient Boosting Classifier with PCA}{16}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Ensemble Learning (Voting Classifier)}{16}{subsection.3.5.6}%
+\contentsline {section}{\numberline {3.6}Results and Evaluation With Machine Learning }{17}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Random Forest}{17}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Bagging Classifier}{17}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Ensemble Learning}{18}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Gradient Boosting}{19}{subsection.3.6.4}%
+\contentsline {section}{\numberline {3.7}Results and Evaluation with K-fold Cross Validation }{21}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Comparison Sections}{22}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Deep Neural Model for Automated Sleep Staging System using Single-Channel EEG Signal}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Methodology}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Dataset Information}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Preprocessing Techniques}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Model Architecture and Learning Framework}{23}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Results and Evaluation}{23}{section.4.5}%
+\contentsline {chapter}{\numberline {5}SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Methodology}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dataset Information}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{24}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Results and Evaluation}{24}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Reference}{26}{chapter.7}%
