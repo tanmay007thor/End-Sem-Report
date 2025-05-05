@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Filter EEG Chanels}}{9}{figure.caption.5}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of Machine Learning Classifiers for Sleep Stage Classificatio}}{11}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of Machine Learning Classifiers for Sleep Stage Classificatio}}{12}{figure.caption.6}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Random Forest Confusion Matrix}}{14}{figure.caption.7}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Random Forest Accuracy Curve}}{15}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Random Forest Loss Curve}}{16}{figure.caption.9}%

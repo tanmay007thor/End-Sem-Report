@@ -16,10 +16,10 @@
 \contentsline {paragraph}{B. Data Preprocessing}{10}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Model Architecture and Learning Framework}{11}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Random Forest Classifier}{12}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Gradient Boosting Classifier with PCA}{12}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Ensemble Learning (Voting Classifier)}{12}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Results and Evaluation}{13}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Random Forest}{13}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.4.2}Gradient Boosting Classifier with PCA}{13}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Ensemble Learning (Voting Classifier)}{13}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Results and Evaluation}{14}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Random Forest}{14}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Bagging Classifier}{17}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Ensemble Learning}{21}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Gradient Boosting}{25}{subsection.3.5.4}%
