@@ -1,0 +1,250 @@
+\section*{Code}
+\begin{verbatim}
+import nibabel as nib
+import cv2
+import gc
+import os
+import numpy as np
+from glob import glob
+import tensorflow as tf
+from tqdm.auto import tqdm
+import keras.backend as K
+import matplotlib.pyplot as plt
+from Codes.Dataloader import *
+from Codes.Evalution_matrix import *
+from Codes.own_method import *
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+class UNET3D(tf.keras.Model):
+    def __init__(self, classes, dropout_rate=0.5, l2_reg=0.01):
+        super(UNET3D, self).__init__()
+        self.classes = classes
+        self.dropout_rate = dropout_rate
+        self.l2_reg = l2_reg
+
+    def conv3D(self, x, filters, filter_size, activation='relu'):
+        out = tf.keras.layers.Conv3D(
+            filters,
+            (filter_size, filter_size, filter_size),
+            padding="same",
+            kernel_regularizer=tf.keras.regularizers.l2(self.l2_reg)
+        )(x)
+        out = tf.keras.layers.BatchNormalization()(out)
+        out = tf.keras.layers.Activation('relu')(out)
+        out = tf.keras.layers.Dropout(self.dropout_rate)(out)
+        return out
+
+    def upsampling3D(self, x, filters, filter_size, stride=2, 
+    activation='relu'):
+        up_out = tf.keras.layers.Conv3DTranspose(
+            filters, (filter_size, filter_size, filter_size),
+            strides=(stride, stride, stride), padding='same'
+        )(x)
+        out = tf.keras.layers.BatchNormalization()(up_out)
+        return out
+
+    def concatenate(self, x1, x2):
+        concat = tf.keras.layers.concatenate([x1, x2])
+        return concat
+
+    def max_pool3D(self, x, filter_size, stride):
+        out = tf.keras.layers.MaxPooling3D(
+            (filter_size, filter_size, filter_size), strides=stride
+        )(x)
+        return out
+
+    def downconv(self, x, filters):
+        s1 = self.conv3D(x, filters, 3)
+        s2 = self.conv3D(s1, filters, 3)
+        return s1
+
+    def upconv(self, x, filters, skip_connection):
+        e1 = self.upsampling3D(x, filters, 2)
+        concat = self.concatenate(e1, skip_connection)
+        conv1 = self.conv3D(concat, filters, 3)
+        conv2 = self.conv3D(conv1, filters, 3)
+        return conv2
+
+    def call(self):
+        inputs = tf.keras.layers.Input(shape=(64, 64, 64, 1))
+        d1 = self.downconv(inputs, 32)
+        m1 = self.max_pool3D(d1, filter_size=2, stride=2)
+        d2 = self.downconv(m1, 64)
+        m2 = self.max_pool3D(d2, filter_size=2, stride=2)
+        d3 = self.downconv(m2, 128)
+        m3 = self.max_pool3D(d3, filter_size=2, stride=2)
+        d4 = self.downconv(m3, 256)
+        m4 = self.max_pool3D(d4, filter_size=2, stride=2)
+
+        bridge = self.conv3D(m4, 1024, 3, 1)
+        bridge = self.conv3D(bridge, 1024, 3, 1)
+
+        u1 = self.upconv(bridge, 256, d4)
+        u2 = self.upconv(u1, 128, d3)
+        u3 = self.upconv(u2, 64, d2)
+        u4 = self.upconv(u3, 32, d1)
+
+        logits = tf.keras.layers.Conv3D(self.classes, (1, 1, 1), 
+        padding="same")(u4)
+        logits = tf.nn.sigmoid(logits)
+
+        model = tf.keras.Model(inputs=[inputs], outputs=[bridge, logits])
+        return model
+
+unet1 = UNET3D(classes=1, dropout_rate=0.2, l2_reg=0.01)
+
+imgepath= "/kaggle/input/gbm-64/GBM/image"
+maskpath= "/kaggle/input/gbm-64/GBM/mask"
+
+images_file = os.listdir(imgepath)
+masks_file = os.listdir(maskpath)
+
+npy_images_path = [os.path.join(imgepath, img_file) for 
+img_file in images_file[:]]
+npy_masks_path = [os.path.join(maskpath,mas_file) for 
+mas_file in masks_file[:]]
+npy_images_path.sort()
+npy_masks_path.sort()
+
+metrics = [iou,dice_coef,precision,sensitivity,specificity]
+
+LR = 0.00001
+batch_size = 5
+epochs = 151
+
+data ={}
+data["original_data"] = mini_batches_(npy_images_path[:100],
+npy_masks_path[:100],batch_size)
+
+data["model"] = unet1.call()
+data["optimizer"] = tf.keras.optimizers.Adam(LR)
+
+test_data_gen = mini_batches_(npy_images_path[100:110], 
+npy_masks_path[100:110],batch_size)
+
+plot_dice_losses=[]
+plot_total_loss=[]
+plot_dice_co=[]
+
+past_model = None
+
+for epoch in range(epochs):
+    print(epoch+1,'/',epochs)
+    model = data['model']
+    optimizer = data["optimizer"]
+    # optimizer = optimizer
+    model.set_weights(data["model"].get_weights())
+
+
+    dice = []
+    pre = []
+    batch_loss = []
+    se = []
+    spe = []
+    io = []
+    dice_losses=[]
+    contrastive_losses=[]
+
+    for batch_idx, (images, masks) in enumerate(tqdm(data['original_data'])):
+        pro2, _ = data['model'](images)
+        with tf.GradientTape() as tape:
+            pro1 , logits = model(images)
+            loss_combined = tversky_loss(y_true=masks, y_pred=logits)
+
+            loss = loss_combined
+            batch_loss.append(loss)
+
+            dice_loss_value = dice_loss2(masks, logits)
+            contrastive_loss_value = contrastive_loss(prev=pro2, pres=pro1)
+
+            dice_losses.append(dice_loss_value)
+            contrastive_losses.append(contrastive_loss_value)
+
+            # metrics
+            dice.append(dice_coef(masks, logits))
+            pre.append(precision(masks, logits))
+            se.append(sensitivity(masks, logits))
+            spe.append(specificity(masks, logits))
+            io.append(iou(masks, logits))
+
+
+        grads = tape.gradient(loss, model.trainable_variables)
+        gradients, _ = tf.clip_by_global_norm(grads, clip_norm=1.0)
+        optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+
+    # local_weight_list.append(model.get_weights())
+    batch_loss = np.array(batch_loss).mean()
+    dice = np.array(dice).mean()
+    pre = np.array(pre).mean()
+    se = np.array(se).mean()
+    spe = np.array(spe).mean()
+    io = np.array(io).mean()
+
+    data['past_model'] = model
+    data['model'] = model
+
+    mean_dice_loss = np.mean(dice_losses)
+    mean_contrastive_loss = np.mean(contrastive_losses)
+    print("\nWeighted Combined Loss: {} | Dice Coeff: {}  |
+    \n\n Precision: {} Sensitivity: {} | 
+    \n\n Specificity: {} , IOU: {} |"
+    .format(batch_loss, dice, pre, se, spe, io))
+    
+    plot_dice_losses.append(mean_dice_loss)
+    plot_total_loss.append(batch_loss)
+    plot_dice_co.append(dice)
+
+    if epoch%10 == 0 and epoch != 0:
+        dice_test = []
+        pre_test = []
+        batch_loss_test=[]
+        se_test=[]
+        spe_test = []
+        io_test = []
+        model_test = data["model"]
+        for batch_idx, (images, masks) in enumerate(tqdm(test_data_gen)):
+            predictions, logits = model(images)
+
+            loss = dice_loss2(masks,logits)
+            batch_loss_test.append(loss)
+
+            dice_test.append(dice_coef(masks, logits))
+            pre_test.append(precision(masks, logits))
+            se_test.append(sensitivity(masks, logits))
+            spe_test.append(specificity(masks, logits))
+            io_test.append(iou(masks, logits))
+
+        batch_loss_test = np.array(batch_loss_test).mean()
+        dice_test = np.array(dice_test).mean()
+        pre_test =np.array(pre_test).mean()
+        se_test =  np.array(se_test).mean()
+        spe_test =  np.array(spe_test).mean()
+        io_test =  np.array(io_test).mean()
+        print("----------->Test<-----------")
+        print("Epoch: {} , Loss: {} , Dice Coeff: {}
+        \n\n, Precision: {} Sensitivity: {} 
+        \n\n Specificity: {} , IOU {}".format(epoch+1,batch_loss_test,dice_test,
+        pre_test,se_test,spe_test,io_test))
+        print("----------->Trining Conti<-----------")
+
+plt.figure(figsize=(10, 5))
+plt.plot(plot_dice_losses, label='Dice Loss', color='blue')
+plt.title('Dice Loss Over Epochs')
+plt.xlabel('Epochs')
+plt.ylabel('Dice Loss')
+plt.legend()
+plt.show()
+
+# Plot Weighted Combined Loss
+plt.figure(figsize=(10, 5))
+plt.plot(plot_total_loss, label='Weighted Combined Loss', color='red')
+plt.title('Weighted Combined Loss Over Epochs')
+plt.xlabel('Epochs')
+plt.ylabel('Weighted Combined Loss')
+plt.legend()
+plt.show()
+
+
+\end{verbatim}

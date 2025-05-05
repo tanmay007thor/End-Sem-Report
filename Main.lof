@@ -1,0 +1,21 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Sleep EDF Data Visulization}}{2}{figure.caption.5}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Proposed Architecture of GCN-Transformer Hybrid Approach}}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Graph Weight Visulization}}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Graph Convolution Neural Network}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Enter Caption}}{13}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Balanced class distribution across the test set.}}{20}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Accuracy Curve: Training vs Testing.}}{20}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Loss Curve: Training vs Testing.}}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Confusion Matrix showing model performance across sleep stages.}}{22}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Gradient 3D Surface: Training vs Validation Metrics.}}{23}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Precision Scores per Class.}}{23}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Recall Scores per Class.}}{24}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces F1 Scores per Class.}}{24}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Feature Importance Analysis for 4 Channels.}}{25}{figure.caption.23}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,243 @@
+\documentclass[12pt,a4paper]{report}
+% \bibliographystyle{abbrv}
+\usepackage{graphicx}
+\usepackage{tabularx,adjustbox}
+\usepackage{subfig}
+\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{tablefootnote}
+\usepackage{subcaption}
+\usepackage{adjustbox,makecell, cellspace}
+\usepackage{soul}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{float}
+\pagestyle{plain}
+\usepackage{siunitx}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algcompatible}
+\usepackage{multirow}
+\usepackage[acronym]{glossaries}
+\usepackage[labelsep=period]{caption}
+\captionsetup[table]{name=TABLE,labelsep=newline}
+\usepackage{booktabs,caption}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{environ}
+\NewEnviron{myequation}{%
+    \begin{equation}
+    \scalebox{1.1}{$\BODY$}
+    \end{equation}}
+\usepackage{tablefootnote}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{alphalph,array}
+\usepackage{subfig}
+\renewcommand\thesubfigure{\alphalph{\value{subfigure}}}
+\usepackage[fit]{truncate}
+\usepackage{fancyhdr}
+%\usepackage{apacite}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\fontsize{8}{8}\selectfont\itshape\nouppercase{\textcolor{internationalkleinblue}\leftmark}}
+\fancyfoot[R]{\fontsize{8}{8}\selectfont\itshape\nouppercase{\thepage}}
+\fancyfoot[C]{\fontsize{7}{7}\selectfont\itshape\nouppercase{\textcolor{internationalkleinblue}{SleepGCN-Transformer: A Hybrid Graph
+Convolutional and Transformer Network for Sleep
+Stage Classification
+}}}
+\fancyfoot[L]{\fontsize{8}{8}\selectfont\itshape\nouppercase{\textcolor{internationalkleinblue}{PDEU}}}
+\footrule{\footskip=1.7pt}
+\makeatletter
+\def\footrule{{\color{auburn}\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+		\hrule\@height 2pt\@width\headwidth\vskip 1pt
+		\hrule\@height\headrulewidth\@width\headwidth \footskip \dimexpr-\footrulewidth-0.5pt\relax}}
+\def\headrule{\color{auburn}{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+		\hrule\@height 2pt\@width\headwidth\vskip 1pt
+		\hrule\@height\headrulewidth\@width\headwidth \vskip\dimexpr-\headrulewidth-2pt\relax}}
+\makeatother 
+
+\usepackage{setspace}
+% \usepackage[round]{natbib}
+\usepackage[sort, numbers]{natbib}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+\usepackage{chngcntr}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{mathptmx}% Times Roman font
+\usepackage[scaled=.90]{helvet}
+\usepackage[toc,page]{appendix}
+\usepackage{subfig}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[acronym]{glossaries}
+\usepackage[toc,page]{appendix}
+\usepackage{xcolor,sectsty}
+\definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
+\definecolor{vividauburn}{rgb}{0.58, 0.15, 0.14}
+\definecolor{bole}{rgb}{0.47, 0.27, 0.23}
+\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
+\definecolor{midnightblue}{rgb}{0.1, 0.1, 0.44}
+\definecolor{internationalkleinblue}{rgb}{0.0, 0.18, 0.65}
+\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
+\definecolor{magicmint}{rgb}{0.67, 0.94, 0.82}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}
+\definecolor{LightCyan}{rgb}{0.80,1,1}
+\definecolor{amber}{rgb}{1.0, 0.88, 0.0}	
+\definecolor{Gray}{gray}{0.9}
+\definecolor{amethyst}{rgb}{0.6, 0.6, 0.8}
+\definecolor{inchworm}{rgb}{0.7, 0.93, 0.36}
+\definecolor{cherryblossompink}{rgb}{0.98, 0.8, 0.91}
+\definecolor{electriclime}{rgb}{0.8, 1.0, 0.0}
+\definecolor{lavenderblue}{rgb}{0.8, 0.8, 1.0}
+\definecolor{atomictangerine}{rgb}{1.0, 0.7, 0.0}
+\definecolor{atomictangerine1}{rgb}{1.0, 0.64, 0.26}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{LightCyan}{rgb}{0.80,1,1}
+\definecolor{amber}{rgb}{1.0, 0.88, 0.0}	
+\definecolor{Gray}{gray}{0.9}
+\definecolor{amethyst}{rgb}{0.6, 0.6, 0.8}
+\definecolor{lavendergray}{rgb}{0.77, 0.76, 0.82}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.90}
+\definecolor{amethyst}{rgb}{1, 0.4, 0.8}
+\definecolor{brilliantlavender}{rgb}{0.96, 0.73, 1.0}
+\definecolor{cadmiumyellow}{rgb}{1.0, 0.96, 0.0}
+\definecolor{chartreuse(web)}{rgb}{0.5, 1.0, 0.0}
+\definecolor{electricgreen}{rgb}{0.0, 1.0, 0.0}
+\definecolor{pear}{rgb}{0.82, 0.89, 0.19}
+\definecolor{bananamania}{rgb}{0.98, 0.91, 0.71}
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{celadon}{rgb}{0.67, 0.88, 0.69}
+\usepackage{caption}
+\DeclareCaptionFont{royalblue(traditional)}{\color{royalblue(traditional)}}
+\captionsetup[figure]{labelfont=royalblue(traditional),textfont=royalblue(traditional)}
+\captionsetup[table]{labelfont={color=midnightblue},font={color=midnightblue}}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\huge\bfseries\color{auburn}}
+{\chaptertitlename\ \thechapter}{15pt}{\Huge}
+\titleformat{\section}
+{\Large\bfseries\color{vividauburn}}
+{\thesection}{12pt}{}
+\subsectionfont{\color{bole}} 
+\usepackage{setspace}
+\doublespacing
+\usepackage{xpatch}
+\makeatletter
+
+\xpatchcmd{\@chapter}{%
+	\ifnum \c@secnumdepth >\m@ne
+	\refstepcounter{chapter}%
+	\typeout{\@chapapp\space\thechapter.}%
+	\addcontentsline{toc}{chapter}%
+	{\protect\numberline{\thechapter}#1}%
+	\else
+	\addcontentsline{toc}{chapter}{#1}%
+	\fi
+}{%
+\ifnum \c@secnumdepth >\m@ne
+\refstepcounter{chapter}%
+\typeout{\@chapapp\space\thechapter.}%
+\addcontentsline{toc}{chapter}%
+{\protect\numberline{\thechapter}\protect\parbox[t]{0.9\linewidth}{#2}}%
+\else
+\addcontentsline{toc}{chapter}{\protect\parbox[t]{0.9\linewidth}{#2}}%
+\fi
+\addtocontents{toc}{\protect\addvspace{0.5\baselineskip}}% Some spacing afterwards
+}{}{}
+
+\makeatother
+\usepackage{blindtext}
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+	\pagestyle{plain}\clearpage
+        \thispagestyle{empty}
+	\include{Title/title}
+
+         \pagestyle{plain}\clearpage
+        \thispagestyle{empty}
+	\include{Title/approval}
+      
+
+
+
+        \pagenumbering{roman}
+        \include{Title/acknowledgement}
+	\thispagestyle{empty}
+	\include{Title/dedication}
+	\clearpage\thispagestyle{empty}
+
+\clearpage\thispagestyle{empty}
+	\include{Title/declaration}
+        % \includepdf[pages={1}]{Charul 3rd.pdf}
+	\thispagestyle{empty}
+ 
+	\include{Title/abstract}
+	\thispagestyle{empty}
+	
+        \addcontentsline{toc}{chapter}{Contents}	\tableofcontents
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
+ 
+    
+	\cleardoublepage\pagenumbering{arabic}
+	\pagestyle{fancy}
+
+	\chapter[Introduction]{Introduction}
+	\label{chapter1}
+	\input{Chapters/introduction}
+	
+	\chapter[Literature Review]{Literature Review}
+	\label{chapter2}
+	\input{Chapters/Chapter2}
+	
+	\chapter[SleepGCN-Transformer Hybrid Graph Convolution and Transfomer Network Methodology]{SleepGCN-Transformer Hybrid Graph Convolution and Transfomer Network Methodology}
+	\label{chapter3}
+	\input{Chapters/chapter 3}
+
+        
+ 	\chapter[Results and Discussion]
+    {Results and Discussion}
+\input{Chapters/chapter4}
+	
+	\chapter[Conclusion]{Conclusion}
+	\pagestyle{plain}
+ \input{Title/conclusion}
+
+\chapter [Reference] {Reference}
+		\pagestyle{plain}
+	 \input{Chapters/reference}
+
+
+
+
+ 
+        \clearpage\thispagestyle{empty}
+\end{document}

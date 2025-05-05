@@ -1,0 +1,75 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $M\geq N$ and $M>T+N$\relax }}{34}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces $M\geq N$ and $M\leq T+N$\relax }}{35}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces $M< N$ \relax }}{36}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Convexity of cost function for the case $M>T+N$\relax }}{38}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Sensitivity analysis for cycle time $T$\relax }}{39}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Sensitivity analysis for total cost per unit time\relax }}{39}{figure.caption.9}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Concavity of profit function for $S=\$19.10$\relax }}{45}{figure.caption.10}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Concavity of profit function for $T=0.7085$ years\relax }}{45}{figure.caption.10}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Concavity of profit function for $u=\$8.13$\relax }}{45}{figure.caption.10}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Inventory level vs time (with and without investment in preservation technology)\relax }}{46}{figure.caption.11}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Deterioration rate versus preservation technology investment\relax }}{51}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces $M\geq N$ and $M>T+N$\relax }}{58}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces $M\geq N$ and $M\leq T+N$\relax }}{59}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces $M< N$ \relax }}{60}{figure.caption.15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Convexity of cost function with respect to cycle time $T$ for the case $M>T+N$\relax }}{61}{figure.caption.16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Convexity of cost function with respect to cycle time $T$ for the case $M<T+N$\relax }}{61}{figure.caption.16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sensitivity analysis for cycle time $T$\relax }}{63}{figure.caption.17}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Sensitivity analysis for total cost per unit time\relax }}{63}{figure.caption.18}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Total cost for both cases of example 1.\relax }}{69}{figure.caption.19}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Total cost for both cases of example 2.\relax }}{70}{figure.caption.20}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Total cost for both cases of example 3.\relax }}{70}{figure.caption.21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Concavity of profit function for S = \$10.37\relax }}{79}{figure.caption.22}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Concavity of profit function for $T$ = 0.0956 year\relax }}{80}{figure.caption.23}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Concavity of profit function for $E$ = 3.64 unit\relax }}{80}{figure.caption.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Concave nature of profit function for advance payment with $\beta _1=5$\relax }}{91}{figure.caption.25}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Concave nature of profit function for advance payment with $\beta _2=20$\relax }}{91}{figure.caption.26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Interest earned by the retailer when $T \leq M_i$\relax }}{103}{figure.caption.29}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Opportunity cost and Interest earned by the retailer when $T > M_i$\relax }}{104}{figure.caption.30}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Interest earned by the retailer when $T_w<T \leq M_i$\relax }}{108}{figure.caption.33}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Opportunity cost and Interest earned by the retailer when $ T>M_i$ and $T-T_w \leq M_i$\relax }}{109}{figure.caption.34}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Opportunity cost and Interest earned by the retailer when $ T>M_i$ and $M_i<T-T_w$\relax }}{110}{figure.caption.35}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Sensitivity analysis of inventory parameters with respect to cycle time\relax }}{119}{figure.caption.40}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Sensitivity analysis of inventory parameters with respect to joint profit\relax }}{119}{figure.caption.41}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Comparison of individual and joint profit for credit period offered is (15, 30, 45)\relax }}{120}{figure.caption.42}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Comparison of individual and joint profit for credit period offered is (20, 40, 60)\relax }}{120}{figure.caption.42}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Comparison of individual and joint profit for credit period offered is (30, 60, 90)\relax }}{121}{figure.caption.43}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Joint total profit of the supply chain.\relax }}{127}{figure.caption.46}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Joint total profit and individual profit for different number of shipment.\relax }}{128}{figure.caption.47}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Sensitivity analysis for cycle time.\relax }}{129}{figure.caption.48}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Sensitivity analysis for selling price\relax }}{129}{figure.caption.49}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Sensitivity analysis for joint total profit.\relax }}{130}{figure.caption.50}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces $M\geq N,~M>T+N$\relax }}{139}{figure.caption.53}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces $M\geq N,~M<T+N$\relax }}{139}{figure.caption.54}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces $M< N$\relax }}{140}{figure.caption.55}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Joint and individual cost\relax }}{140}{figure.caption.56}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Deterioration rate versus preservation technology investment\relax }}{145}{figure.caption.57}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Concavity of profit function for \(u = 68.26\$ \)\relax }}{158}{figure.caption.58}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Concavity of profit function for \(T = 0.5437\) years\relax }}{158}{figure.caption.59}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Concavity of profit function for \(N = 0.3054\) years\relax }}{159}{figure.caption.60}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Joint and individual profit\relax }}{159}{figure.caption.61}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Variation in cycle time $(T)$\relax }}{161}{figure.caption.62}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Variation in joint total profit\relax }}{161}{figure.caption.63}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Variation in preservation technology investment $(u)$\relax }}{162}{figure.caption.64}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Deterioration rate versus preservation technology investment\relax }}{162}{figure.caption.65}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Concavity $T$ and $N$\relax }}{176}{figure.caption.66}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Concavity for $S$ and $N$\relax }}{176}{figure.caption.66}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Concavity for $u$ and $N$\relax }}{177}{figure.caption.67}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Concavity for $S$ and $T$\relax }}{177}{figure.caption.68}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Concavity for $u$ and $T$\relax }}{178}{figure.caption.69}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Concavity for $u$ and $S$\relax }}{178}{figure.caption.69}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Joint and individual profit\relax }}{178}{figure.caption.69}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Variation in credit period offered to end customer ($N$)\relax }}{180}{figure.caption.71}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Variation in cycle time ($T$)\relax }}{181}{figure.caption.72}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Variation in unit selling price ($S$)\relax }}{182}{figure.caption.73}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Variation in preservation technology investment ($u$)\relax }}{183}{figure.caption.74}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Variation in joint total profit\relax }}{183}{figure.caption.74}

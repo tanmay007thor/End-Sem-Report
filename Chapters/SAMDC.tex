@@ -1,0 +1,118 @@
+\section{Data Pre-Processing}
+In the preliminary stage of preparing MRI images for the segmentation of brain tumors, the first action involves resizing the images to a uniform dimension of (128, 128, 128, 1). Subsequently, a sequence of filtering techniques is employed to enhance the clarity and detail of these resized MRI images. These filtering methods are classified into two primary domains: frequency domain filters and spatial domain filters. Frequency domain filters comprise the Homomorphic Filter, Gabor Filter, and Gaussian High Pass Filter, each tailored to manipulate the frequency characteristics of the images. On the other hand, spatial domain filters encompass techniques like Sharpen Filters and Median Filters, which operate directly on the spatial distribution of pixel intensities within the images. This multi-step preprocessing workflow aims to optimize the quality and suitability of the MRI data for subsequent tumor segmentation tasks.
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabularx}{\linewidth}{|X|X|X|X|X|}
+    \hline
+    &\textbf{Filter Name} & \textbf{Pratts Merit} & \textbf{Entropy} & \textbf{SSI} \\
+    \hline
+    \hline
+    \textbf{Frequency Domain }&Homomor-phic Filter & 8.692 & 18.000 & 0.145\\
+    \cline{2-5}
+    \textbf{}&Gabor Filter & 9.041 & 16.469 & 0.145\\
+    \cline{2-5}
+    \textbf{}&Gaussian High Pass Filter & 11.091 & 18.000 & 0.301 \\
+    \hline
+    \hline
+    \textbf{Spatial Domain Filters}&Sharpen Filter (Kernal Size 3) & 19.512 & 12.043 & 0.814\\
+    \cline{2-5}
+    \textbf{}&Sharpen Filter (Kernal Size 5) & 1.099 & 13.208 & 0.072\\
+    \cline{2-5}
+    &Median Filter (Kernal Size 5) & 28.683 & 11.324 & 0.873\\
+    \cline{2-5}
+    \textbf{}&Median Filter (Kernal Size 3) & \textbf{32.838} & \textbf{11.478} & \textbf{0.955}\\
+    \hline
+  \end{tabularx}
+  \caption{Filter Efficacy: A Performance Insight into Preprocessed images using Quality Metrics e.g. Pratts Merit, Entropy and Similarity stucture index(SSI).}
+  \label{tab:Filter Efficacy}
+\end{table}
+
+The table \ref{tab:Filter Efficacy} offers a thorough assessment of diverse image preprocessing filters, evaluating their efficacy across three fundamental parameters: Pratt's Merit, Entropy, and SSI (Structural Similarity Index). Specifically, the Homomorphic Filter demonstrates a Pratt's Merit value of 8.692, an Entropy of 18, and an SSI of 0.145. Similarly, the Gabor Filter closely follows with scores of 9.041, 16.469, and 0.145 for Pratt's Merit, Entropy, and SSI respectively. Additionally, the Gaussian High Pass Filter yields results of 11.091 for Pratt's Merit, 18.000 for Entropy, and 0.301 for SSI. In the spatial domain, the analysis encompasses Sharpen Filters with kernel sizes of 3 and 5, along with Median Filters of kernel sizes 3 and 5. The Sharpen Filter with a kernel size of 3 exhibits a Pratt's Merit of 19.512, Entropy of 12.043, and SSI of 0.814. Conversely, the Sharpen Filter with a kernel size of 5 performs relatively lower, recording values of 1.099, 13.208, and 0.072 for Pratt's Merit, Entropy, and SSI respectively. The Median Filter with a kernel size of 3 emerges as a standout performer, showcasing a noteworthy Pratt's Merit of 32.838, minimal Entropy of 11.478, and high SSI of 0.955. Similarly, the Median Filter with a kernel size of 5 delivers competitive outcomes with scores of 28.683, 11.324, and 0.873 for Pratt's Merit, Entropy, and SSI. Based on this analysis, the adoption of spatial filters, such as the Median Filter with a kernel size of 3, is preferred due to their resilience against noise. This attribute holds significant importance in the realm of processing medical images such as MRI scans, where noise mitigation is crucial for precise diagnosis and analysis. This efficacy is visually apparent in Figure \ref{Image: Preprocess compare filters}, where the employment of spatial filters noticeably enhances image quality by mitigating noise and enhancing image contrast.
+
+\begin{figure*}[!h]
+  \centering
+   \includegraphics[width=0.9\linewidth]{Images_4th/compare_filters.pdf}
+    \caption{Comparison of Various Image Preprocessing Filters: Illustration depicting the comparative effectiveness of diverse preprocessing filters, encompassing both spatial and frequency-based variants.}
+  \label{Image: Preprocess compare filters}
+\end{figure*}
+
+\section{Class-Enhanced Mahalanobis Distance Contrastive (CEMDC) Loss}\label{sec:samdcapproach}
+Our method strategically addresses the issue of imbalanced class distribution within datasets by employing a multifaceted approach. In addition to utilizing feature-based representations to enhance segmentation accuracy, we focus on effectively managing the inherent imbalance in class distribution through the incorporation of the Tversky loss (\(L_{Tversky}\)). This loss function proves particularly useful in scenarios where class sizes exhibit significant disparities. Moreover, we enhance the quality of feature representations by integrating the Mahalanobis distance-contrastive loss (\(L_{MDC}\)). By leveraging the Mahalanobis distance, we extract valuable contrastive information from the spread distribution of the data, thereby facilitating more discriminative and efficient segmentation outcomes. To strike a balance between mitigating class imbalance (as indicated by \(L_{Tversky}\)) and improving discriminative feature learning (as indicated by \(L_{MDC}\)), we introduce a hyperparameter \(\Delta\). This parameter dynamically adjusts inversely with respect to the Tversky loss value, ensuring adaptability and refined optimization throughout the process. Specifically, as the Tversky loss value increases, the values of \(\Delta\) decrease, and vice versa. This adaptable nature facilitates the formulation of our Class-Enhanced Mahalanobis Distance Contrast Loss (\(L_{CEMDC}\)), as expressed in Equation \ref{EQ: L_CEMDC}. Experimental validation conducted on diverse brain tumor datasets (refer to Table \ref{tab:CEMDC_Results}) demonstrates the significant improvement in generalization achieved through our integrated approach. The equilibrium achieved through this integration is succinctly captured in Equation \ref{EQ: L_CEMDC}.
+
+\begin{equation} \label{EQ: L_CEMDC}
+L_{\text{CEMDC}} = \Delta \times L_{\text{Tversky}} +  L_{\text{MDC}}
+\end{equation}
+
+\subsection{Tversky Loss}
+The Tversky loss, as delineated by Equation \ref{EQ: LTversky}, emerges as a fundamental cornerstone guiding the navigation through the intricacies of addressing imbalanced classes within segmentation tasks. Its essence lies in furnishing a comprehensive measure of the discrepancy between the ground truth annotations and the predictions generated by our segmentation model. This specialized loss function is meticulously tailored to confront and mitigate the inherent complexities stemming from uneven distributions across different classes.
+
+\begin{equation}
+\label{EQ: LTversky}
+L_{\text{Tversky}} = 1 - \frac{{TP + \epsilon}}{{TP + \alpha \times FP + \beta \times FN + \epsilon}}
+\end{equation}
+
+At its core, the Tversky loss embodies a strategic framework that endeavors to uphold equity in the treatment of true positives while delicately navigating the intricate balance between false positives and false negatives. To facilitate smoother optimization and convergence during training, the inclusion of the parameter \(\epsilon\) serves to introduce a smoothing mechanism, thus alleviating potential numerical instabilities. The variables \(TP\), \(FP\), and \(FN\) encapsulate the instances of true positives, false positives, and false negatives, respectively, offering a comprehensive lens through which to gauge the performance of our segmentation model.
+The dynamic interplay orchestrated by the adjustable parameters \(\alpha\) and \(\beta\) provides a nuanced means to fine-tune the model's sensitivity to false positives and negatives, thereby enhancing its adaptability across diverse datasets and segmentation scenarios. This meticulous calibration and steadfast commitment to harmonizing class imbalances underscore the robustness and reliability of our segmentation strategy, ensuring not only heightened precision but also steadfastness in the outcomes generated by our model.
+
+\subsection{Mahalanobis Distance-Contrastive (MDC) Loss}
+
+The Mahalanobis Distance-Contrastive (MDC) Loss technique is proposed with the aim of refining segmentation accuracy and enhancing the quality of feature representations. This methodology incorporates the Mahalanobis distance, a metric used to measure the dissimilarity between a specific point and a given distribution, in order to capture the inherent structure of the feature representation space. Additionally, a contrastive loss component is integrated, which serves to emphasize the learning of features by accentuating the differences between various classes. This strategic approach enables the model to effectively utilize the spread distribution of data, thereby resulting in more distinct feature representations and precise segmentation outcomes.
+
+Let's define \(x_c\) and \(x_p\) as multidimensional feature vectors representing the current and previous sample batch histories, respectively. This allows us to analyze sequential batch representations thoroughly, ensuring consistency in how features are portrayed and improving generalization capabilities across datasets. To make these vectors comparable, they are scaled along each dimension by their L2 norms, ensuring they are adjusted to a unit length. This normalization process effectively places the vectors on a unit hypersphere, enabling us to make directional relationship comparisons more easily. This normalization is crucial for calculating the Mahalanobis distance-based representation (\(D_M\)) (see Equation \ref{EQ: MD}) for both the previous and current sample batch feature vectors.
+
+The Mahalanobis distance serves as a measure of dissimilarity between a given sample batch and a distribution, taking into account both the mean (\(\mu\)) and covariance (\(\Sigma\)) of the distribution. By incorporating the inverse of the covariance matrix (\(\Sigma^{-1}\)), the distance metric is normalized to account for the spread and orientation of the feature distribution. This adjustment compensates for variations in scales and correlations among features, ensuring that each dimension contributes uniformly to the overall distance computation. Essentially, utilizing the inverse covariance matrix enhances the discriminative capability of the Mahalanobis distance metric by accommodating the distributional characteristics of the feature space.
+
+\begin{equation} \label{EQ: MD}
+D_M(x) = (x - \mu)^T \Sigma^{-1} (x - \mu) 
+\end{equation}
+
+To thoroughly examine differences within the feature representation space, we analyze both the typical characteristics and the interrelations among features, which are described respectively by the mean and covariance. This comprehensive assessment allows for a nuanced understanding of distinctions within the specific feature context, highlighting the Mahalanobis distance matrix as a crucial tool for identifying subtle variations in feature distributions. In the calculation of the contrastive loss, we employ the Mahalanobis Distance (\(D_M\)), where \(x\) denotes feature vectors for both the previous (\(x_p\)) and current (\(x_c\)) batches. The Mahalanobis Distance-Contrastive (MDC) Loss, as depicted in Equation \ref{EQ:MDC}, can be articulated as follows:
+
+\begin{equation} \label{EQ:MDC}
+\begin{aligned}
+L_{\text{MDC}} &= -\frac{1}{N} \sum_{i=1}^{N} \log\left(\exp\left(-\frac{D_M(x_p)}{\tau}\right) + \exp\left(-\frac{D_M(x_c)}{\tau}\right)\right) \\
+&\quad \times \text{lr}
+\end{aligned}
+\end{equation}
+
+\noindent Here, \(N\) represents the batch size, while \(D_M(x_p)\) and \(D_M(x_c)\) refer to the Mahalanobis distances for the previous and current batches, respectively. The temperature hyperparameter \(\tau\) regulates the steepness of the exponential function, thus affecting the computation of the contrastive loss. By considering both past and present batch representations, this loss function encourages the model to learn more discerning features while maintaining consistency and stability across batches. Additionally, the learning rate scaling factor \(\text{lr}\) adjusts the overall magnitude of the loss to effectively guide the optimization process. This formulation effectively leverages the discriminative power of the Mahalanobis Distance within the domain of contrastive learning, with the objective of refining the quality of feature representations and enhancing the model's learning process.
+
+\section{Model Intergration with CEMDC Loss}
+In the context of our model integration, we have opted for the utilization of a cutting-edge 3D U-Net architecture, which is widely acknowledged for its efficacy in handling tasks related to the segmentation of medical images. This particular architectural design is particularly adept at capturing spatial relationships and complex structures inherent in volumetric data, thus making it an optimal choice for our segmentation objectives. Moreover, to ensure a comprehensive understanding of our integrated methodology, we have devised a meticulously crafted flowchart that elucidates the architectural framework, as illustrated in Figure \ref{Image: CEMDC Architecture}. 
+
+\begin{figure}[!h]
+  \centering
+   \includegraphics[width=0.95\linewidth]{Images_4th/CEMDC_LOSS_Architecture.pdf}
+    \caption{A visual representation outlining the structure of our combined approach, which integrates the Class-Enhanced Mahalanobis Distance Contrast (CEMDC) model with the 3D-UNet model.}
+  \label{Image: CEMDC Architecture}
+\end{figure}
+
+This flowchart serves to delineate the sequential progression of steps entailed within our methodology, thereby facilitating a deeper comprehension of the inner workings of the model. In addition to the visual depiction, we have also furnished a detailed algorithm encapsulating the entire architectural process, as delineated in Algorithm \ref{Algo: CEMDFrame}. This algorithm meticulously outlines the procedural steps involved in our approach, ranging from model training to inference generation. By furnishing both a visual representation and a comprehensive algorithmic description, our aim is to offer a holistic perspective of our model integration process, thereby enabling researchers and practitioners to grasp the intricacies of the methodology and effectively replicate the results.
+
+\begin{algorithm}[h]
+\caption{CEMDC Loss Calculation During Model Training}
+\label{Algo: CEMDFrame}
+\begin{algorithmic}[1]
+\State \textbf{Input:} Number of epochs $E$, temperature $\tau$, learning rate $lr$, hyper-parameter $\Delta$, smoothness $\epsilon$ 
+\For{epoch $i = 1, 2, \dots, E$}
+    \For{each batch $b = \{x, y\}$ of $\mathcal{D}$}
+        \State $L_{Tversky} \leftarrow TverskyLoss(y,\hat{y})$
+        \State $\Delta \leftarrow \frac{1}{L_{Tversky}}$
+        \State $x_c \leftarrow R_{w^t}(x)$
+        \State $x_p \leftarrow R_{w^{t}}(x-1)$
+        \State $D_M(x_c) \leftarrow (x_c - \mu)^T \Sigma^{-1} (x_c - \mu) $
+        \State $D_M(x_p) \leftarrow (x_p - \mu)^T \Sigma^{-1} (x_p - \mu) $
+        \State $X_p \leftarrow \exp\left(-\frac{D_M(x_p)}{\tau}\right) $
+        \State $X_c \leftarrow \exp\left(-\frac{D_M(x_c)}{\tau}\right)$
+        \State $L_{\text{MDC}} \leftarrow -\frac{1}{N} \sum_{i=1}^{N} \log\left( X_p + X_c\right) \times \text{lr}$
+        \State $L_{\text{CEMDC}} \leftarrow \Delta \times L_{\text{Tversky}} + L_{\text{MDC}}$
+        
+        \State$w^t \leftarrow w^t - \eta \nabla L_{CEMDC}$
+    \EndFor
+\EndFor
+\State \Return $w^t$
+\end{algorithmic}
+\end{algorithm}
+
