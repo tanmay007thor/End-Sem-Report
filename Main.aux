@@ -92,23 +92,76 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter_paper2}{{4}{23}{Deep Neural Model for Automated Sleep Staging System using Single-Channel EEG Signal}{chapter.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Methodology}{23}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Dataset Information}{23}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Preprocessing Techniques}{23}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Model Architecture and Learning Framework}{23}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results and Evaluation}{23}{section.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{24}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Modeling Approach}{24}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Deep Neural Network (DNN)}{24}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Dataset Information}{24}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Preprocessing Techniques}{26}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Model Architecture and Learning Framework}{26}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Deep Neural Network (DNN)}{26}{section.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Architecture of the Deep Neural Network}}{27}{table.caption.14}\protected@file@percent }
+\newlabel{tab:nn_architecture}{{4.1}{27}{Architecture of the Deep Neural Network}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Forward Propagation}{27}{table.caption.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Backward Propagation}{28}{equation.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Activation Functions}{28}{equation.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Recurrent Neural Network (RNN)}{29}{equation.4.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Recurrent Neural Network Architecture for Sleep Stage Classification}}{30}{table.caption.15}\protected@file@percent }
+\newlabel{tab:rnn_architecture}{{4.2}{30}{Recurrent Neural Network Architecture for Sleep Stage Classification}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Long Short-Term Memory (LSTM)}{31}{equation.4.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces LSTM Neural Network Architecture for Sleep Stage Classification}}{31}{table.caption.16}\protected@file@percent }
+\newlabel{tab:lstm_architecture}{{4.3}{31}{LSTM Neural Network Architecture for Sleep Stage Classification}{table.caption.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Bidirectional Long Short-Term Memory (Bi-LSTM)}{33}{equation.4.15}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Bidirectional LSTM Neural Network Architecture for Sleep Stage Classification}}{34}{table.caption.17}\protected@file@percent }
+\newlabel{tab:bi_lstm_architecture}{{4.4}{34}{Bidirectional LSTM Neural Network Architecture for Sleep Stage Classification}{table.caption.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results and Evaluation}{35}{section.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}LSTM Model}{35}{subsection.4.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces LSTM Accuracy and Loss Plot}}{35}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:lstm_accuracy}{{4.1}{35}{LSTM Accuracy and Loss Plot}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces LSTM Confusion Matrix}}{35}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:lstm_cm}{{4.2}{35}{LSTM Confusion Matrix}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}RNN Model}{36}{subsection.4.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces RNN Accuracy Plot}}{36}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:rnn_accuracy}{{4.3}{36}{RNN Accuracy Plot}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces RNN Confusion Matrix}}{36}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:rnn_cm}{{4.4}{36}{RNN Confusion Matrix}{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}BiLSTM Model}{37}{subsection.4.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces BiLSTM Accuracy Plot}}{37}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:bilstm_accuracy}{{4.5}{37}{BiLSTM Accuracy Plot}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces BiLSTM Confusion Matrix}}{37}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:bilstm_cm}{{4.6}{37}{BiLSTM Confusion Matrix}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Neural Network (NN) Model}{38}{subsection.4.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Neural Network Accuracy Comparison}}{38}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:nn_accuracy}{{4.7}{38}{Neural Network Accuracy Comparison}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Neural Network Confusion Matrix}}{38}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:nn_cm}{{4.8}{38}{Neural Network Confusion Matrix}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Comparison of Results}{38}{section.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Comparison Plot}{39}{subsection.4.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Accuracy Comparison Plot}}{39}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:accuracy_comparison}{{4.9}{39}{Accuracy Comparison Plot}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Neural Network Comparison}{40}{subsection.4.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Neural Network Comparison}}{40}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:nn_comparison}{{4.10}{40}{Neural Network Comparison}{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Bi-LSTM Performance}{40}{subsection.4.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Bi-LSTM Accuracy Plot}}{41}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:bilstm_accuracy}{{4.11}{41}{Bi-LSTM Accuracy Plot}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}LSTM Performance}{41}{subsection.4.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces LSTM Accuracy and Loss Plot}}{42}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:lstm_accuracy}{{4.12}{42}{LSTM Accuracy and Loss Plot}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.5}RNN Performance}{42}{subsection.4.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces RNN Accuracy Plot}}{43}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:rnn_accuracy}{{4.13}{43}{RNN Accuracy Plot}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{44}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter_paper3}{{5}{24}{SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Methodology}{24}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Dataset Information}{24}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{24}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{24}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results and Evaluation}{24}{section.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}\protected@file@percent }
+\newlabel{chapter_paper3}{{5}{44}{SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Methodology}{44}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Dataset Information}{44}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Preprocessing Techniques}{44}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Model Architecture and Learning Framework}{44}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results and Evaluation}{44}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Reference}{26}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Reference}{46}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\gdef \@abspage@last{39}
+\gdef \@abspage@last{59}

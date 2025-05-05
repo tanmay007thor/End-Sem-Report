@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.5)  5 MAY 2025 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.5)  5 MAY 2025 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1102,7 +1102,7 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 \openout2 = `Title/title.aux'.
 
  (./Title/title.tex
-<img/pdpu_logo.png, id=177, 308.15125pt x 326.21875pt>
+<img/pdpu_logo.png, id=197, 308.15125pt x 326.21875pt>
 File: img/pdpu_logo.png Graphic file (type png)
 <use img/pdpu_logo.png>
 Package pdftex.def Info: img/pdpu_logo.png  used on input line 24.
@@ -1340,7 +1340,7 @@ Overfull \hbox (6.38481pt too wide) in paragraph at lines 222--222
 ]
 
 [8]
-<./img/paper_1/EEG_Filter_chanel.png, id=357, 579.66562pt x 614.295pt>
+<./img/paper_1/EEG_Filter_chanel.png, id=405, 579.66562pt x 614.295pt>
 File: ./img/paper_1/EEG_Filter_chanel.png Graphic file (type png)
 <use ./img/paper_1/EEG_Filter_chanel.png>
 Package pdftex.def Info: ./img/paper_1/EEG_Filter_chanel.png  used on input lin
@@ -1353,7 +1353,7 @@ e 24.
 [10]
 
 [11]
-<img/paper_1/Architechture1.png, id=371, 467.49657pt x 402.00188pt>
+<img/paper_1/Architechture1.png, id=419, 467.49657pt x 402.00188pt>
 File: img/paper_1/Architechture1.png Graphic file (type png)
 <use img/paper_1/Architechture1.png>
 Package pdftex.def Info: img/paper_1/Architechture1.png  used on input line 56.
@@ -1362,7 +1362,7 @@ Package pdftex.def Info: img/paper_1/Architechture1.png  used on input line 56.
 
 
 [12 <./img/paper_1/Architechture1.png (PNG copy)>]
-<img/paper_1/k-FOLD.PNG, id=377, 638.385pt x 744.7825pt>
+<img/paper_1/k-FOLD.PNG, id=425, 638.385pt x 744.7825pt>
 File: img/paper_1/k-FOLD.PNG Graphic file (type png)
 <use img/paper_1/k-FOLD.PNG>
 Package pdftex.def Info: img/paper_1/k-FOLD.PNG  used on input line 76.
@@ -1401,31 +1401,31 @@ m/m/n/12 ,
 
 
 [16]
-<img/paper_1/random_forest_confusion_matrix.png, id=395, 560.8152pt x 450.9648p
+<img/paper_1/random_forest_confusion_matrix.png, id=444, 560.8152pt x 450.9648p
 t>
 File: img/paper_1/random_forest_confusion_matrix.png Graphic file (type png)
 <use img/paper_1/random_forest_confusion_matrix.png>
 Package pdftex.def Info: img/paper_1/random_forest_confusion_matrix.png  used o
 n input line 148.
 (pdftex.def)             Requested size: 175.49881pt x 141.11882pt.
-<img/paper_1/accuracy_curve.png, id=396, 722.7pt x 505.89pt>
+<img/paper_1/accuracy_curve.png, id=445, 722.7pt x 505.89pt>
 File: img/paper_1/accuracy_curve.png Graphic file (type png)
 <use img/paper_1/accuracy_curve.png>
 Package pdftex.def Info: img/paper_1/accuracy_curve.png  used on input line 154
 .
 (pdftex.def)             Requested size: 175.49881pt x 122.84413pt.
-<img/paper_1/loss_curve.png, id=397, 722.7pt x 505.89pt>
+<img/paper_1/loss_curve.png, id=446, 722.7pt x 505.89pt>
 File: img/paper_1/loss_curve.png Graphic file (type png)
 <use img/paper_1/loss_curve.png>
 Package pdftex.def Info: img/paper_1/loss_curve.png  used on input line 162.
 (pdftex.def)             Requested size: 175.49881pt x 122.84413pt.
-<img/paper_1/precision_per_class.png, id=398, 722.7pt x 505.89pt>
+<img/paper_1/precision_per_class.png, id=447, 722.7pt x 505.89pt>
 File: img/paper_1/precision_per_class.png Graphic file (type png)
 <use img/paper_1/precision_per_class.png>
 Package pdftex.def Info: img/paper_1/precision_per_class.png  used on input lin
 e 168.
 (pdftex.def)             Requested size: 175.49881pt x 122.84413pt.
-<img/paper_1/BG_confusion_matrix.png, id=399, 722.7pt x 505.89pt>
+<img/paper_1/BG_confusion_matrix.png, id=448, 722.7pt x 505.89pt>
 File: img/paper_1/BG_confusion_matrix.png Graphic file (type png)
 <use img/paper_1/BG_confusion_matrix.png>
 Package pdftex.def Info: img/paper_1/BG_confusion_matrix.png  used on input lin
@@ -1450,7 +1450,7 @@ e 202.
 [17 <./img/paper_1/random_forest_confusion_matrix.png> <./img/paper_1/accuracy_
 curve.png> <./img/paper_1/loss_curve.png> <./img/paper_1/precision_per_class.pn
 g>]
-<img/paper_1//Ensemble_confusion_matrix.png, id=408, 578.16pt x 463.2507pt>
+<img/paper_1//Ensemble_confusion_matrix.png, id=457, 578.16pt x 463.2507pt>
 File: img/paper_1//Ensemble_confusion_matrix.png Graphic file (type png)
 <use img/paper_1//Ensemble_confusion_matrix.png>
 Package pdftex.def Info: img/paper_1//Ensemble_confusion_matrix.png  used on in
@@ -1461,13 +1461,13 @@ Underfull \hbox (badness 1062) in paragraph at lines 217--217
 [][]\OT1/ptm/m/n/12 Figure 3.12[][]. [][]|En-sem-ble Learn-ing
  []
 
-<img/paper_1//accuracy_curve.png, id=409, 722.7pt x 505.89pt>
+<img/paper_1//accuracy_curve.png, id=458, 722.7pt x 505.89pt>
 File: img/paper_1//accuracy_curve.png Graphic file (type png)
 <use img/paper_1//accuracy_curve.png>
 Package pdftex.def Info: img/paper_1//accuracy_curve.png  used on input line 22
 2.
 (pdftex.def)             Requested size: 175.49881pt x 122.84413pt.
-<img/paper_1//loss_curve.png, id=410, 722.7pt x 505.89pt>
+<img/paper_1//loss_curve.png, id=459, 722.7pt x 505.89pt>
 File: img/paper_1//loss_curve.png Graphic file (type png)
 <use img/paper_1//loss_curve.png>
 Package pdftex.def Info: img/paper_1//loss_curve.png  used on input line 230.
@@ -1477,7 +1477,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 231--231
 [][]\OT1/ptm/m/n/12 Figure 3.14[][]. [][]|En-sem-ble Learn-ing
  []
 
-<img/paper_1//precision_per_class.png, id=411, 722.7pt x 505.89pt>
+<img/paper_1//precision_per_class.png, id=460, 722.7pt x 505.89pt>
 File: img/paper_1//precision_per_class.png Graphic file (type png)
 <use img/paper_1//precision_per_class.png>
 Package pdftex.def Info: img/paper_1//precision_per_class.png  used on input li
@@ -1491,7 +1491,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 237--237
 
 
 [18 <./img/paper_1/BG_confusion_matrix.png>]
-<img/paper_1//confusion_matrix.png, id=418, 578.16pt x 463.2507pt>
+<img/paper_1//confusion_matrix.png, id=467, 578.16pt x 463.2507pt>
 File: img/paper_1//confusion_matrix.png Graphic file (type png)
 <use img/paper_1//confusion_matrix.png>
 Package pdftex.def Info: img/paper_1//confusion_matrix.png  used on input line 
@@ -1516,7 +1516,7 @@ ne 270.
 [19 <./img/paper_1//Ensemble_confusion_matrix.png> <./img/paper_1//accuracy_cur
 ve.png> <./img/paper_1//loss_curve.png> <./img/paper_1//precision_per_class.png
 >]
-<img/paper_1/Ensemble Learning_percentage_based.png, id=427, 433.62pt x 361.35p
+<img/paper_1/Ensemble Learning_percentage_based.png, id=476, 433.62pt x 361.35p
 t>
 File: img/paper_1/Ensemble Learning_percentage_based.png Graphic file (type png
 )
@@ -1529,19 +1529,19 @@ Underfull \hbox (badness 1062) in paragraph at lines 282--282
 [][]\OT1/ptm/m/n/12 Figure 3.20[][]. [][]|En-sem-ble Learn-ing
  []
 
-<img/paper_1/Random Forest_percentage_based.png, id=428, 433.62pt x 361.35pt>
+<img/paper_1/Random Forest_percentage_based.png, id=477, 433.62pt x 361.35pt>
 File: img/paper_1/Random Forest_percentage_based.png Graphic file (type png)
 <use img/paper_1/Random Forest_percentage_based.png>
 Package pdftex.def Info: img/paper_1/Random Forest_percentage_based.png  used o
 n input line 287.
 (pdftex.def)             Requested size: 175.49881pt x 146.25221pt.
-<img/paper_1/GB Classifier_percentage_based.png, id=429, 433.62pt x 361.35pt>
+<img/paper_1/GB Classifier_percentage_based.png, id=478, 433.62pt x 361.35pt>
 File: img/paper_1/GB Classifier_percentage_based.png Graphic file (type png)
 <use img/paper_1/GB Classifier_percentage_based.png>
 Package pdftex.def Info: img/paper_1/GB Classifier_percentage_based.png  used o
 n input line 295.
 (pdftex.def)             Requested size: 175.49881pt x 146.25221pt.
-<img/paper_1/SGD_percentage_based.png, id=430, 433.62pt x 361.35pt>
+<img/paper_1/SGD_percentage_based.png, id=479, 433.62pt x 361.35pt>
 File: img/paper_1/SGD_percentage_based.png Graphic file (type png)
 <use img/paper_1/SGD_percentage_based.png>
 Package pdftex.def Info: img/paper_1/SGD_percentage_based.png  used on input li
@@ -1550,25 +1550,25 @@ ne 301.
 
 
 [20 <./img/paper_1//confusion_matrix.png>]
-<img/paper_1/accuracy_comparison.png, id=436, 622.4856pt x 405.4347pt>
+<img/paper_1/accuracy_comparison.png, id=485, 622.4856pt x 405.4347pt>
 File: img/paper_1/accuracy_comparison.png Graphic file (type png)
 <use img/paper_1/accuracy_comparison.png>
 Package pdftex.def Info: img/paper_1/accuracy_comparison.png  used on input lin
 e 313.
 (pdftex.def)             Requested size: 175.49881pt x 114.30661pt.
-<img/paper_1/bar_chart_improved.png, id=437, 722.7pt x 433.62pt>
+<img/paper_1/bar_chart_improved.png, id=486, 722.7pt x 433.62pt>
 File: img/paper_1/bar_chart_improved.png Graphic file (type png)
 <use img/paper_1/bar_chart_improved.png>
 Package pdftex.def Info: img/paper_1/bar_chart_improved.png  used on input line
  319.
 (pdftex.def)             Requested size: 175.49881pt x 105.29497pt.
-<img/paper_1/box_plot_comparison.png, id=438, 631.158pt x 388.3308pt>
+<img/paper_1/box_plot_comparison.png, id=487, 631.158pt x 388.3308pt>
 File: img/paper_1/box_plot_comparison.png Graphic file (type png)
 <use img/paper_1/box_plot_comparison.png>
 Package pdftex.def Info: img/paper_1/box_plot_comparison.png  used on input lin
 e 327.
 (pdftex.def)             Requested size: 175.49881pt x 107.97342pt.
-<img/paper_1/violin_plot_improved.png, id=439, 1033.2201pt x 520.1031pt>
+<img/paper_1/violin_plot_improved.png, id=488, 1033.2201pt x 520.1031pt>
 File: img/paper_1/violin_plot_improved.png Graphic file (type png)
 <use img/paper_1/violin_plot_improved.png>
 Package pdftex.def Info: img/paper_1/violin_plot_improved.png  used on input li
@@ -1594,11 +1594,429 @@ Overfull \hbox (0.214pt too wide) in paragraph at lines 226--226
 \OT1/ptm/b/n/24.88 Stag-ing Sys-tem us-ing Single-Channel
  []
 
-(./Chapters/paper2.tex)
+(./Chapters/paper2.tex
 
 [23
 
 ]
+
+[24]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+4.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+[25]
+Overfull \hbox (6.01837pt too wide) in paragraph at lines 59--60
+[]\OT1/ptm/m/n/12 To im-prove gen-er-al-iza-tion and pre-vent over-fit-ting, dr
+opout lay-ers with a dropout
+ []
+
+
+
+[26]
+
+[27]
+
+[28]
+
+[29]
+
+[30]
+
+[31]
+
+[32]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[33]
+
+[34]
+<img/paper_2/lstm accuracy and loss plot.png, id=583, 1003.8303pt x 426.393pt>
+File: img/paper_2/lstm accuracy and loss plot.png Graphic file (type png)
+<use img/paper_2/lstm accuracy and loss plot.png>
+Package pdftex.def Info: img/paper_2/lstm accuracy and loss plot.png  used on i
+nput line 304.
+(pdftex.def)             Requested size: 331.50238pt x 140.80771pt.
+<img/paper_2/LSTM_cm.png, id=584, 578.16pt x 433.62pt>
+File: img/paper_2/LSTM_cm.png Graphic file (type png)
+<use img/paper_2/LSTM_cm.png>
+Package pdftex.def Info: img/paper_2/LSTM_cm.png  used on input line 311.
+(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
+<img/paper_2/Rnn Accuracy Plot.png, id=585, 1003.8303pt x 426.393pt>
+File: img/paper_2/Rnn Accuracy Plot.png Graphic file (type png)
+<use img/paper_2/Rnn Accuracy Plot.png>
+Package pdftex.def Info: img/paper_2/Rnn Accuracy Plot.png  used on input line 
+320.
+(pdftex.def)             Requested size: 331.50238pt x 140.80771pt.
+
+
+[35 <./img/paper_2/lstm accuracy and loss plot.png> <./img/paper_2/LSTM_cm.png>
+]
+<img/paper_2/RNN_cm.png, id=592, 578.16pt x 433.62pt>
+File: img/paper_2/RNN_cm.png Graphic file (type png)
+<use img/paper_2/RNN_cm.png>
+Package pdftex.def Info: img/paper_2/RNN_cm.png  used on input line 327.
+(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
+<img/paper_2/BILSTM Accuaracy Plot.png, id=593, 1003.8303pt x 426.393pt>
+File: img/paper_2/BILSTM Accuaracy Plot.png Graphic file (type png)
+<use img/paper_2/BILSTM Accuaracy Plot.png>
+Package pdftex.def Info: img/paper_2/BILSTM Accuaracy Plot.png  used on input l
+ine 336.
+(pdftex.def)             Requested size: 331.50238pt x 140.80771pt.
+
+
+[36 <./img/paper_2/Rnn Accuracy Plot.png> <./img/paper_2/RNN_cm.png>]
+<img/paper_2/BiLSTM_cm.png, id=601, 578.16pt x 433.62pt>
+File: img/paper_2/BiLSTM_cm.png Graphic file (type png)
+<use img/paper_2/BiLSTM_cm.png>
+Package pdftex.def Info: img/paper_2/BiLSTM_cm.png  used on input line 343.
+(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
+<img/paper_2/deeplearning.png, id=602, 1394.20876pt x 592.2125pt>
+File: img/paper_2/deeplearning.png Graphic file (type png)
+<use img/paper_2/deeplearning.png>
+Package pdftex.def Info: img/paper_2/deeplearning.png  used on input line 352.
+(pdftex.def)             Requested size: 331.50238pt x 140.80554pt.
+
+
+[37 <./img/paper_2/BILSTM Accuaracy Plot.png> <./img/paper_2/BiLSTM_cm.png>]
+<img/paper_2/NN_cm.png, id=609, 578.16pt x 433.62pt>
+File: img/paper_2/NN_cm.png Graphic file (type png)
+<use img/paper_2/NN_cm.png>
+Package pdftex.def Info: img/paper_2/NN_cm.png  used on input line 359.
+(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
+
+! Undefined control sequence.
+<argument> img 
+               /paper_2/Comparision Plot.png
+l.375 ...width]{\img/paper_2/Comparision Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> img 
+               /paper_2/Comparision Plot.png
+l.375 ...width]{\img/paper_2/Comparision Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<inserted text> img 
+                    /paper_2/Comparision Plot.png
+l.375 ...width]{\img/paper_2/Comparision Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> 
+LaTeX Warning: File `\img 
+                                   /paper_2/Comparision Plot.png' not found\...
+l.375 ...width]{\img/paper_2/Comparision Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `/paper_2/Comparision Plot.png' not found on input line 375
+.
+
+
+! Package pdftex.def Error: File `/paper_2/Comparision Plot.png' not found: usi
+ng draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.375 ...width]{\img/paper_2/Comparision Plot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[38 <./img/paper_2/deeplearning.png> <./img/paper_2/NN_cm.png>]
+! Undefined control sequence.
+<argument> img 
+               /paper_2/neural network comparison .png
+l.385 ...g/paper_2/neural network comparison .png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> img 
+               /paper_2/neural network comparison .png
+l.385 ...g/paper_2/neural network comparison .png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<inserted text> img 
+                    /paper_2/neural network comparison .png
+l.385 ...g/paper_2/neural network comparison .png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> 
+LaTeX Warning: File `\img 
+                                   /paper_2/neural network comparison .png' ...
+l.385 ...g/paper_2/neural network comparison .png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `/paper_2/neural network comparison .png' not found on inpu
+t line 385.
+
+
+! Package pdftex.def Error: File `/paper_2/neural network comparison .png' not 
+found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385 ...g/paper_2/neural network comparison .png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[39]
+! Undefined control sequence.
+<argument> img 
+               /paper_2/BILSTM Accuaracy Plot.png
+l.395 ...]{\img/paper_2/BILSTM Accuaracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> img 
+               /paper_2/BILSTM Accuaracy Plot.png
+l.395 ...]{\img/paper_2/BILSTM Accuaracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<inserted text> img 
+                    /paper_2/BILSTM Accuaracy Plot.png
+l.395 ...]{\img/paper_2/BILSTM Accuaracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> 
+LaTeX Warning: File `\img 
+                                   /paper_2/BILSTM Accuaracy Plot.png' not f...
+l.395 ...]{\img/paper_2/BILSTM Accuaracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `/paper_2/BILSTM Accuaracy Plot.png' not found on input lin
+e 395.
+
+
+! Package pdftex.def Error: File `/paper_2/BILSTM Accuaracy Plot.png' not found
+: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.395 ...]{\img/paper_2/BILSTM Accuaracy Plot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[40]
+! Undefined control sequence.
+<argument> img 
+               /paper_2/lstm accuracy and loss plot.png
+l.405 .../paper_2/lstm accuracy and loss plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> img 
+               /paper_2/lstm accuracy and loss plot.png
+l.405 .../paper_2/lstm accuracy and loss plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<inserted text> img 
+                    /paper_2/lstm accuracy and loss plot.png
+l.405 .../paper_2/lstm accuracy and loss plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> 
+LaTeX Warning: File `\img 
+                                   /paper_2/lstm accuracy and loss plot.png'...
+l.405 .../paper_2/lstm accuracy and loss plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `/paper_2/lstm accuracy and loss plot.png' not found on inp
+ut line 405.
+
+
+! Package pdftex.def Error: File `/paper_2/lstm accuracy and loss plot.png' not
+ found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.405 .../paper_2/lstm accuracy and loss plot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[41]
+! Undefined control sequence.
+<argument> img 
+               /paper_2/Rnn Accuracy Plot.png
+l.415 ...idth]{\img/paper_2/Rnn Accuracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> img 
+               /paper_2/Rnn Accuracy Plot.png
+l.415 ...idth]{\img/paper_2/Rnn Accuracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<inserted text> img 
+                    /paper_2/Rnn Accuracy Plot.png
+l.415 ...idth]{\img/paper_2/Rnn Accuracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> 
+LaTeX Warning: File `\img 
+                                   /paper_2/Rnn Accuracy Plot.png' not found...
+l.415 ...idth]{\img/paper_2/Rnn Accuracy Plot.png}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `/paper_2/Rnn Accuracy Plot.png' not found on input line 41
+5.
+
+
+! Package pdftex.def Error: File `/paper_2/Rnn Accuracy Plot.png' not found: us
+ing draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...idth]{\img/paper_2/Rnn Accuracy Plot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[42])
+
+[43]
 Chapter 5.
 
 Overfull \hbox (64.8503pt too wide) in paragraph at lines 230--230
@@ -1607,19 +2025,19 @@ Overfull \hbox (64.8503pt too wide) in paragraph at lines 230--230
 
 (./chapters/paper3.tex)
 
-[24
+[44
 
 ]
 Chapter 6.
 (./Title/conclusion.tex)
 
-[25
+[45
 
 ]
 Chapter 7.
 (./Chapters/reference.tex)
 
-[26
+[46
 
 ] (./Main.aux (./Title/title.aux) (./Title/approval.aux)
 (./Title/acknowledgement.aux) (./Title/dedication.aux) (./Title/declaration.aux
@@ -1632,38 +2050,37 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: CA117E13A43A34F263EEE3EB82307A39;8953.
+
+Package rerunfilecheck Warning: File `Main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Main.out':
+(rerunfilecheck)             Before: FE24C168A4DD279FD2E6221B7982B70D;9655
+(rerunfilecheck)             After:  94A90B79E92288C920923175E366F517;10599.
  ) 
 Here is how much of TeX's memory you used:
- 30479 strings out of 473190
- 602903 string characters out of 5715801
- 1039993 words of memory out of 5000000
- 53110 multiletter control sequences out of 15000+600000
- 585222 words of font info for 86 fonts, out of 8000000 for 9000
+ 30818 strings out of 473190
+ 613346 string characters out of 5715801
+ 1046570 words of memory out of 5000000
+ 53363 multiletter control sequences out of 15000+600000
+ 594279 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,13n,133p,2387b,1215s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.caption.16} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.15} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.14} has been referenced but does not
- exist, replaced by a fixed one
-
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (39 pages, 1590093 bytes).
+ 85i,20n,133p,2387b,1215s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2025/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on Main.pdf (59 pages, 2402026 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 424 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
- 447 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 740 PDF objects out of 1000 (max. 8388607)
+ 595 compressed objects within 6 object streams
+ 155 named destinations out of 1000 (max. 500000)
+ 527 words of extra memory for PDF output out of 10000 (max. 10000000)
 
