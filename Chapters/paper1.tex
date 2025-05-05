@@ -53,11 +53,22 @@ To address the class imbalance inherent in sleep stage data, the SMOTE (Syntheti
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{"img/paper_1/Architechture1"}
+	\includegraphics[width=0.9\linewidth]{"img/paper_1/Architechture1"}
 	\caption{Architecture of Machine Learning Classifiers for Sleep Stage
 		Classificatio}
 	\label{fig:architechture1}
 \end{figure}
+
+
+
+\section{K-Fold Cross-Validation}
+
+K-Fold Cross Validation  5-fold cross-validation approach was employed to evaluate the model's performance. The 5-fold cross-validation procedure divides the dataset into 5 equal subsets (or folds). In each iteration, the model is trained on 80\% of the data (four folds) and tested on the remaining 20\% (the fifth fold). This process is repeated 5 times, with each fold serving as the test set once, ensuring that each data point is tested exactly once.
+
+This approach provides a more reliable estimate of model performance by reducing the potential bias that can arise from using a single train-test split. The final performance of the model is obtained by averaging the results from each fold, offering a comprehensive evaluation of its ability to generalize to unseen data.
+
+The advantage of K-fold cross-validation lies in its ability to provide a more robust and generalized estimate of model performance by using different subsets for training and testing in each iteration. This process reduces the risk of overfitting and ensures that the model's evaluation is based on multiple different test sets.
+
 
 
 
@@ -86,33 +97,40 @@ To improve computational efficiency and potentially boost model accuracy, we int
 
 This section presents the results and evaluations for the models trained, including Random Forest, Bagging, Ensemble Learning, and Gradient Boosting. The following figures summarize the performance metrics for each model.
 
+
 \subsection{Random Forest}
 
 For the Random Forest model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/random_forest_confusion_matrix.png}
-	\caption{Random Forest Confusion Matrix}
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/random_forest_confusion_matrix.png}
+		\caption{Random Forest Confusion Matrix}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
+		\caption{Random Forest Accuracy Curve}
+	\end{minipage}
+	
+	\vspace{1em}
+	
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
+		\caption{Random Forest Loss Curve}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
+		\caption{Random Forest Precision Per Class}
+	\end{minipage}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
-	\caption{Random Forest Accuracy Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
-	\caption{Random Forest Loss Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
-	\caption{Random Forest Precision Per Class}
-\end{figure}
 
 \subsection{Bagging Classifier}
 
@@ -120,27 +138,33 @@ For the Bagging Classifier model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/BG_confusion_matrix.png}
-	\caption{Bagging Classifier Confusion Matrix}
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/BG_confusion_matrix.png}
+		\caption{Bagging Classifier Confusion Matrix}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
+		\caption{Bagging Classifier Accuracy Curve}
+	\end{minipage}
+	
+	\vspace{1em}
+	
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
+		\caption{Bagging Classifier Loss Curve}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
+		\caption{Bagging Classifier Precision Per Class}
+	\end{minipage}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
-	\caption{Bagging Classifier Accuracy Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
-	\caption{Bagging Classifier Loss Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
-	\caption{Bagging Classifier Precision Per Class}
-\end{figure}
 
 \subsection{Ensemble Learning}
 
@@ -148,27 +172,33 @@ For the Ensemble Learning model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//Ensemble_confusion_matrix.png}
-	\caption{Ensemble Learning Confusion Matrix}
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//Ensemble_confusion_matrix.png}
+		\caption{Ensemble Learning Confusion Matrix}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//accuracy_curve.png}
+		\caption{Ensemble Learning Accuracy Curve}
+	\end{minipage}
+	
+	\vspace{1em}
+	
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//loss_curve.png}
+		\caption{Ensemble Learning Loss Curve}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//precision_per_class.png}
+		\caption{Ensemble Learning Precision Per Class}
+	\end{minipage}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//accuracy_curve.png}
-	\caption{Ensemble Learning Accuracy Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//loss_curve.png}
-	\caption{Ensemble Learning Loss Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//precision_per_class.png}
-	\caption{Ensemble Learning Precision Per Class}
-\end{figure}
 
 \subsection{Gradient Boosting}
 
@@ -176,24 +206,29 @@ For the Gradient Boosting model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//confusion_matrix.png}
-	\caption{Gradient Boosting Confusion Matrix}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//accuracy_curve.png}
-	\caption{Gradient Boosting Accuracy Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//loss_curve.png}
-	\caption{Gradient Boosting Loss Curve}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/paper_1//precision_per_class.png}
-	\caption{Gradient Boosting Precision Per Class}
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//confusion_matrix.png}
+		\caption{Gradient Boosting Confusion Matrix}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//accuracy_curve.png}
+		\caption{Gradient Boosting Accuracy Curve}
+	\end{minipage}
+	
+	\vspace{1em}
+	
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//loss_curve.png}
+		\caption{Gradient Boosting Loss Curve}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1//precision_per_class.png}
+		\caption{Gradient Boosting Precision Per Class}
+	\end{minipage}
 \end{figure}
