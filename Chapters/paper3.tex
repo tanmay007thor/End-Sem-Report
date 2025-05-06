@@ -290,11 +290,7 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 
 
 
-
-
-
 \section{Results and Evaluation}
-
 
 \begin{center}
 	\begin{minipage}[t]{0.48\textwidth}
@@ -317,50 +313,8 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 		\end{align}
 	\end{minipage}
 \end{center}
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/loss plot}
-		\caption{Loss plot}
-		\label{fig:loss-plot}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/accuracy plot}
-		\caption{Accuracy plot}
-		\label{fig:accuracy-plot}
-	\end{minipage}
-\end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/3D acc loss plot}
-		\caption{3D Accuracy vs. Loss}
-		\label{fig:3d-acc-loss-plot}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/3d gradient}
-		\caption{3D Gradient visualization}
-		\label{fig:3d-gradient}
-	\end{minipage}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/sample distribution plot pdf}
-		\caption{Sample distribution}
-		\label{fig:sample-distribution-plot-pdf}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/auc vs roc curve}
-		\caption{AUC vs. ROC Curve}
-		\label{fig:auc-vs-roc-curve}
-	\end{minipage}
-\end{figure}
+The model demonstrates high performance in classifying the Wake and N3 sleep stages, achieving correct classification rates of 97.14\% and 97.94\%, respectively. In contrast, the N2 stage is accurately classified 88.3\% of the time, though it shows some confusion with neighboring N1 and REM stages. Misclassifications are more prominent for the N1 and REM stages, with the REM stage frequently misidentified as N1, exhibiting a 17.97\% confusion rate. These results indicate strong general performance by the model, though enhancements may be beneficial for improving distinction between the N1 and REM stages.
 
 \begin{figure}[htbp]
 	\centering
@@ -377,6 +331,66 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 	\end{minipage}
 \end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{img/paper_3/loss plot}
+		\caption{Loss plot}
+		\label{fig:loss-plot}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{img/paper_3/accuracy plot}
+		\caption{Accuracy plot}
+		\label{fig:accuracy-plot}
+	\end{minipage}
+\end{figure}
+
+The class weight distribution used during training is as follows: 0: 1.1923, 1: 5.8152, 2: 2.4719, 3: 4.8223, 4: 4.0506. These values reflect adjustments to counter class imbalance and ensure fairer learning across all sleep stages.
+
+The progression of model performance across selected epochs is summarized below:
+\begin{itemize}
+	\item Epoch 1: Train Loss = 0.1915, Train Accuracy = 82.91\%; Validation Loss = 0.2110, Validation Accuracy = 83.84\%
+	\item Epoch 2: Train Loss = 0.1695, Train Accuracy = 87.74\%; Validation Loss = 0.2168, Validation Accuracy = 69.46\%
+	\item Epoch 3: Train Loss = 0.1669, Train Accuracy = 88.15\%; Validation Loss = 0.1803, Validation Accuracy = 88.39\%
+	\item Epoch 4: Train Loss = 0.1659, Train Accuracy = 88.38\%; Validation Loss = 0.1534, Validation Accuracy = 91.83\%
+	\item Epoch 5: Train Loss = 0.1621, Train Accuracy = 89.45\%; Validation Loss = 0.1615, Validation Accuracy = 89.11\%
+	\item Epoch 10: Train Loss = 0.1533, Train Accuracy = 91.03\%; Validation Loss = 0.1471, Validation Accuracy = 91.16\%
+	\item Epoch 15: Train Loss = 0.1458, Train Accuracy = 92.59\%; Validation Loss = 0.1484, Validation Accuracy = 90.98\%
+	\item Epoch 20: Train Loss = 0.1413, Train Accuracy = 93.12\%; Validation Loss = 0.1390, Validation Accuracy = 93.04\%
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{img/paper_3/3D acc loss plot}
+		\caption{3D Accuracy vs. Loss}
+		\label{fig:3d-acc-loss-plot}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{img/paper_3/3d gradient}
+		\caption{3D Gradient visualization}
+		\label{fig:3d-gradient}
+	\end{minipage}
+\end{figure}
+
+The sample distribution plot reveals a nearly normal distribution of data across the various sleep stages, confirming a balanced dataset. For the test phase, approximately 1,050 samples were utilized, with 210 samples assigned to each class, ensuring equitable and unbiased performance evaluation.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{img/paper_3/sample distribution plot pdf}
+		\caption{Sample distribution}
+		\label{fig:sample-distribution-plot-pdf}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{img/paper_3/auc vs roc curve}
+		\caption{AUC vs. ROC Curve}
+		\label{fig:auc-vs-roc-curve}
+	\end{minipage}
+\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -398,6 +412,21 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 		\label{fig:recallplot}
 	\end{minipage}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

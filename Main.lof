@@ -48,27 +48,27 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Raw signal channels from the Sleep-EDF dataset}}{44}{figure.caption.29}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Preprocessed and filtered signal channels}}{44}{figure.caption.29}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Graph Dataset Creation}}{47}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Loss plot}}{53}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Accuracy plot}}{53}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces 3D Accuracy vs. Loss}}{54}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces 3D Gradient visualization}}{54}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Sample distribution}}{54}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces AUC vs. ROC Curve}}{54}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Confusion matrix (percentage)}}{54}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Confusion matrix (samples)}}{54}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces F1 Score}}{55}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Precision}}{55}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Recall}}{55}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Stage N1}}{55}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Stage N2}}{55}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Stage N3}}{55}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Stage REM}}{55}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Stage Wake}}{56}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces XAI Visualization}}{56}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Preprocessing (\(O(MN^3 + KEN + MN)\))}}{56}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Training Loop (\(O(T(LN + 2N^2D/10^4 + DC))\))}}{56}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces GCN Layers (\(O(LN)\))}}{57}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Transformer Encoder (\(O(N^2D)\))}}{57}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Evaluation Loop (\(O(E_{\text {val}}(LN + 2N^2D/10^4 + DC))\))}}{57}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Fully Connected Layer (\(O(DC)\))}}{57}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Confusion matrix (percentage)}}{54}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Confusion matrix (samples)}}{54}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Loss plot}}{54}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Accuracy plot}}{54}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces 3D Accuracy vs. Loss}}{56}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces 3D Gradient visualization}}{56}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Sample distribution}}{56}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces AUC vs. ROC Curve}}{56}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces F1 Score}}{56}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Precision}}{56}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Recall}}{56}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Stage N1}}{57}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Stage N2}}{57}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Stage N3}}{57}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Stage REM}}{57}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Stage Wake}}{57}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces XAI Visualization}}{57}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Preprocessing (\(O(MN^3 + KEN + MN)\))}}{58}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Training Loop (\(O(T(LN + 2N^2D/10^4 + DC))\))}}{58}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces GCN Layers (\(O(LN)\))}}{58}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Transformer Encoder (\(O(N^2D)\))}}{58}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Evaluation Loop (\(O(E_{\text {val}}(LN + 2N^2D/10^4 + DC))\))}}{59}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Fully Connected Layer (\(O(DC)\))}}{59}{figure.caption.42}%
 \addvspace {10\p@ }
