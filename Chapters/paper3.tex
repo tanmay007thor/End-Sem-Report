@@ -5,6 +5,17 @@
 
 The SleepGCN-Transformer is a hybrid deep learning framework designed for accurate sleep stage classification by combining the strengths of Graph Convolutional Networks (GCNs) and Transformer architectures. This model is trained on the Sleep-EDF dataset, utilizing four critical physiological signal channels: EEG Fpz-Cz, EEG Pz-Oz, EOG (horizontal), and submental EMG.
 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{"img/paper_3/hypnogram sleep stage transition"}
+	\caption{Hypnogram With Transition Heighlights }
+	\label{fig:hypnogram-sleep-stage-transition}
+\end{figure}
+
+
+
+
 In this architecture, GCNs are employed to capture spatial relationships between the multimodal input signals, while the Transformer encoder is tasked with modeling the temporal dependencies across time sequences. This dual approach ensures that both spatial and sequential dynamics are effectively learned.
 
 Experimental results confirm the effectiveness of the model, achieving an accuracy of 93.12\% on the training set and 93.04\% on the validation set. To address class imbalance—particularly the underrepresentation of certain sleep stages—the model incorporates Focal Loss, which emphasizes harder-to-classify samples during training.
@@ -19,6 +30,7 @@ Further analysis of feature importance revealed that the EMG and EEG Pz-Oz chann
 \end{figure}
 
 
+
 \section{Dataset and Implementation Environment}
 
 Our experiments were conducted using the publicly available Sleep-EDF dataset, which is widely utilized for sleep stage classification research. The dataset can be accessed at \url{https://physionet.org/content/sleep-edfx/1.0.0/}, and it includes EEG recordings labeled with corresponding sleep stages, enabling effective supervised learning.
@@ -30,7 +42,6 @@ For version control and collaborative development, we used GitHub to manage our 
 The source code of this research is licensed under the Apache License 2.0, which allows for open use and distribution. The license details are available at \url{http://www.apache.org/licenses/}.
 
 To support data processing, model training, and evaluation, we relied on several key Python libraries. The primary libraries and their versions used in our project include: NumPy 2.2.2, Pandas 2.2.3, Scikit-learn 1.6.1, SciPy 1.15.1, Matplotlib 3.10.0, Seaborn 0.13.2, PyTorch 2.6.0, Torch Geometric 2.6.1, NetworkX 3.4.2, and MNE 1.9.0. This software environment ensured a reliable, efficient, and reproducible workflow throughout our research.
-
 
 
 
@@ -81,13 +92,31 @@ Each sleep stage in the dataset was mapped to a simplified class label to consol
 	\end{tabular}
 \end{table}
 
-The preprocessing begins with reading the EDF recordings and assigning sleep labels based on the mapped classes. Subsequently, we applied a bandpass filter to isolate relevant frequency ranges. Specifically, the signal was filtered to retain only the 0.3–30 Hz band using the `firwin` filter design, effectively removing noise and irrelevant frequencies outside this band. Though not a standard approach, this customized filtering was found to be better suited to our specific dataset and classification task.
+The preprocessing begins with reading the EDF recordings and assigning sleep labels based on the mapped classes. Subsequently, we applied a bandpass filter to isolate relevant frequency ranges. Specifically, the signal was filtered to retain only the 0.3–30 Hz band using the firwin filter design, effectively removing noise and irrelevant frequencies outside this band. Though not a standard approach, this customized filtering was found to be better suited to our specific dataset and classification task.
 
 We then segmented the signals into fixed-length epochs of 30 seconds. The final preprocessed data was shaped into a three-dimensional format: $(X, 4, 3000)$, where $X$ is the number of epochs (samples), $4$ is the number of selected channels, and $3000$ corresponds to the number of time steps per epoch.
 
 \subsection{Filtering Method}
 
-The filtering was implemented using a windowed time-domain design via the `firwin` method. A Hamming window was employed, configured with a 0.0194 passband ripple and 53 dB stopband attenuation. The filter characteristics were as follows: lower passband edge at 0.30 Hz, lower transition bandwidth of 0.30 Hz (with a $-6$ dB cutoff at 0.15 Hz), upper passband edge at 30.00 Hz, and an upper transition bandwidth of 7.50 Hz (with a $-6$ dB cutoff at 33.75 Hz). These settings were carefully chosen to preserve the signal components relevant to sleep staging while minimizing noise.
+The filtering was implemented using a windowed time-domain design via the firwin method. A Hamming window was employed, configured with a 0.0194 passband ripple and 53 dB stopband attenuation. The filter characteristics were as follows: lower passband edge at 0.30 Hz, lower transition bandwidth of 0.30 Hz (with a $-6$ dB cutoff at 0.15 Hz), upper passband edge at 30.00 Hz, and an upper transition bandwidth of 7.50 Hz (with a $-6$ dB cutoff at 33.75 Hz). These settings were carefully chosen to preserve the signal components relevant to sleep staging while minimizing noise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -96,6 +125,14 @@ The filtering was implemented using a windowed time-domain design via the `firwi
 \section{Model Architecture and Learning Framework}
 
 To extract spatial features from the multi-channel data, we construct a graph using the four selected channels, where each channel acts as a node and the edges represent their interrelationships. These edges are weighted based on prior literature and empirical observations, assigning higher importance to EEG channels due to their strong influence on sleep stage detection. In contrast, connections involving EMG and EOG are assigned lower weights, as EOG shows weaker correlations. Although assigning self-loop weights is possible, we chose not to include them in this implementation.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{"img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Architechture"}
+	\caption{Proposed Architecture of the sleep GCN- Transformer Architecture}
+	\label{fig:graph-convolution-neural-network--sleepgcntransformer-architechture}
+\end{figure}
 
 The final dataset comprises 11,076 samples, structured as \texttt{Data(x=[3000, 4], edge\_index=[2, 12], edge\_attr=[12], y=[1])}. Here, \texttt{x} represents the time-series data with 3,000 time steps across 4 channels, \texttt{edge\_index} defines the graph connectivity, \texttt{edge\_attr} contains the edge weights, and \texttt{y} denotes the sleep stage label. This dataset is created using the \texttt{SleepEEGDataset} class and is designed to effectively model spatial dependencies across EEG, EMG, and EOG signals, thereby enhancing sleep stage classification performance.
 
@@ -218,56 +255,122 @@ The operations within the Transformer encoder are summarized using the following
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Training Pipeline}
 
-The training process for the SleepGCN-Transformer model is designed to handle class imbalance, prevent overfitting, and improve generalization. Below, we outline the training methodology using key equations:
+\textbf{Fully Connected Layer:}  
+The final stage of the model includes a linear transformation layer that maps a 256-dimensional input vector to 5 output logits, corresponding to the five target sleep stages. This transformation enables direct classification output.
 
-\textbf{Label Smoothing:} To reduce overconfidence in predictions and improve generalization, we apply label smoothing:
-\begin{equation}
-	y_{\text{smooth}} = y(1 - \epsilon) + \frac{\epsilon}{C}
-\end{equation}
+\subsubsection*{Why Focal Loss Instead of Standard Cross-Entropy?}
 
-\textbf{Combined Loss Function:} We incorporate both Focal Loss and smoothed labels:
-\begin{equation}
-	L = \alpha(1 - p)^\gamma (-y_{\text{smooth}} \log p)
-\end{equation}
+Standard cross-entropy loss treats all training samples equally, which can lead to a bias toward majority classes in imbalanced datasets. In such settings, the model tends to suppress the prediction of minority classes, resulting in poor generalization. Focal Loss addresses this by dynamically adjusting the contribution of each sample based on the confidence of its prediction. This mechanism reduces the influence of well-classified samples and increases the focus on harder, misclassified instances.
 
-\textbf{Focal Loss (for class imbalance):}
-\begin{equation}
-	FL(p_t) = -\alpha(1 - p_t)^\gamma \log(p_t)
-\end{equation}
+Focal Loss introduces two key parameters: the focusing parameter $\gamma$, which controls the down-weighting of easy examples, and the class weighting factor $\alpha$, which helps balance class frequencies during training. These features make Focal Loss particularly effective for classification tasks involving significant class imbalance.
 
-\textbf{Class Weight Computation:} Each class receives a weight based on its frequency:
-\begin{equation}
-	w_c = \frac{N}{\sqrt{K + 1}}
-\end{equation}
+\subsubsection*{Focal Loss Formulation}
 
-\textbf{AdamW Optimizer:} We update parameters using the AdamW optimization rule:
-\begin{equation}
-	\theta_{t+1} = \theta_t - \eta (\nabla\phi(\theta_t) + \lambda\theta_t)
-\end{equation}
+The Focal Loss is mathematically expressed as:
 
-\textbf{AdamW with Decoupled Weight Decay:}
-\begin{equation}
-	\theta_t' = \theta_t - \eta \nabla\phi(\theta_t)
-\end{equation}
-\begin{equation}
-	\theta_{t+1} = \theta_t' - \eta \lambda \theta_t
-\end{equation}
+\[
+FL(p_t) = -\alpha(1 - p_t)^{\gamma} \log(p_t)
+\]
 
-\textbf{Learning Rate Scheduling:} Cosine Annealing is used to adjust learning rates dynamically:
-\begin{equation}
-	\eta_t = \eta_{\min} + \frac{1}{2} (\eta_{\max} - \eta_{\min}) \left(1 + \cos\left(\frac{\pi T_{\text{cur}}}{T_{\text{max}}}\right)\right)
-\end{equation}
+Here, $p_t$ denotes the predicted probability for the target class, $\alpha$ is the balancing factor to compensate for class imbalance, and $\gamma$ adjusts the focus on misclassified examples.
 
-\textbf{Pipeline Summary:}
-\begin{itemize}
-	\item Load preprocessed EEG dataset for training and validation.
-	\item Compute class weights.
-	\item Apply label smoothing and Focal Loss.
-	\item Optimize with AdamW and update learning rate via cosine scheduler.
-	\item Monitor loss and accuracy metrics per epoch.
-\end{itemize}
+To enhance numerical stability and improve generalization, label smoothing is applied:
+
+\[
+y_{\text{smooth}} = y(1 - \epsilon) + \frac{\epsilon}{C}
+\]
+
+This prevents issues such as $\log(0)$ and ensures a more stable optimization process. The combined implementation of Focal Loss with label smoothing can be written in a PyTorch-like style as:
+
+\[
+L = \alpha(1 - p)^{\gamma} \left( - y_{\text{smooth}} \log(p) \right)
+\]
+
+\subsubsection*{Learning Rate Scheduling}
+
+The learning rate is a critical hyperparameter that governs the pace of model updates during training. A high learning rate may cause divergence, while a low learning rate can result in slow convergence or suboptimal local minima. Therefore, adaptive learning rate scheduling is essential for efficient training.
+
+CosineAnnealingLR is used as the scheduling strategy, as it provides a smooth and gradual reduction in the learning rate. It allows for large updates in the early stages of training and fine-tuning in later stages, thereby helping the model generalize better. The learning rate at each epoch $t$ is computed using the following cosine annealing formula:
+
+\[
+\eta_t = \eta_{\min} + \frac{1}{2} (\eta_{\max} - \eta_{\min}) \left( 1 + \cos \left( \frac{\pi T_{\text{cur}}}{T_{\text{max}}} \right) \right)
+\]
+
+In this equation, $\eta_t$ is the learning rate at epoch $t$, $\eta_{\min}$ and $\eta_{\max}$ are the minimum and maximum learning rates respectively, $T_{\text{cur}}$ is the current epoch, and $T_{\text{max}}$ is the total number of epochs.
+
+\subsubsection*{Training Methodology Overview}
+
+The training pipeline is encapsulated within a dedicated class named \texttt{SleepTrainer}, which manages model training, validation, and optimization. The training process begins with the computation of class weights to address data imbalance. The model is then trained using mini-batch gradient descent, where each batch is used to compute the loss and update the model parameters accordingly. Performance is periodically evaluated on a separate validation set, and the learning rate is adjusted dynamically using the scheduler.
+
+\subsubsection*{Hyperparameters Used}
+
+The training setup uses a batch size of 32 and an initial learning rate of 0.0003. The optimizer of choice is AdamW, with a weight decay of $1 \times 10^{-4}$ to prevent overfitting. Training is conducted for 20 epochs, and the CosineAnnealingLR scheduler is applied to adjust the learning rate over time. This configuration ensures smooth convergence and robust generalization.
+
+\subsubsection*{Handling Class Imbalance}
+
+EEG sleep stage data is inherently imbalanced, with some stages appearing far more frequently than others. To address this, class weights are computed and incorporated into the loss function. The weighting formula is given by:
+
+\[
+w_c = \left( \frac{\text{Total Samples}}{\text{Class Count} + 1} \right)^{0.5}
+\]
+
+This formulation ensures that less frequent classes receive proportionally higher weights, encouraging the model to give them more attention during training. These computed weights are then integrated directly into the Focal Loss function to balance the influence of each class.
+
+\subsubsection*{Testing Data Distribution Analysis}
+
+Balanced testing data is crucial for an unbiased evaluation of model performance. An imbalanced test set can lead to skewed metrics that do not accurately reflect the model’s generalization capabilities. In this pipeline, the testing data is curated to ensure an even distribution across all sleep stages.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -308,7 +411,7 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 		\begin{align}
 			\text{Macro Precision} &= \frac{1}{C} \sum_{i=1}^{C} \frac{TP_i}{TP_i + FP_i} \\
 			\text{Weighted Precision} &= \sum_{i=1}^{C} \frac{n_i}{N} \cdot \frac{TP_i}{TP_i + FP_i} \\
-			\mathcal{L}_{CE} &= -\sum_{i=1}^{C} y_i \log(\hat{y}_i) \\
+			\mathcal{L}{CE} &= -\sum{i=1}^{C} y_i \log(\hat{y}_i) \\
 			\mathcal{L}_{FL} &= -\alpha_t (1 - p_t)^\gamma \log(p_t)
 		\end{align}
 	\end{minipage}
@@ -349,16 +452,6 @@ The model demonstrates high performance in classifying the Wake and N3 sleep sta
 The class weight distribution used during training is as follows: 0: 1.1923, 1: 5.8152, 2: 2.4719, 3: 4.8223, 4: 4.0506. These values reflect adjustments to counter class imbalance and ensure fairer learning across all sleep stages.
 
 The progression of model performance across selected epochs is summarized below:
-\begin{itemize}
-	\item Epoch 1: Train Loss = 0.1915, Train Accuracy = 82.91\%; Validation Loss = 0.2110, Validation Accuracy = 83.84\%
-	\item Epoch 2: Train Loss = 0.1695, Train Accuracy = 87.74\%; Validation Loss = 0.2168, Validation Accuracy = 69.46\%
-	\item Epoch 3: Train Loss = 0.1669, Train Accuracy = 88.15\%; Validation Loss = 0.1803, Validation Accuracy = 88.39\%
-	\item Epoch 4: Train Loss = 0.1659, Train Accuracy = 88.38\%; Validation Loss = 0.1534, Validation Accuracy = 91.83\%
-	\item Epoch 5: Train Loss = 0.1621, Train Accuracy = 89.45\%; Validation Loss = 0.1615, Validation Accuracy = 89.11\%
-	\item Epoch 10: Train Loss = 0.1533, Train Accuracy = 91.03\%; Validation Loss = 0.1471, Validation Accuracy = 91.16\%
-	\item Epoch 15: Train Loss = 0.1458, Train Accuracy = 92.59\%; Validation Loss = 0.1484, Validation Accuracy = 90.98\%
-	\item Epoch 20: Train Loss = 0.1413, Train Accuracy = 93.12\%; Validation Loss = 0.1390, Validation Accuracy = 93.04\%
-\end{itemize}
 
 \begin{figure}[htbp]
 	\centering
@@ -367,13 +460,8 @@ The progression of model performance across selected epochs is summarized below:
 		\caption{3D Accuracy vs. Loss}
 		\label{fig:3d-acc-loss-plot}
 	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/3d gradient}
-		\caption{3D Gradient visualization}
-		\label{fig:3d-gradient}
-	\end{minipage}
 \end{figure}
+
 
 The sample distribution plot reveals a nearly normal distribution of data across the various sleep stages, confirming a balanced dataset. For the test phase, approximately 1,050 samples were utilized, with 210 samples assigned to each class, ensuring equitable and unbiased performance evaluation.
 
@@ -427,11 +515,30 @@ The sample distribution plot reveals a nearly normal distribution of data across
 
 
 
-
-
-
-
 \subsection{XAI Visualization with Heatmap and Plots}
+
+
+
+
+
+This section presents the distribution of sleep stage data, which approximates a normal distribution. The dataset is well-balanced, with an equal number of samples across all sleep stages. For testing purposes, approximately 1,050 samples were selected, ensuring that each sleep stage class contains around 210 samples. This balanced distribution supports a fair and unbiased evaluation of the model's performance.
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"img/paper_3/shap important"}
+	\caption{Bar plot illustrating EEG channel importance based on SHAP values. Higher SHAP values indicate greater influence on the model's sleep stage predictions.}
+	
+	\label{fig:shap-important}
+\end{figure}
+
+
+
+
+\subsubsection*{Interpretable Sleep Stage Classification: Hypnogram Transitions and Feature Importance using LIME and SHAP}
 
 \begin{figure}[H]
 	\centering
@@ -448,6 +555,12 @@ The sample distribution plot reveals a nearly normal distribution of data across
 	\end{minipage}
 \end{figure}
 
+
+
+
+To improve the interpretability of the sleep stage classification model, we employ Explainable AI (XAI) techniques. Initially, we analyze the hypnogram transition plot, which illustrates the temporal sequence of sleep stages. This visualization helps assess whether the model's predictions align with the natural and expected progression of sleep cycles.
+
+
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[b]{0.45\linewidth}
@@ -462,6 +575,13 @@ The sample distribution plot reveals a nearly normal distribution of data across
 		\label{fig:stage-rem}
 	\end{minipage}
 \end{figure}
+
+
+
+Subsequently, we utilize LIME (Local Interpretable Model-Agnostic Explanations) and SHAP (SHapley Additive exPlanations) to investigate feature importance. These tools provide both global and local explanations of the model's behavior. Specifically, they identify the EEG channels that significantly influence the model's decisions, offering insight into which features are most critical in sleep stage classification.
+
+
+
 
 \begin{figure}[htbp]
 	\centering
@@ -478,6 +598,8 @@ The sample distribution plot reveals a nearly normal distribution of data across
 	\end{minipage}
 \end{figure}
 
+
+By leveraging these interpretability techniques, we ensure that the model's predictions are not only accurate but also aligned with known physiological sleep dynamics, thereby enhancing trust and transparency in the model's outcomes.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.7)  6 MAY 2025 11:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.7)  6 MAY 2025 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1170,6 +1170,10 @@ LaTeX Warning: Label `fig:architechture1' multiply defined.
 LaTeX Warning: Label `fig:lstm_accuracy' multiply defined.
 
 
+LaTeX Warning: Label `fig:graph-convolution-neural-network--sleepgcntransformer
+-architechture' multiply defined.
+
+
 Package natbib Warning: Citation `han2024classification' multiply defined.
 
 
@@ -1289,7 +1293,7 @@ ers/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 \openout2 = `Title/title.aux'.
 
  (Title/title.tex
-<img/pdpu_logo.png, id=236, 308.15125pt x 326.21875pt>
+<img/pdpu_logo.png, id=248, 308.15125pt x 326.21875pt>
 File: img/pdpu_logo.png Graphic file (type png)
 <use img/pdpu_logo.png>
 Package pdftex.def Info: img/pdpu_logo.png  used on input line 24.
@@ -1417,11 +1421,11 @@ r Sleep Stage Clas-
 
 [8
 
-] [9])
+] [9] [10])
 \tf@lof=\write5
 \openout5 = `Main.lof'.
 
- [10] [11] (Main.lot)
+ [11] (Main.lot)
 \tf@lot=\write6
 \openout6 = `Main.lot'.
 
@@ -1493,7 +1497,7 @@ Overfull \hbox (6.38481pt too wide) in paragraph at lines 222--222
 (Chapters/paper1.tex [7
 
 ] [8]
-<./img/paper_1/EEG_Filter_chanel.png, id=516, 579.66562pt x 614.295pt>
+<./img/paper_1/EEG_Filter_chanel.png, id=536, 579.66562pt x 614.295pt>
 File: ./img/paper_1/EEG_Filter_chanel.png Graphic file (type png)
 <use ./img/paper_1/EEG_Filter_chanel.png>
 Package pdftex.def Info: ./img/paper_1/EEG_Filter_chanel.png  used on input lin
@@ -1501,14 +1505,14 @@ e 28.
 (pdftex.def)             Requested size: 155.99762pt x 165.3182pt.
  [9 <./img/paper_1/EEG_Filter_chanel.png>] [10]
 [11]
-<img/paper_1/Architechture1.png, id=531, 467.49657pt x 402.00188pt>
+<img/paper_1/Architechture1.png, id=551, 467.49657pt x 402.00188pt>
 File: img/paper_1/Architechture1.png Graphic file (type png)
 <use img/paper_1/Architechture1.png>
 Package pdftex.def Info: img/paper_1/Architechture1.png  used on input line 60.
 
 (pdftex.def)             Requested size: 350.99762pt x 301.83803pt.
  [12 <./img/paper_1/Architechture1.png (PNG copy)>]
-<img/paper_1/k-FOLD.PNG, id=536, 638.385pt x 744.7825pt>
+<img/paper_1/k-FOLD.PNG, id=556, 638.385pt x 744.7825pt>
 File: img/paper_1/k-FOLD.PNG Graphic file (type png)
 <use img/paper_1/k-FOLD.PNG>
 Package pdftex.def Info: img/paper_1/k-FOLD.PNG  used on input line 80.
@@ -1539,25 +1543,25 @@ m/m/n/12 ,
  []
 
 [16]
-<img/paper_1/random_forest_confusion_matrix.png, id=555, 560.8152pt x 450.9648p
+<img/paper_1/random_forest_confusion_matrix.png, id=575, 560.8152pt x 450.9648p
 t>
 File: img/paper_1/random_forest_confusion_matrix.png Graphic file (type png)
 <use img/paper_1/random_forest_confusion_matrix.png>
 Package pdftex.def Info: img/paper_1/random_forest_confusion_matrix.png  used o
 n input line 152.
 (pdftex.def)             Requested size: 187.19833pt x 150.52536pt.
-<img/paper_1/accuracy_curve.png, id=556, 722.7pt x 505.89pt>
+<img/paper_1/accuracy_curve.png, id=576, 722.7pt x 505.89pt>
 File: img/paper_1/accuracy_curve.png Graphic file (type png)
 <use img/paper_1/accuracy_curve.png>
 Package pdftex.def Info: img/paper_1/accuracy_curve.png  used on input line 158
 .
 (pdftex.def)             Requested size: 187.19833pt x 131.03426pt.
-<img/paper_1/loss_curve.png, id=557, 722.7pt x 505.89pt>
+<img/paper_1/loss_curve.png, id=577, 722.7pt x 505.89pt>
 File: img/paper_1/loss_curve.png Graphic file (type png)
 <use img/paper_1/loss_curve.png>
 Package pdftex.def Info: img/paper_1/loss_curve.png  used on input line 166.
 (pdftex.def)             Requested size: 187.19833pt x 131.03426pt.
-<img/paper_1/precision_per_class.png, id=558, 722.7pt x 505.89pt>
+<img/paper_1/precision_per_class.png, id=578, 722.7pt x 505.89pt>
 File: img/paper_1/precision_per_class.png Graphic file (type png)
 <use img/paper_1/precision_per_class.png>
 Package pdftex.def Info: img/paper_1/precision_per_class.png  used on input lin
@@ -1566,7 +1570,7 @@ e 172.
  [17 <./img/paper_1/random_forest_confusion_matrix.png> <./img/paper_1/accuracy
 _curve.png> <./img/paper_1/loss_curve.png> <./img/paper_1/precision_per_class.p
 ng>]
-<img/paper_1/BG_confusion_matrix.png, id=567, 722.7pt x 505.89pt>
+<img/paper_1/BG_confusion_matrix.png, id=587, 722.7pt x 505.89pt>
 File: img/paper_1/BG_confusion_matrix.png Graphic file (type png)
 <use img/paper_1/BG_confusion_matrix.png>
 Package pdftex.def Info: img/paper_1/BG_confusion_matrix.png  used on input lin
@@ -1586,7 +1590,7 @@ File: img/paper_1/precision_per_class.png Graphic file (type png)
 Package pdftex.def Info: img/paper_1/precision_per_class.png  used on input lin
 e 207.
 (pdftex.def)             Requested size: 187.19833pt x 131.03426pt.
-<img/paper_1/Ensemble_confusion_matrix.png, id=568, 578.16pt x 463.2507pt>
+<img/paper_1/Ensemble_confusion_matrix.png, id=588, 578.16pt x 463.2507pt>
 File: img/paper_1/Ensemble_confusion_matrix.png Graphic file (type png)
 <use img/paper_1/Ensemble_confusion_matrix.png>
 Package pdftex.def Info: img/paper_1/Ensemble_confusion_matrix.png  used on inp
@@ -1607,7 +1611,7 @@ Package pdftex.def Info: img/paper_1/precision_per_class.png  used on input lin
 e 243.
 (pdftex.def)             Requested size: 187.19833pt x 131.03426pt.
  [18 <./img/paper_1/BG_confusion_matrix.png>]
-<img/paper_1/confusion_matrix.png, id=574, 578.16pt x 463.2507pt>
+<img/paper_1/confusion_matrix.png, id=594, 578.16pt x 463.2507pt>
 File: img/paper_1/confusion_matrix.png Graphic file (type png)
 <use img/paper_1/confusion_matrix.png>
 Package pdftex.def Info: img/paper_1/confusion_matrix.png  used on input line 2
@@ -1631,7 +1635,7 @@ e 280.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/paper_1/Ensemble Learning_percentage_based.png, id=580, 433.62pt x 361.35p
+<img/paper_1/Ensemble Learning_percentage_based.png, id=600, 433.62pt x 361.35p
 t>
 File: img/paper_1/Ensemble Learning_percentage_based.png Graphic file (type png
 )
@@ -1644,7 +1648,7 @@ Underfull \hbox (badness 4279) in paragraph at lines 311--311
 [][]\OT1/ptm/m/n/12 Figure 3.20[][]. [][]|En-sem-ble Learn-ing
  []
 
-<img/paper_1/Random Forest_percentage_based.png, id=581, 433.62pt x 361.35pt>
+<img/paper_1/Random Forest_percentage_based.png, id=601, 433.62pt x 361.35pt>
 File: img/paper_1/Random Forest_percentage_based.png Graphic file (type png)
 <use img/paper_1/Random Forest_percentage_based.png>
 Package pdftex.def Info: img/paper_1/Random Forest_percentage_based.png  used o
@@ -1662,7 +1666,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--317
 
 [20 <./img/paper_1/confusion_matrix.png>] [21 <./img/paper_1/Ensemble Learning_
 percentage_based.png> <./img/paper_1/Random Forest_percentage_based.png>]
-<img/paper_1/GB Classifier_percentage_based.png, id=593, 433.62pt x 361.35pt>
+<img/paper_1/GB Classifier_percentage_based.png, id=613, 433.62pt x 361.35pt>
 File: img/paper_1/GB Classifier_percentage_based.png Graphic file (type png)
 <use img/paper_1/GB Classifier_percentage_based.png>
 Package pdftex.def Info: img/paper_1/GB Classifier_percentage_based.png  used o
@@ -1673,13 +1677,13 @@ Underfull \hbox (badness 6825) in paragraph at lines 332--332
 [][]\OT1/ptm/m/n/12 Figure 3.22[][]. [][]|Gra-di-ent Boost-ing
  []
 
-<img/paper_1/SGD_percentage_based.png, id=594, 433.62pt x 361.35pt>
+<img/paper_1/SGD_percentage_based.png, id=614, 433.62pt x 361.35pt>
 File: img/paper_1/SGD_percentage_based.png Graphic file (type png)
 <use img/paper_1/SGD_percentage_based.png>
 Package pdftex.def Info: img/paper_1/SGD_percentage_based.png  used on input li
 ne 337.
 (pdftex.def)             Requested size: 187.19833pt x 156.00052pt.
-<img/paper_1/bar plot.png, id=595, 1793.9522pt x 578.16pt>
+<img/paper_1/bar plot.png, id=615, 1793.9522pt x 578.16pt>
 File: img/paper_1/bar plot.png Graphic file (type png)
 <use img/paper_1/bar plot.png>
 Package pdftex.def Info: img/paper_1/bar plot.png  used on input line 385.
@@ -1700,114 +1704,125 @@ Overfull \hbox (0.214pt too wide) in paragraph at lines 226--226
 (Chapters/paper2.tex [24
 
 ]
-<img/paper_2/sleep event.PNG, id=613, 630.355pt x 433.62pt>
+<img/paper_2/sleep event.PNG, id=633, 630.355pt x 433.62pt>
 File: img/paper_2/sleep event.PNG Graphic file (type png)
 <use img/paper_2/sleep event.PNG>
-Package pdftex.def Info: img/paper_2/sleep event.PNG  used on input line 15.
-(pdftex.def)             Requested size: 272.99881pt x 187.79611pt.
+Package pdftex.def Info: img/paper_2/sleep event.PNG  used on input line 14.
+(pdftex.def)             Requested size: 234.00238pt x 160.9662pt.
  [25 <./img/paper_2/sleep event.PNG>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-3.
+2.
 
 (C:\Users\Tanmay Rathod\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.f
 d
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [26] [27]
-Overfull \hbox (6.01837pt too wide) in paragraph at lines 68--69
+Overfull \hbox (6.01837pt too wide) in paragraph at lines 70--71
 []\OT1/ptm/m/n/12 To im-prove gen-er-al-iza-tion and pre-vent over-fit-ting, dr
 opout lay-ers with a dropout
  []
 
 [28] [29] [30] [31] [32] [33] [34] [35]
-<img/paper_2/lstm accuracy and loss plot.png, id=682, 1003.8303pt x 426.393pt>
+<img/paper_2/deeplearning.png, id=702, 1394.20876pt x 592.2125pt>
+File: img/paper_2/deeplearning.png Graphic file (type png)
+<use img/paper_2/deeplearning.png>
+Package pdftex.def Info: img/paper_2/deeplearning.png  used on input line 323.
+(pdftex.def)             Requested size: 257.40143pt x 109.33168pt.
+<img/paper_2/NN_cm.png, id=703, 578.16pt x 433.62pt>
+File: img/paper_2/NN_cm.png Graphic file (type png)
+<use img/paper_2/NN_cm.png>
+Package pdftex.def Info: img/paper_2/NN_cm.png  used on input line 330.
+(pdftex.def)             Requested size: 128.70071pt x 96.5215pt.
+<img/paper_2/lstm accuracy and loss plot.png, id=704, 1003.8303pt x 426.393pt>
 File: img/paper_2/lstm accuracy and loss plot.png Graphic file (type png)
 <use img/paper_2/lstm accuracy and loss plot.png>
 Package pdftex.def Info: img/paper_2/lstm accuracy and loss plot.png  used on i
-nput line 313.
-(pdftex.def)             Requested size: 331.50238pt x 140.80771pt.
- [36]
-<img/paper_2/LSTM_cm.png, id=690, 578.16pt x 433.62pt>
+nput line 343.
+(pdftex.def)             Requested size: 257.40143pt x 109.3306pt.
+<img/paper_2/LSTM_cm.png, id=705, 578.16pt x 433.62pt>
 File: img/paper_2/LSTM_cm.png Graphic file (type png)
 <use img/paper_2/LSTM_cm.png>
-Package pdftex.def Info: img/paper_2/LSTM_cm.png  used on input line 320.
-(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
-<img/paper_2/Rnn Accuracy Plot.png, id=691, 1003.8303pt x 426.393pt>
+Package pdftex.def Info: img/paper_2/LSTM_cm.png  used on input line 350.
+(pdftex.def)             Requested size: 124.80286pt x 93.597pt.
+ [36 <./img/paper_2/deeplearning.png> <./img/paper_2/NN_cm.png>]
+<img/paper_2/Rnn Accuracy Plot.png, id=714, 1003.8303pt x 426.393pt>
 File: img/paper_2/Rnn Accuracy Plot.png Graphic file (type png)
 <use img/paper_2/Rnn Accuracy Plot.png>
 Package pdftex.def Info: img/paper_2/Rnn Accuracy Plot.png  used on input line 
-329.
-(pdftex.def)             Requested size: 331.50238pt x 140.80771pt.
- [37 <./img/paper_2/lstm accuracy and loss plot.png> <./img/paper_2/LSTM_cm.png
->]
-<img/paper_2/RNN_cm.png, id=698, 578.16pt x 433.62pt>
+363.
+(pdftex.def)             Requested size: 257.40143pt x 109.3306pt.
+<img/paper_2/RNN_cm.png, id=715, 578.16pt x 433.62pt>
 File: img/paper_2/RNN_cm.png Graphic file (type png)
 <use img/paper_2/RNN_cm.png>
-Package pdftex.def Info: img/paper_2/RNN_cm.png  used on input line 336.
-(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
-<img/paper_2/BILSTM Accuaracy Plot.png, id=699, 1003.8303pt x 426.393pt>
+Package pdftex.def Info: img/paper_2/RNN_cm.png  used on input line 370.
+(pdftex.def)             Requested size: 124.80286pt x 93.597pt.
+<img/paper_2/BILSTM Accuaracy Plot.png, id=716, 1003.8303pt x 426.393pt>
 File: img/paper_2/BILSTM Accuaracy Plot.png Graphic file (type png)
 <use img/paper_2/BILSTM Accuaracy Plot.png>
 Package pdftex.def Info: img/paper_2/BILSTM Accuaracy Plot.png  used on input l
-ine 345.
-(pdftex.def)             Requested size: 331.50238pt x 140.80771pt.
- [38 <./img/paper_2/Rnn Accuracy Plot.png> <./img/paper_2/RNN_cm.png>]
-<img/paper_2/BiLSTM_cm.png, id=706, 578.16pt x 433.62pt>
+ine 383.
+(pdftex.def)             Requested size: 257.40143pt x 109.3306pt.
+<img/paper_2/BiLSTM_cm.png, id=717, 578.16pt x 433.62pt>
 File: img/paper_2/BiLSTM_cm.png Graphic file (type png)
 <use img/paper_2/BiLSTM_cm.png>
-Package pdftex.def Info: img/paper_2/BiLSTM_cm.png  used on input line 352.
-(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
-<img/paper_2/deeplearning.png, id=707, 1394.20876pt x 592.2125pt>
-File: img/paper_2/deeplearning.png Graphic file (type png)
-<use img/paper_2/deeplearning.png>
-Package pdftex.def Info: img/paper_2/deeplearning.png  used on input line 361.
-(pdftex.def)             Requested size: 331.50238pt x 140.80554pt.
- [39 <./img/paper_2/BILSTM Accuaracy Plot.png> <./img/paper_2/BiLSTM_cm.png>]
-<img/paper_2/NN_cm.png, id=714, 578.16pt x 433.62pt>
-File: img/paper_2/NN_cm.png Graphic file (type png)
-<use img/paper_2/NN_cm.png>
-Package pdftex.def Info: img/paper_2/NN_cm.png  used on input line 368.
-(pdftex.def)             Requested size: 234.00238pt x 175.49603pt.
-<img/paper_2/Comparision Plot.png, id=715, 855.6768pt x 566.5968pt>
+Package pdftex.def Info: img/paper_2/BiLSTM_cm.png  used on input line 390.
+(pdftex.def)             Requested size: 124.80286pt x 93.597pt.
+ [37 <./img/paper_2/lstm accuracy and loss plot.png> <./img/paper_2/LSTM_cm.png
+> <./img/paper_2/Rnn Accuracy Plot.png> <./img/paper_2/RNN_cm.png> <./img/paper
+_2/BILSTM Accuaracy Plot.png> <./img/paper_2/BiLSTM_cm.png>]
+Overfull \hbox (29.40996pt too wide) in paragraph at lines 412--426
+ [][] 
+ []
+
+[38]
+<img/paper_2/Comparision Plot.png, id=732, 855.6768pt x 566.5968pt>
 File: img/paper_2/Comparision Plot.png Graphic file (type png)
 <use img/paper_2/Comparision Plot.png>
-Package pdftex.def Info: img/paper_2/Comparision Plot.png  used on input line 3
-84.
+Package pdftex.def Info: img/paper_2/Comparision Plot.png  used on input line 4
+52.
 (pdftex.def)             Requested size: 187.19833pt x 123.95139pt.
-<img/paper_2/BILSTM.png, id=716, 711.1368pt x 422.0568pt>
+<img/paper_2/BILSTM.png, id=733, 711.1368pt x 422.0568pt>
 File: img/paper_2/BILSTM.png Graphic file (type png)
 <use img/paper_2/BILSTM.png>
-Package pdftex.def Info: img/paper_2/BILSTM.png  used on input line 391.
+Package pdftex.def Info: img/paper_2/BILSTM.png  used on input line 459.
 (pdftex.def)             Requested size: 187.19833pt x 111.09746pt.
-<img/paper_2/LSTM.png, id=717, 711.1368pt x 422.0568pt>
+<img/paper_2/LSTM.png, id=734, 711.1368pt x 422.0568pt>
 File: img/paper_2/LSTM.png Graphic file (type png)
 <use img/paper_2/LSTM.png>
-Package pdftex.def Info: img/paper_2/LSTM.png  used on input line 400.
+Package pdftex.def Info: img/paper_2/LSTM.png  used on input line 468.
 (pdftex.def)             Requested size: 187.19833pt x 111.09746pt.
-<img/paper_2/RNN.png, id=718, 711.1368pt x 422.0568pt>
+<img/paper_2/RNN.png, id=735, 711.1368pt x 422.0568pt>
 File: img/paper_2/RNN.png Graphic file (type png)
 <use img/paper_2/RNN.png>
-Package pdftex.def Info: img/paper_2/RNN.png  used on input line 407.
+Package pdftex.def Info: img/paper_2/RNN.png  used on input line 475.
 (pdftex.def)             Requested size: 187.19833pt x 111.09746pt.
- [40 <./img/paper_2/deeplearning.png> <./img/paper_2/NN_cm.png>]) [41 <./img/pa
-per_2/Comparision Plot.png> <./img/paper_2/BILSTM.png> <./img/paper_2/LSTM.png>
- <./img/paper_2/RNN.png>]
+) [39] [40 <./img/paper_2/Comparision Plot.png> <./img/paper_2/BILSTM.png> <./i
+mg/paper_2/LSTM.png> <./img/paper_2/RNN.png>]
 Chapter 5.
 
 Overfull \hbox (64.8503pt too wide) in paragraph at lines 230--230
 |\OT1/ptm/b/n/24.88 SleepGCN-Transformer: A Hy-brid Graph-
  []
 
-(chapters/paper3.tex [42
+(chapters/paper3.tex
+<img/paper_3/hypnogram sleep stage transition.png, id=749, 736.55174pt x 339.66
+9pt>
+File: img/paper_3/hypnogram sleep stage transition.png Graphic file (type png)
+<use img/paper_3/hypnogram sleep stage transition.png>
+Package pdftex.def Info: img/paper_3/hypnogram sleep stage transition.png  used
+ on input line 11.
+(pdftex.def)             Requested size: 312.00119pt x 143.88316pt.
+ [41
 
 ]
 <img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Architechtu
-re.png, id=737, 1058.45438pt x 581.17125pt>
+re.png, id=754, 1058.45438pt x 581.17125pt>
 File: img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Archit
 echture.png Graphic file (type png)
 <use img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Archite
 chture.png>
 Package pdftex.def Info: img/paper_3/Graph Convolution Neural Network -SleepGCN
-_Transformer Architechture.png  used on input line 16.
+_Transformer Architechture.png  used on input line 27.
 (pdftex.def)             Requested size: 350.99762pt x 192.71823pt.
 
 
@@ -1817,18 +1832,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
+[42 <./img/paper_3/hypnogram sleep stage transition.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 16.87595pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.87595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
+
 [43 <./img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Archi
 techture.png>]
-<img/paper_3/Signals.png, id=746, 587.5551pt x 589.7232pt>
+<img/paper_3/Signals.png, id=768, 587.5551pt x 589.7232pt>
 File: img/paper_3/Signals.png Graphic file (type png)
 <use img/paper_3/Signals.png>
-Package pdftex.def Info: img/paper_3/Signals.png  used on input line 42.
+Package pdftex.def Info: img/paper_3/Signals.png  used on input line 53.
 (pdftex.def)             Requested size: 187.19833pt x 187.88742pt.
-<img/paper_3/filtered chanels.png, id=747, 573.1011pt x 589.7232pt>
+<img/paper_3/filtered chanels.png, id=769, 573.1011pt x 589.7232pt>
 File: img/paper_3/filtered chanels.png Graphic file (type png)
 <use img/paper_3/filtered chanels.png>
-Package pdftex.def Info: img/paper_3/filtered chanels.png  used on input line 4
-9.
+Package pdftex.def Info: img/paper_3/filtered chanels.png  used on input line 6
+0.
 (pdftex.def)             Requested size: 187.19833pt x 192.6296pt.
 
 
@@ -1838,16 +1861,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
-[44]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 16.87595pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.87595pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
-
-[45 <./img/paper_3/Signals.png> <./img/paper_3/filtered chanels.png>]
-Overfull \hbox (2.97261pt too wide) in paragraph at lines 62--63
+[44 <./img/paper_3/Signals.png> <./img/paper_3/filtered chanels.png>]
+Overfull \hbox (2.97261pt too wide) in paragraph at lines 73--74
 \OT1/ptm/m/n/12 To ad-dress these chal-lenges, we de-vel-oped a com-pre-hen-siv
 e pre-pro-cess-ing pipeline
  []
@@ -1859,7 +1874,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
+[45]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 16.87595pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.87595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
+
 [46]
+File: img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Archit
+echture.png Graphic file (type png)
+<use img/paper_3/Graph Convolution Neural Network -SleepGCN_Transformer Archite
+chture.png>
+Package pdftex.def Info: img/paper_3/Graph Convolution Neural Network -SleepGCN
+_Transformer Architechture.png  used on input line 132.
+(pdftex.def)             Requested size: 350.99762pt x 192.71823pt.
+<img/paper_3/Graph Weightage.png, id=786, 482.80376pt x 322.20375pt>
+File: img/paper_3/Graph Weightage.png Graphic file (type png)
+<use img/paper_3/Graph Weightage.png>
+Package pdftex.def Info: img/paper_3/Graph Weightage.png  used on input line 14
+2.
+(pdftex.def)             Requested size: 272.99881pt x 182.19295pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.87595pt, for example:
@@ -1868,13 +1905,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
 [47]
-<img/paper_3/Graph Weightage.png, id=768, 482.80376pt x 322.20375pt>
-File: img/paper_3/Graph Weightage.png Graphic file (type png)
-<use img/paper_3/Graph Weightage.png>
-Package pdftex.def Info: img/paper_3/Graph Weightage.png  used on input line 10
-5.
-(pdftex.def)             Requested size: 272.99881pt x 182.19295pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.87595pt, for example:
@@ -1915,8 +1945,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
 [52]
-Overfull \hbox (20.57574pt too wide) detected at line 313
-[]
+Overfull \hbox (11.84044pt too wide) in paragraph at lines 332--333
+\OT1/ptm/m/n/12 The train-ing pipeline is en-cap-su-lated within a ded-i-cated 
+class named \OT1/cmtt/m/n/12 SleepTrainer\OT1/ptm/m/n/12 ,
  []
 
 
@@ -1927,31 +1958,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
 [53]
-<img/paper_3/confusion matrix percentatge wise.png, id=816, 466.8642pt x 430.24
-74pt>
-File: img/paper_3/confusion matrix percentatge wise.png Graphic file (type png)
+Overfull \hbox (4.92465pt too wide) in paragraph at lines 346--347
+[]\OT1/ptm/m/n/12 This for-mu-la-tion en-sures that less fre-quent classes re-c
+eive pro-por-tion-ally higher
+ []
 
-<use img/paper_3/confusion matrix percentatge wise.png>
-Package pdftex.def Info: img/paper_3/confusion matrix percentatge wise.png  use
-d on input line 322.
-(pdftex.def)             Requested size: 175.49881pt x 161.7297pt.
-<img/paper_3/confusion matrix samples.png, id=817, 472.6458pt x 430.2474pt>
-File: img/paper_3/confusion matrix samples.png Graphic file (type png)
-<use img/paper_3/confusion matrix samples.png>
-Package pdftex.def Info: img/paper_3/confusion matrix samples.png  used on inpu
-t line 328.
-(pdftex.def)             Requested size: 175.49881pt x 159.75363pt.
-<img/paper_3/loss plot.png, id=818, 570.933pt x 337.5009pt>
-File: img/paper_3/loss plot.png Graphic file (type png)
-<use img/paper_3/loss plot.png>
-Package pdftex.def Info: img/paper_3/loss plot.png  used on input line 337.
-(pdftex.def)             Requested size: 175.49881pt x 103.74358pt.
-<img/paper_3/accuracy plot.png, id=819, 570.933pt x 370.0224pt>
-File: img/paper_3/accuracy plot.png Graphic file (type png)
-<use img/paper_3/accuracy plot.png>
-Package pdftex.def Info: img/paper_3/accuracy plot.png  used on input line 343.
 
-(pdftex.def)             Requested size: 175.49881pt x 113.74026pt.
+Overfull \hbox (1.23253pt too wide) in paragraph at lines 346--347
+\OT1/ptm/m/n/12 weights, en-cour-ag-ing the model to give them more at-ten-tion
+ dur-ing train-ing. These
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1961,6 +1977,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
 [54]
+Overfull \hbox (20.57574pt too wide) detected at line 416
+[]
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.87595pt, for example:
@@ -1968,49 +1988,78 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
-[55 <./img/paper_3/confusion matrix percentatge wise.png> <./img/paper_3/confus
-ion matrix samples.png> <./img/paper_3/loss plot.png> <./img/paper_3/accuracy p
-lot.png>]
-<img/paper_3/3D acc loss plot.png, id=843, 664.1613pt x 532.6299pt>
+[55]
+<img/paper_3/confusion matrix percentatge wise.png, id=849, 466.8642pt x 430.24
+74pt>
+File: img/paper_3/confusion matrix percentatge wise.png Graphic file (type png)
+
+<use img/paper_3/confusion matrix percentatge wise.png>
+Package pdftex.def Info: img/paper_3/confusion matrix percentatge wise.png  use
+d on input line 425.
+(pdftex.def)             Requested size: 175.49881pt x 161.7297pt.
+<img/paper_3/confusion matrix samples.png, id=850, 472.6458pt x 430.2474pt>
+File: img/paper_3/confusion matrix samples.png Graphic file (type png)
+<use img/paper_3/confusion matrix samples.png>
+Package pdftex.def Info: img/paper_3/confusion matrix samples.png  used on inpu
+t line 431.
+(pdftex.def)             Requested size: 175.49881pt x 159.75363pt.
+<img/paper_3/loss plot.png, id=851, 570.933pt x 337.5009pt>
+File: img/paper_3/loss plot.png Graphic file (type png)
+<use img/paper_3/loss plot.png>
+Package pdftex.def Info: img/paper_3/loss plot.png  used on input line 440.
+(pdftex.def)             Requested size: 175.49881pt x 103.74358pt.
+<img/paper_3/accuracy plot.png, id=852, 570.933pt x 370.0224pt>
+File: img/paper_3/accuracy plot.png Graphic file (type png)
+<use img/paper_3/accuracy plot.png>
+Package pdftex.def Info: img/paper_3/accuracy plot.png  used on input line 446.
+
+(pdftex.def)             Requested size: 175.49881pt x 113.74026pt.
+<img/paper_3/3D acc loss plot.png, id=853, 664.1613pt x 532.6299pt>
 File: img/paper_3/3D acc loss plot.png Graphic file (type png)
 <use img/paper_3/3D acc loss plot.png>
-Package pdftex.def Info: img/paper_3/3D acc loss plot.png  used on input line 3
-66.
+Package pdftex.def Info: img/paper_3/3D acc loss plot.png  used on input line 4
+59.
 (pdftex.def)             Requested size: 175.49881pt x 140.73988pt.
-<img/paper_3/3d gradient.png, id=844, 546.3612pt x 475.5366pt>
-File: img/paper_3/3d gradient.png Graphic file (type png)
-<use img/paper_3/3d gradient.png>
-Package pdftex.def Info: img/paper_3/3d gradient.png  used on input line 372.
-(pdftex.def)             Requested size: 175.49881pt x 152.74805pt.
-<img/paper_3/sample distribution plot pdf.png, id=845, 552.8655pt x 414.95026pt
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 16.87595pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.87595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
+
+[56 <./img/paper_3/confusion matrix percentatge wise.png> <./img/paper_3/confus
+ion matrix samples.png> <./img/paper_3/loss plot.png> <./img/paper_3/accuracy p
+lot.png>]
+<img/paper_3/sample distribution plot pdf.png, id=862, 552.8655pt x 414.95026pt
 >
 File: img/paper_3/sample distribution plot pdf.png Graphic file (type png)
 <use img/paper_3/sample distribution plot pdf.png>
 Package pdftex.def Info: img/paper_3/sample distribution plot pdf.png  used on 
-input line 383.
+input line 471.
 (pdftex.def)             Requested size: 175.49881pt x 131.71674pt.
-<img/paper_3/auc vs roc curve.png, id=846, 511.6716pt x 409.7709pt>
+<img/paper_3/auc vs roc curve.png, id=863, 511.6716pt x 409.7709pt>
 File: img/paper_3/auc vs roc curve.png Graphic file (type png)
 <use img/paper_3/auc vs roc curve.png>
-Package pdftex.def Info: img/paper_3/auc vs roc curve.png  used on input line 3
-89.
+Package pdftex.def Info: img/paper_3/auc vs roc curve.png  used on input line 4
+77.
 (pdftex.def)             Requested size: 175.49881pt x 140.54576pt.
-<img/paper_3/f1_score_plot.png, id=847, 433.62pt x 289.08pt>
+<img/paper_3/f1_score_plot.png, id=864, 433.62pt x 289.08pt>
 File: img/paper_3/f1_score_plot.png Graphic file (type png)
 <use img/paper_3/f1_score_plot.png>
-Package pdftex.def Info: img/paper_3/f1_score_plot.png  used on input line 398.
+Package pdftex.def Info: img/paper_3/f1_score_plot.png  used on input line 486.
 
 (pdftex.def)             Requested size: 120.89905pt x 80.59778pt.
-<img/paper_3/precision_plot.png, id=848, 433.62pt x 289.08pt>
+<img/paper_3/precision_plot.png, id=865, 433.62pt x 289.08pt>
 File: img/paper_3/precision_plot.png Graphic file (type png)
 <use img/paper_3/precision_plot.png>
-Package pdftex.def Info: img/paper_3/precision_plot.png  used on input line 404
+Package pdftex.def Info: img/paper_3/precision_plot.png  used on input line 492
 .
 (pdftex.def)             Requested size: 120.89905pt x 80.59778pt.
-<img/paper_3/recall_plot.png, id=849, 433.62pt x 289.08pt>
+<img/paper_3/recall_plot.png, id=866, 433.62pt x 289.08pt>
 File: img/paper_3/recall_plot.png Graphic file (type png)
 <use img/paper_3/recall_plot.png>
-Package pdftex.def Info: img/paper_3/recall_plot.png  used on input line 410.
+Package pdftex.def Info: img/paper_3/recall_plot.png  used on input line 498.
 (pdftex.def)             Requested size: 120.89905pt x 80.59778pt.
 
 
@@ -2020,7 +2069,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
-[56]
+[57 <./img/paper_3/3D acc loss plot.png> <./img/paper_3/sample distribution plo
+t pdf.png> <./img/paper_3/auc vs roc curve.png>]
+<img/paper_3/shap important.png, id=874, 566.5968pt x 212.4738pt>
+File: img/paper_3/shap important.png Graphic file (type png)
+<use img/paper_3/shap important.png>
+Package pdftex.def Info: img/paper_3/shap important.png  used on input line 532
+.
+(pdftex.def)             Requested size: 272.99881pt x 102.37206pt.
+<img/paper_3/stage n1.png, id=875, 1076.1003pt x 711.8595pt>
+File: img/paper_3/stage n1.png Graphic file (type png)
+<use img/paper_3/stage n1.png>
+Package pdftex.def Info: img/paper_3/stage n1.png  used on input line 546.
+(pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
+<img/paper_3/stage n2.png, id=876, 1076.1003pt x 711.8595pt>
+File: img/paper_3/stage n2.png Graphic file (type png)
+<use img/paper_3/stage n2.png>
+Package pdftex.def Info: img/paper_3/stage n2.png  used on input line 552.
+(pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.87595pt, for example:
@@ -2028,62 +2095,77 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
-[57 <./img/paper_3/3D acc loss plot.png> <./img/paper_3/3d gradient.png> <./img
-/paper_3/sample distribution plot pdf.png> <./img/paper_3/auc vs roc curve.png>
- <./img/paper_3/f1_score_plot.png> <./img/paper_3/precision_plot.png> <./img/pa
-per_3/recall_plot.png>]
-<img/paper_3/stage n1.png, id=865, 1076.1003pt x 711.8595pt>
-File: img/paper_3/stage n1.png Graphic file (type png)
-<use img/paper_3/stage n1.png>
-Package pdftex.def Info: img/paper_3/stage n1.png  used on input line 439.
-(pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
-<img/paper_3/stage n2.png, id=866, 1076.1003pt x 711.8595pt>
-File: img/paper_3/stage n2.png Graphic file (type png)
-<use img/paper_3/stage n2.png>
-Package pdftex.def Info: img/paper_3/stage n2.png  used on input line 445.
-(pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
-<img/paper_3/stage n3.png, id=867, 1076.1003pt x 711.8595pt>
+[58 <./img/paper_3/f1_score_plot.png> <./img/paper_3/precision_plot.png> <./img
+/paper_3/recall_plot.png> <./img/paper_3/shap important.png>]
+<img/paper_3/stage n3.png, id=886, 1076.1003pt x 711.8595pt>
 File: img/paper_3/stage n3.png Graphic file (type png)
 <use img/paper_3/stage n3.png>
-Package pdftex.def Info: img/paper_3/stage n3.png  used on input line 454.
+Package pdftex.def Info: img/paper_3/stage n3.png  used on input line 567.
 (pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
-<img/paper_3/stage rem.png, id=868, 1076.1003pt x 711.8595pt>
+<img/paper_3/stage rem.png, id=887, 1076.1003pt x 711.8595pt>
 File: img/paper_3/stage rem.png Graphic file (type png)
 <use img/paper_3/stage rem.png>
-Package pdftex.def Info: img/paper_3/stage rem.png  used on input line 460.
+Package pdftex.def Info: img/paper_3/stage rem.png  used on input line 573.
 (pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
-<img/paper_3/stage wake.png, id=869, 1076.1003pt x 711.8595pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 16.87595pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.87595pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
+
+[59 <./img/paper_3/stage n1.png> <./img/paper_3/stage n2.png> <./img/paper_3/st
+age n3.png> <./img/paper_3/stage rem.png>]
+<img/paper_3/stage wake.png, id=896, 1076.1003pt x 711.8595pt>
 File: img/paper_3/stage wake.png Graphic file (type png)
 <use img/paper_3/stage wake.png>
-Package pdftex.def Info: img/paper_3/stage wake.png  used on input line 469.
+Package pdftex.def Info: img/paper_3/stage wake.png  used on input line 589.
 (pdftex.def)             Requested size: 175.49881pt x 116.09398pt.
-<img/paper_3/XAI4.png, id=870, 1014.6708pt x 674.2791pt>
+<img/paper_3/XAI4.png, id=897, 1014.6708pt x 674.2791pt>
 File: img/paper_3/XAI4.png Graphic file (type png)
 <use img/paper_3/XAI4.png>
-Package pdftex.def Info: img/paper_3/XAI4.png  used on input line 475.
+Package pdftex.def Info: img/paper_3/XAI4.png  used on input line 595.
 (pdftex.def)             Requested size: 175.49881pt x 116.62192pt.
-<img/paper_3/preprocessing_on³.png, id=871, 505.89pt x 433.62pt>
+<img/paper_3/preprocessing_on³.png, id=898, 505.89pt x 433.62pt>
 File: img/paper_3/preprocessing_on³.png Graphic file (type png)
 <use img/paper_3/preprocessing_on³.png>
 Package pdftex.def Info: img/paper_3/preprocessing_on³.png  used on input line
- 528.
+ 650.
 (pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
 
-Underfull \hbox (badness 5050) in paragraph at lines 529--529
-[][]\OT1/ptm/m/n/12 Figure 5.22[][]. [][]|Pre-pro-cess-ing
+Underfull \hbox (badness 5050) in paragraph at lines 651--651
+[][]\OT1/ptm/m/n/12 Figure 5.24[][]. [][]|Pre-pro-cess-ing
  []
 
-<img/paper_3/training_loop_ot·….png, id=872, 505.89pt x 433.62pt>
+<img/paper_3/training_loop_ot·….png, id=899, 505.89pt x 433.62pt>
 File: img/paper_3/training_loop_ot·….png Graphic file (type png)
 <use img/paper_3/training_loop_ot·….png>
 Package pdftex.def Info: img/paper_3/training_loop_ot·….png  used on input l
-ine 535.
+ine 657.
 (pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
 
-Underfull \hbox (badness 2065) in paragraph at lines 536--536
-[][]\OT1/ptm/m/n/12 Figure 5.23[][]. [][]|Train-ing Loop
+Underfull \hbox (badness 2065) in paragraph at lines 658--658
+[][]\OT1/ptm/m/n/12 Figure 5.25[][]. [][]|Train-ing Loop
  []
 
+<img/paper_3/gcn_layers_on.png, id=900, 505.89pt x 433.62pt>
+File: img/paper_3/gcn_layers_on.png Graphic file (type png)
+<use img/paper_3/gcn_layers_on.png>
+Package pdftex.def Info: img/paper_3/gcn_layers_on.png  used on input line 670.
+
+(pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
+
+Underfull \hbox (badness 4899) in paragraph at lines 671--671
+[][]\OT1/ptm/m/n/12 Figure 5.26[][]. [][]|GCN Lay-ers
+ []
+
+<img/paper_3/transformer_encoder_on².png, id=901, 505.89pt x 433.62pt>
+File: img/paper_3/transformer_encoder_on².png Graphic file (type png)
+<use img/paper_3/transformer_encoder_on².png>
+Package pdftex.def Info: img/paper_3/transformer_encoder_on².png  used on inpu
+t line 677.
+(pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.87595pt, for example:
@@ -2091,45 +2173,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
-[58 <./img/paper_3/stage n1.png> <./img/paper_3/stage n2.png> <./img/paper_3/st
-age n3.png> <./img/paper_3/stage rem.png> <./img/paper_3/stage wake.png> <./img
-/paper_3/XAI4.png>]
-<img/paper_3/gcn_layers_on.png, id=884, 505.89pt x 433.62pt>
-File: img/paper_3/gcn_layers_on.png Graphic file (type png)
-<use img/paper_3/gcn_layers_on.png>
-Package pdftex.def Info: img/paper_3/gcn_layers_on.png  used on input line 548.
-
-(pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
-
-Underfull \hbox (badness 4899) in paragraph at lines 549--549
-[][]\OT1/ptm/m/n/12 Figure 5.24[][]. [][]|GCN Lay-ers
- []
-
-<img/paper_3/transformer_encoder_on².png, id=885, 505.89pt x 433.62pt>
-File: img/paper_3/transformer_encoder_on².png Graphic file (type png)
-<use img/paper_3/transformer_encoder_on².png>
-Package pdftex.def Info: img/paper_3/transformer_encoder_on².png  used on inpu
-t line 555.
-(pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
-<img/paper_3/evaluation_oe_val·….png, id=886, 505.89pt x 433.62pt>
+[60 <./img/paper_3/stage wake.png> <./img/paper_3/XAI4.png> <./img/paper_3/prep
+rocessing_on³.png> <./img/paper_3/training_loop_ot·….png>]
+<img/paper_3/evaluation_oe_val·….png, id=910, 505.89pt x 433.62pt>
 File: img/paper_3/evaluation_oe_val·….png Graphic file (type png)
 <use img/paper_3/evaluation_oe_val·….png>
 Package pdftex.def Info: img/paper_3/evaluation_oe_val·….png  used on input 
-line 568.
+line 690.
 (pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--569
+Underfull \hbox (badness 10000) in paragraph at lines 691--691
 \OT1/ptm/m/n/12 ($\OML/ztmcm/m/it/12 O\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 E[]
 \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 LN \OT1/ztmcm/m/n/12 + 2\OML/ztmcm/m/it/1
 2 N[]D=\OT1/ztmcm/m/n/12 10[] +
  []
 
-<img/paper_3/fully_connected_layer_o1.png, id=887, 505.89pt x 433.62pt>
+<img/paper_3/fully_connected_layer_o1.png, id=911, 505.89pt x 433.62pt>
 File: img/paper_3/fully_connected_layer_o1.png Graphic file (type png)
 <use img/paper_3/fully_connected_layer_o1.png>
 Package pdftex.def Info: img/paper_3/fully_connected_layer_o1.png  used on inpu
-t line 575.
+t line 697.
 (pdftex.def)             Requested size: 155.99762pt x 133.71284pt.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 16.87595pt, for example:
@@ -2137,20 +2202,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
 
-[59 <./img/paper_3/preprocessing_on³.png> <./img/paper_3/training_loop_ot·…
-.png> <./img/paper_3/gcn_layers_on.png> <./img/paper_3/transformer_encoder_on²
-.png>])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 16.87595pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.87595pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-4.87595pt}.
-
-[60 <./img/paper_3/evaluation_oe_val·….png> <./img/paper_3/fully_connected_l
+[61 <./img/paper_3/gcn_layers_on.png> <./img/paper_3/transformer_encoder_on².p
+ng> <./img/paper_3/evaluation_oe_val·….png> <./img/paper_3/fully_connected_l
 ayer_o1.png>]
 Chapter 6.
-(Title/conclusion.tex) (Chapters/reference.tex [61
+(Title/conclusion.tex) (Chapters/reference.tex [62
 
 ]
 Underfull \hbox (badness 8132) in paragraph at lines 16--17
@@ -2164,7 +2220,7 @@ Underfull \hbox (badness 2922) in paragraph at lines 16--17
 2 , vol. 16, no. 3, Jun. 2012, doi:
  []
 
-[62
+[63
 
 ]
 Underfull \hbox (badness 1852) in paragraph at lines 22--23
@@ -2196,7 +2252,7 @@ a2011automatic}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.42 	\bibitem{krakovska2011automatic}
-                                       [63]
+                                       [64]
 pdfTeX warning (ext4): destination with the same identifier (name{cite.biswal20
 18expert}) has been already used, duplicate ignored
 <to be read again> 
@@ -2244,7 +2300,7 @@ Underfull \hbox (badness 2435) in paragraph at lines 70--71
 A
  []
 
-[64] [65] [66]) [67]
+[65] [66] [67]) [68]
 
 Package natbib Warning: There were multiply defined citations.
 
@@ -2264,13 +2320,13 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: BBDFF67A638F31951E8F43A8AF09C2C0;11654.
+(rerunfilecheck)             Checksum: E2CF11D3E9E9CB1FEB0E405CFC75A052;12061.
  ) 
 Here is how much of TeX's memory you used:
- 31699 strings out of 474486
- 652297 string characters out of 5739944
- 1944542 words of memory out of 5000000
- 53165 multiletter control sequences out of 15000+600000
+ 31715 strings out of 474486
+ 653132 string characters out of 5739944
+ 1942542 words of memory out of 5000000
+ 53185 multiletter control sequences out of 15000+600000
  593511 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,20n,133p,2511b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2288,9 +2344,9 @@ ocal/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Tanmay Rathod/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Tanmay R
 athod/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/
 Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Main.pdf (82 pages, 5713291 bytes).
+Output written on Main.pdf (83 pages, 5545189 bytes).
 PDF statistics:
- 1082 PDF objects out of 1200 (max. 8388607)
- 259 named destinations out of 1000 (max. 500000)
- 737 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1099 PDF objects out of 1200 (max. 8388607)
+ 255 named destinations out of 1000 (max. 500000)
+ 766 words of extra memory for PDF output out of 10000 (max. 10000000)
 

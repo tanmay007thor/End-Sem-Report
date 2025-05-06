@@ -1,4 +1,3 @@
-
 \section{Methodology}
 
 
@@ -12,7 +11,7 @@ The dataset was partitioned into \textbf{training}, \textbf{validation}, and \te
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.70\textwidth]{img/paper_2/sleep event.PNG}
+	\includegraphics[width=0.60\textwidth]{img/paper_2/sleep event.PNG}
 	\caption{Event Mapping Plot}
 	\label{fig:lstm_accuracy}
 \end{figure}
@@ -32,7 +31,7 @@ The DNN consists of an input layer followed by three fully connected (\texttt{De
 \section{Dataset Information}
 
 
- ensure efficient implementation and reproducibility, this research adheres to a well-structured computational framework, including consistent system configuration, version control, and the integration of essential libraries for data processing and deep learning tasks. The experiments were conducted on both Windows and Linux operating systems using an \textbf{Intel Core i5 11th Gen} processor (with \textit{Iris Xe Graphics} and a clock speed of \textbf{3.9 GHz}). The programming environment was built with \textbf{Python version 3.13.1}, managed via the \texttt{pip} package installer.
+ensure efficient implementation and reproducibility, this research adheres to a well-structured computational framework, including consistent system configuration, version control, and the integration of essential libraries for data processing and deep learning tasks. The experiments were conducted on both Windows and Linux operating systems using an \textbf{Intel Core i5 11th Gen} processor (with \textit{Iris Xe Graphics} and a clock speed of \textbf{3.9 GHz}). The programming environment was built with \textbf{Python version 3.13.1}, managed via the \texttt{pip} package installer.
 
 The study utilized the \textbf{Sleep-EDF} dataset, which contains EEG recordings and corresponding hypnograms for sleep stage classification. Prior to model training, the dataset was preprocessed into uniform, fixed-length segments. The dataset is publicly available at: \url{https://www.physionet.org/content/sleep-edf/1.0.0/}.
 
@@ -57,6 +56,9 @@ This setup ensures smooth execution of machine learning and deep learning models
 To ensure consistency in the input data, all recordings were resampled to a \textbf{100 Hz} sampling frequency. Each signal was segmented into \textbf{30-second epochs}, resulting in \textbf{3000 time steps per sample}. These samples were stored in \texttt{PKL} (Pickle) format, each approximately \textbf{48 KB} in size, enabling efficient storage and fast access, particularly beneficial for edge device deployment.
 
 Each sample consisted of input-output pairs: the inputs ($X$) included two EEG channels—\textbf{FPZ-CZ} and \textbf{PZ-OZ}—while the labels ($Y$) represented the corresponding sleep stages. The stages were categorized into five classes: \textbf{Wake, N1, N2, N3,} and \textbf{REM}. To streamline processing, raw labels were mapped to a standardized class format.
+
+
+
 
 \section{Model Architecture and Learning Framework}
 
@@ -236,7 +238,7 @@ LSTM cells operate through a series of gating mechanisms that regulate the flow 
 \begin{align}
 	f_t &= \sigma(W_f x_t + U_f h_{t-1} + b_f) \quad \text{(Forget Gate)} \\
 	i_t &= \sigma(W_i x_t + U_i h_{t-1} + b_i) \quad \text{(Input Gate)} \\
-	\tilde{c}_t &= \tanh(W_c x_t + U_c h_{t-1} + b_c) \quad \text{(Candidate Cell State)} \\
+	\tilde{c}t &= \tanh(W_c x_t + U_c h{t-1} + b_c) \quad \text{(Candidate Cell State)} \\
 	c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \quad \text{(Cell State Update)} \\
 	o_t &= \sigma(W_o x_t + U_o h_{t-1} + b_o) \quad \text{(Output Gate)} \\
 	h_t &= o_t \odot \tanh(c_t) \quad \text{(Hidden State Update)}
@@ -287,8 +289,8 @@ Bi-LSTM networks are particularly well-suited for EEG-based sleep stage classifi
 The Bi-LSTM model processes input sequences in both forward and backward directions, maintaining two hidden states for each timestep. The key equations describing the forward and backward passes are:
 
 \begin{align}
-	\overrightarrow{h}_t &= \text{LSTM}(x_t, \overrightarrow{h}_{t-1}) \\
-	\overleftarrow{h}_t &= \text{LSTM}(x_t, \overleftarrow{h}_{t+1}) \\
+	\overrightarrow{h}t &= \text{LSTM}(x_t, \overrightarrow{h}{t-1}) \\
+	\overleftarrow{h}t &= \text{LSTM}(x_t, \overleftarrow{h}{t+1}) \\
 	h_t &= [\overrightarrow{h}_t; \overleftarrow{h}_t]
 \end{align}
 
@@ -302,77 +304,143 @@ where:
 
 
 
+
+
+
+
 \section{Results and Evaluation}
 
-This section presents the performance evaluation of different deep learning models, using accuracy plots and confusion matrices for visual comparison.
 
-\subsection{LSTM Model}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{img/paper_2/lstm accuracy and loss plot.png}
-	\caption{LSTM Accuracy and Loss Plot}
-	\label{fig:lstm_accuracy}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{img/paper_2/LSTM_cm.png}
-	\caption{LSTM Confusion Matrix}
-	\label{fig:lstm_cm}
-\end{figure}
-
-\subsection{RNN Model}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{img/paper_2/Rnn Accuracy Plot.png}
-	\caption{RNN Accuracy Plot}
-	\label{fig:rnn_accuracy}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{img/paper_2/RNN_cm.png}
-	\caption{RNN Confusion Matrix}
-	\label{fig:rnn_cm}
-\end{figure}
-
-\subsection{BiLSTM Model}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{img/paper_2/BILSTM Accuaracy Plot.png}
-	\caption{BiLSTM Accuracy Plot}
-	\label{fig:bilstm_accuracy}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{img/paper_2/BiLSTM_cm.png}
-	\caption{BiLSTM Confusion Matrix}
-	\label{fig:bilstm_cm}
-\end{figure}
 
 \subsection{Neural Network (NN) Model}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{img/paper_2/deeplearning.png}
-	\caption{Neural Network Accuracy Comparison}
-	\label{fig:nn_accuracy}
+	\begin{minipage}{0.66\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/deeplearning.png}
+		\caption{Neural Network Accuracy and Loss Comparison}
+		\label{fig:nn_accuracy}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.33\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/NN_cm.png}
+		\caption{Neural Network Confusion Matrix}
+		\label{fig:nn_cm}
+	\end{minipage}
 \end{figure}
+
+
+\subsection{LSTM Model}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{img/paper_2/NN_cm.png}
-	\caption{Neural Network Confusion Matrix}
-	\label{fig:nn_cm}
+	\begin{minipage}{0.66\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/lstm accuracy and loss plot.png}
+		\caption{LSTM Accuracy and Loss Plot}
+		\label{fig:lstm_accuracy}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/LSTM_cm.png}
+		\caption{LSTM Confusion Matrix}
+		\label{fig:lstm_cm}
+	\end{minipage}
 \end{figure}
+
+
+\subsection{RNN Model}
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.66\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/Rnn Accuracy Plot.png}
+		\caption{RNN Accuracy Plot}
+		\label{fig:rnn_accuracy}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/RNN_cm.png}
+		\caption{RNN Confusion Matrix}
+		\label{fig:rnn_cm}
+	\end{minipage}
+\end{figure}
+
+
+\subsection{BiLSTM Model}
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.66\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/BILSTM Accuaracy Plot.png}
+		\caption{BiLSTM Accuracy Plot}
+		\label{fig:bilstm_accuracy}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_2/BiLSTM_cm.png}
+		\caption{BiLSTM Confusion Matrix}
+		\label{fig:bilstm_cm}
+	\end{minipage}
+\end{figure}
+
+
 
 \section{Comparison of Results}
 
-In this section, we compare the performance of various models, including Neural Networks, RNN, LSTM, and Bi-LSTM, based on several evaluation metrics such as accuracy, precision, recall, and F1 score.
+
+
+This section presents a comparative analysis of multiple machine learning models applied to the sleep stage classification problem. The evaluation metrics considered include accuracy, weighted and macro averages of precision, recall, and F1-score.
+
+\subsection{Testing  Models Overview}
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Performance Comparison of Models}
+	\label{tab:metrics_summary}
+	\begin{tabular}{lcccccc}
+		\hline
+		\textbf{Model} & \textbf{Accuracy} & \textbf{Wgt. F1} & \textbf{Macro F1} & \textbf{Macro Prec.} & \textbf{Macro Rec.} \\
+		\hline
+		Random Forest          & \textbf{0.843} & \textbf{0.823} & 0.641 & \textbf{0.901} & 0.558 \\
+		XGBoost                & \textbf{0.854} & \textbf{0.843} & 0.644 & \textbf{0.776} & 0.599 \\
+		Neural Network         & \textbf{0.777} & \textbf{0.750} & 0.487 & 0.567 & 0.452 \\
+		LSTM                   & \textbf{0.800} & \textbf{0.785} & 0.461 & 0.499 & 0.436 \\
+		BiLSTM                 & \textbf{0.811} & \textbf{0.803} & 0.472 & 0.494 & 0.457 \\
+		RNN                    & 0.706 & 0.690 & 0.332 & 0.381 & 0.345 \\
+		AdaBoost               & 0.312 & 0.353 & 0.273 & 0.323 & 0.399 \\
+		KNN (with PCA)         & 0.194 & 0.189 & 0.272 & 0.296 & 0.359 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\subsection{Discussion}
+
+Among all the models tested, the \textbf{XGBoost classifier} achieved the highest overall accuracy (0.854) and weighted F1-score (0.843), narrowly outperforming the Random Forest model. While Random Forest achieved a slightly higher macro precision (0.901 vs. 0.776), its recall across minority classes such as N1 and REM was relatively lower.
+
+The deep learning-based models (LSTM and BiLSTM) followed closely behind the tree-based models, with BiLSTM slightly outperforming LSTM (macro F1 of 0.472 vs. 0.461). The \textbf{Neural Network model}, although simpler, showed moderate performance (macro F1 of 0.487), better than AdaBoost and KNN.
+
+\textbf{K-Nearest Neighbors (KNN)} and \textbf{AdaBoost} performed poorly in this context. KNN failed to handle the class imbalance effectively, leading to very low overall accuracy (0.194). AdaBoost performed slightly better but still struggled to generalize, especially for majority class (Wake) classification.
+
+The \textbf{RNN model} had the lowest macro F1-score (0.332) among deep models, indicating potential vanishing gradient issues or insufficient context capture compared to LSTM-based architectures.
+
+\subsection{Conclusion}
+
+Tree-based ensemble methods (XGBoost, Random Forest) consistently outperformed others across all key metrics. Deep learning models, especially BiLSTM, offer competitive alternatives with relatively strong performance. Simpler models like KNN and AdaBoost underperform and are not suitable for this imbalanced multiclass classification task without further tuning or class balancing.
+
+
 
 \subsection{Comparison Plot}
 The following plot presents a comparison of the accuracy scores for different models.
