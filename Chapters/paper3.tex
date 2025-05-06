@@ -269,8 +269,54 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 	\item Monitor loss and accuracy metrics per epoch.
 \end{itemize}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Results and Evaluation}
 
+
+\begin{center}
+	\begin{minipage}[t]{0.48\textwidth}
+		\begin{align}
+			\text{Accuracy} &= \frac{TP + TN}{TP + TN + FP + FN} \\
+			\text{Precision} &= \frac{TP}{TP + FP} \\
+			\text{Recall} &= \frac{TP}{TP + FN} \\
+			\text{F1\text{-}Score} &= 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} \\
+			\text{Support} &= TP + FN \\
+			\text{Specificity} &= \frac{TN}{TN + FP}
+		\end{align}
+	\end{minipage}
+	\hfill	
+	\begin{minipage}[t]{0.48\textwidth}
+		\begin{align}
+			\text{Macro Precision} &= \frac{1}{C} \sum_{i=1}^{C} \frac{TP_i}{TP_i + FP_i} \\
+			\text{Weighted Precision} &= \sum_{i=1}^{C} \frac{n_i}{N} \cdot \frac{TP_i}{TP_i + FP_i} \\
+			\mathcal{L}_{CE} &= -\sum_{i=1}^{C} y_i \log(\hat{y}_i) \\
+			\mathcal{L}_{FL} &= -\alpha_t (1 - p_t)^\gamma \log(p_t)
+		\end{align}
+	\end{minipage}
+\end{center}
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[b]{0.45\linewidth}
@@ -404,49 +450,104 @@ The training process for the SleepGCN-Transformer model is designed to handle cl
 \end{figure}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Time Complexity Analysis}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/transformer_encoder_on²}
-		\caption{Transformer Encoder Complexity}
-		\label{fig:transformerencoderon2}
+	\begin{minipage}[b]{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_3/preprocessing_on³}
+		\caption{Preprocessing (\(O(MN^3 + KEN + MN)\))}
+		\label{fig:preprocessingon3}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/data_loading_complexity_with_legend_updated}
-		\caption{Data Loading Complexity}
-		\label{fig:dataloadingcomplexitywithlegendupdated}
+	\begin{minipage}[b]{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_3/training_loop_ot·…}
+		\caption{Training Loop (\(O(T(LN + 2N^2D/10^4 + DC))\))}
+		\label{fig:trainingloopot}
 	\end{minipage}
 \end{figure}
 
-\begin{figure}[htbp]
+\noindent Preprocessing: \(O(MN^3 + KEN + MN)\) \\
+Training Loop: \(O(T(LN + 2N^2D/10^4 + DC))\)
+
+\begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\linewidth}
+	\begin{minipage}[b]{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_3/gcn_layers_on}
+		\caption{GCN Layers (\(O(LN)\))}
+		\label{fig:gcnlayerson}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/paper_3/transformer_encoder_on²}
+		\caption{Transformer Encoder (\(O(N^2D)\))}
+		\label{fig:transformerencoderon2}
+	\end{minipage}
+\end{figure}
+
+\noindent GCN Layers: \(O(LN)\) \\
+Transformer Encoder: \(O(N^2D)\)
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.40\linewidth}
+		\centering
 		\includegraphics[width=\linewidth]{img/paper_3/evaluation_oe_val·…}
-		\caption{Evaluation Complexity}
+		\caption{Evaluation Loop (\(O(E_{\text{val}}(LN + 2N^2D/10^4 + DC))\))}
 		\label{fig:evaluationoeval}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
+	\begin{minipage}[b]{0.40\linewidth}
+		\centering
 		\includegraphics[width=\linewidth]{img/paper_3/fully_connected_layer_o1}
-		\caption{Fully Connected Layer Complexity}
+		\caption{Fully Connected Layer (\(O(DC)\))}
 		\label{fig:fullyconnectedlayero1}
 	\end{minipage}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/gcn_layers_on}
-		\caption{GCN Layers Complexity}
-		\label{fig:gcnlayerson}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{img/paper_3/training_loop_ot·…}
-		\caption{Training Loop Complexity}
-		\label{fig:trainingloopot}
-	\end{minipage}
-\end{figure}
+\noindent Evaluation Loop: \(O(E_{\text{val}}(LN + 2N^2D/10^4 + DC))\) \\
+Fully Connected Layer: \(O(DC)\)
