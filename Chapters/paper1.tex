@@ -9,6 +9,10 @@ After loading and cropping, we segment the data into fixed-length 30-second epoc
 
 Once all epochs are collected, we flatten the 3D EEG data (epochs $\times$ channels $\times$ time points) into 2D arrays (epochs $\times$ features). This is necessary for traditional machine learning classifiers. To address class imbalance in sleep stages, we apply SMOTE (Synthetic Minority Oversampling Technique) to generate balanced training samples.
 
+
+ 
+
+
 The balanced dataset is then split into training and testing sets in an 80-20 ratio. We train a  Machine Learning   on the training data. After training, predictions are made on the test set, and the model is evaluated using standard metrics including classification report and confusion matrix. The confusion matrix is visualized using a heatmap to give a clear view of the stage-wise performance of the classifier.
 
 
@@ -143,33 +147,34 @@ For the Random Forest model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/random_forest_confusion_matrix.png}
 		\caption{Random Forest Confusion Matrix}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
 		\caption{Random Forest Accuracy Curve}
 	\end{minipage}
-	
+\end{figure}
 	\vspace{1em}
-	
-	\begin{minipage}[b]{0.45\textwidth}
+\begin{figure}[H]
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
 		\caption{Random Forest Loss Curve}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
 		\caption{Random Forest Precision Per Class}
 	\end{minipage}
 \end{figure}
 
+The Random Forest classifier demonstrates solid performance with an accuracy of 0.764, precision of 0.777, and sensitivity of 0.770. Its F1-Score of 0.766 reflects a balanced performance between precision and recall. 
 
 \subsection{Bagging Classifier}
 
@@ -177,13 +182,13 @@ For the Bagging Classifier model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/BG_confusion_matrix.png}
 		\caption{Bagging Classifier Confusion Matrix}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
 		\caption{Bagging Classifier Accuracy Curve}
@@ -191,18 +196,20 @@ For the Bagging Classifier model, we present the following evaluation metrics:
 	
 	\vspace{1em}
 	
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
 		\caption{Bagging Classifier Loss Curve}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
 		\caption{Bagging Classifier Precision Per Class}
 	\end{minipage}
 \end{figure}
+
+The Gradient Boosting classifier achieves moderate performance with an accuracy of 0.702, precision of 0.687, and sensitivity of 0.689. Its F1-Score of 0.687 indicates a fairly balanced trade-off between precision and recall.
 
 
 \subsection{Ensemble Learning}
@@ -211,32 +218,35 @@ For the Ensemble Learning model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//Ensemble_confusion_matrix.png}
+		\includegraphics[width=\textwidth]{img/paper_1/Ensemble_confusion_matrix.png}
 		\caption{Ensemble Learning Confusion Matrix}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//accuracy_curve.png}
+		\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
 		\caption{Ensemble Learning Accuracy Curve}
 	\end{minipage}
 	
 	\vspace{1em}
 	
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//loss_curve.png}
+		\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
 		\caption{Ensemble Learning Loss Curve}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//precision_per_class.png}
+		\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
 		\caption{Ensemble Learning Precision Per Class}
 	\end{minipage}
 \end{figure}
+
+The Ensemble Learning model exhibits strong performance with an accuracy of 0.831, precision of 0.830, and sensitivity of 0.820. Its F1-Score of 0.819 underscores its effectiveness in maintaining a balance between precision and recall.
+
 
 
 \subsection{Gradient Boosting}
@@ -245,92 +255,180 @@ For the Gradient Boosting model, we present the following evaluation metrics:
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//confusion_matrix.png}
+		\includegraphics[width=\textwidth]{img/paper_1/confusion_matrix.png}
 		\caption{Gradient Boosting Confusion Matrix}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//accuracy_curve.png}
+		\includegraphics[width=\textwidth]{img/paper_1/accuracy_curve.png}
 		\caption{Gradient Boosting Accuracy Curve}
 	\end{minipage}
 	
 	\vspace{1em}
 	
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//loss_curve.png}
+		\includegraphics[width=\textwidth]{img/paper_1/loss_curve.png}
 		\caption{Gradient Boosting Loss Curve}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/paper_1//precision_per_class.png}
+		\includegraphics[width=\textwidth]{img/paper_1/precision_per_class.png}
 		\caption{Gradient Boosting Precision Per Class}
 	\end{minipage}
 \end{figure}
 
-\section{Results and Evaluation with K-fold Cross Validation }
+
+The Gradient Boosting Classifier shows competent performance with an accuracy of 0.753, precision of 0.737, and sensitivity of 0.746. Its F1-Score of 0.734 suggests a solid equilibrium between precision and recall.
+
+
+\section{Results and Evaluation with K-fold Cross Validation}
+\begin{table}[!h]
+	\centering
+	\caption{Classifier Performance Summary}
+	\begin{tabular}{lcccc}
+		\toprule
+		\textbf{Classifier} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+		\midrule
+		Ensemble Learning & 0.95 & 0.86 & 0.79 & 0.82 \\
+		Random Forest     & 0.88 & 0.85 & 0.81 & 0.82 \\
+		Gradient Boosting & 0.87 & 0.83 & 0.81 & 0.82 \\
+		SGD Classifier    & 0.80 & 0.73 & 0.70 & 0.70 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/Ensemble Learning_percentage_based.png}
-		\caption{Ensemble Learning Confusion Matrix }
+		\caption{Ensemble Learning Percentage-Based Confusion Matrix}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{img/paper_1/Random Forest_percentage_based.png}
-		\caption{Random Forest Confusion Matrix }
-	\end{minipage}
-	
-	\vspace{1em}
-	
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/paper_1/GB Classifier_percentage_based.png}
-		\caption{GB Classifier Confusion Matrix }
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/paper_1/SGD_percentage_based.png}
-		\caption{SGD Confusion Matrix }
+		\caption{Random Forest Percentage-Based Confusion Matrix}
 	\end{minipage}
 \end{figure}
+
+\textbf{Analysis:} Ensemble Learning outperforms all other models with the highest average accuracy (95\%) and strong macro F1-score (0.82), particularly excelling in the Wake stage with near-perfect precision and recall. Random Forest and Gradient Boosting both deliver balanced performance with 88\% and 87\% accuracy respectively, showing robust results in N2 and REM stages. SGD Classifier, while computationally efficient, lags behind in performance, especially in accurately detecting the N1 stage, reflecting a much lower F1-score (0.70).
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/GB Classifier_percentage_based.png}
+		\caption{Gradient Boosting Percentage-Based Confusion Matrix}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/paper_1/SGD_percentage_based.png}
+		\caption{SGD Percentage-Based Confusion Matrix}
+	\end{minipage}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Comparison Sections}
 
+
+
+
+
+The comparison tables highlight that Gradient Boosting and Ensemble Learning consistently outperform other classifiers across overall and per-stage metrics, particularly in precision and F1-score.
+
 \begin{figure}[H]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/paper_1/accuracy_comparison.png}
-		\caption{Accuracy Comparison}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/paper_1/bar_chart_improved.png}
-		\caption{Improved Bar Chart}
-	\end{minipage}
-	
-	\vspace{1em}
-	
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/paper_1/box_plot_comparison.png}
-		\caption{Box Plot Comparison}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/paper_1/violin_plot_improved.png}
-		\caption{Improved Violin Plot}
-	\end{minipage}
+	\includegraphics[width=0.99\linewidth]{img/paper_1/bar plot}
+	\caption{Comparison of Classifier Performance Based on Precision, Recall, and F1-Score}
+	\label{fig:bar-plot}
 \end{figure}
+
+
+
+ Notably, REM and Wake (W) stages achieve the highest precision and recall, while N1 and N2 stages remain more challenging for all models.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{lcccc}
+		\toprule
+		\textbf{Classifier} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Sensitivity} & \textbf{F1-Score} \\
+		\midrule
+		Random Forest       & 0.764             & 0.777              & 0.770                & 0.766             \\
+		Gradient Boosting   & 0.702             & 0.687              & 0.689                & 0.687             \\
+		Ensemble Learning   & \textbf{0.831}    & \textbf{0.830}     & \textbf{0.820}       & \textbf{0.819}    \\
+		Bagging Classifier  & 0.753             & 0.737              & 0.746                & 0.734             \\
+		\bottomrule
+	\end{tabular}
+	\caption{ Performance Metrics of Classifiers}
+\end{table}
+
+
+
+
+
+\begin{table}[htbp]
+	\centering
+	
+	\begin{tabular}{lcccc}
+		\toprule
+		\textbf{Stage} & \textbf{Metric} & \textbf{Random Forest} & \textbf{Ensemble (Gradient)} & \textbf{Bagging} \\
+		\midrule
+		\textbf{W}     & Precision       & 0.86                   & \textbf{0.97}                & 0.95             \\
+		& Recall          & \textbf{0.91}          & 0.86                         & \textbf{0.97}    \\
+		\textbf{N1}    & Precision       & 0.50                   & \textbf{0.57}                & 0.57             \\
+		& Recall          & 0.59                   & \textbf{0.79}                & \textbf{0.79}    \\
+		\textbf{N2}    & Precision       & 0.48                   & \textbf{0.68}                & 0.56             \\
+		& Recall          & 0.44                   & \textbf{0.56}                & 0.41             \\
+		\textbf{REM}   & Precision       & 0.93                   & \textbf{0.98}                & 0.87             \\
+		& Recall          & 0.88                   & \textbf{0.97}                & 0.93             \\
+		\bottomrule
+	\end{tabular}
+
+\end{table}
+
+
+
+

@@ -7,68 +7,65 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Architecture of Machine Learning Classifiers for Sleep Stage Classificatio}}{13}{figure.caption.7}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Random Forest Confusion Matrix}}{17}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Random Forest Accuracy Curve}}{17}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Random Forest Loss Curve}}{17}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Random Forest Precision Per Class}}{17}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Bagging Classifier Confusion Matrix}}{18}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Bagging Classifier Accuracy Curve}}{18}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Bagging Classifier Loss Curve}}{18}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Bagging Classifier Precision Per Class}}{18}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Ensemble Learning Confusion Matrix}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ensemble Learning Accuracy Curve}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Ensemble Learning Loss Curve}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Ensemble Learning Precision Per Class}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Gradient Boosting Confusion Matrix}}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Gradient Boosting Accuracy Curve}}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Gradient Boosting Loss Curve}}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Gradient Boosting Precision Per Class}}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Ensemble Learning Confusion Matrix }}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Random Forest Confusion Matrix }}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces GB Classifier Confusion Matrix }}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces SGD Confusion Matrix }}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Accuracy Comparison}}{22}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Improved Bar Chart}}{22}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Box Plot Comparison}}{22}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Improved Violin Plot}}{22}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Random Forest Loss Curve}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Random Forest Precision Per Class}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Bagging Classifier Confusion Matrix}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Bagging Classifier Accuracy Curve}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Bagging Classifier Loss Curve}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Bagging Classifier Precision Per Class}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ensemble Learning Confusion Matrix}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ensemble Learning Accuracy Curve}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Ensemble Learning Loss Curve}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Ensemble Learning Precision Per Class}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Gradient Boosting Confusion Matrix}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Gradient Boosting Accuracy Curve}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Gradient Boosting Loss Curve}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Gradient Boosting Precision Per Class}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Ensemble Learning Percentage-Based Confusion Matrix}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Random Forest Percentage-Based Confusion Matrix}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Gradient Boosting Percentage-Based Confusion Matrix}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces SGD Percentage-Based Confusion Matrix}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Comparison of Classifier Performance Based on Precision, Recall, and F1-Score}}{22}{figure.caption.16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Event Mapping Plot}}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces LSTM Accuracy and Loss Plot}}{36}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces LSTM Confusion Matrix}}{36}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces RNN Accuracy Plot}}{37}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces RNN Confusion Matrix}}{37}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces BiLSTM Accuracy Plot}}{38}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces BiLSTM Confusion Matrix}}{38}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Neural Network Accuracy Comparison}}{39}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Neural Network Confusion Matrix}}{39}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Accuracy Comparison Across All Models}}{40}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Bi-LSTM Model Performance}}{40}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces LSTM Model Performance}}{40}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces RNN Model Performance}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Event Mapping Plot}}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LSTM Accuracy and Loss Plot}}{37}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces LSTM Confusion Matrix}}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RNN Accuracy Plot}}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces RNN Confusion Matrix}}{38}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces BiLSTM Accuracy Plot}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces BiLSTM Confusion Matrix}}{39}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Neural Network Accuracy Comparison}}{40}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Neural Network Confusion Matrix}}{40}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Accuracy Comparison Across All Models}}{41}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Bi-LSTM Model Performance}}{41}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces LSTM Model Performance}}{41}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces RNN Model Performance}}{41}{figure.caption.32}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Proposed Architecture of the sleep GCN- Transformer Architecture}}{42}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Raw signal channels from the Sleep-EDF dataset}}{44}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Preprocessed and filtered signal channels}}{44}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Graph Dataset Creation}}{47}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Confusion matrix (percentage)}}{54}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Confusion matrix (samples)}}{54}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Loss plot}}{54}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Accuracy plot}}{54}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces 3D Accuracy vs. Loss}}{56}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces 3D Gradient visualization}}{56}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Sample distribution}}{56}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces AUC vs. ROC Curve}}{56}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces F1 Score}}{56}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Precision}}{56}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Recall}}{56}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Stage N1}}{57}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Stage N2}}{57}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Stage N3}}{57}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Stage REM}}{57}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Stage Wake}}{57}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces XAI Visualization}}{57}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Preprocessing (\(O(MN^3 + KEN + MN)\))}}{58}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Training Loop (\(O(T(LN + 2N^2D/10^4 + DC))\))}}{58}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces GCN Layers (\(O(LN)\))}}{58}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Transformer Encoder (\(O(N^2D)\))}}{58}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Evaluation Loop (\(O(E_{\text {val}}(LN + 2N^2D/10^4 + DC))\))}}{59}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Fully Connected Layer (\(O(DC)\))}}{59}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Proposed Architecture of the sleep GCN- Transformer Architecture}}{43}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Raw signal channels from the Sleep-EDF dataset}}{45}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Preprocessed and filtered signal channels}}{45}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Graph Dataset Creation}}{48}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Confusion matrix (percentage)}}{55}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Confusion matrix (samples)}}{55}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Loss plot}}{55}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Accuracy plot}}{55}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces 3D Accuracy vs. Loss}}{57}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces 3D Gradient visualization}}{57}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Sample distribution}}{57}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces AUC vs. ROC Curve}}{57}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces F1 Score}}{57}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Precision}}{57}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Recall}}{57}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Stage N1}}{58}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Stage N2}}{58}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Stage N3}}{58}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Stage REM}}{58}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Stage Wake}}{58}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces XAI Visualization}}{58}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Preprocessing (\(O(MN^3 + KEN + MN)\))}}{59}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Training Loop (\(O(T(LN + 2N^2D/10^4 + DC))\))}}{59}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces GCN Layers (\(O(LN)\))}}{59}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Transformer Encoder (\(O(N^2D)\))}}{59}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Evaluation Loop (\(O(E_{\text {val}}(LN + 2N^2D/10^4 + DC))\))}}{60}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Fully Connected Layer (\(O(DC)\))}}{60}{figure.caption.47}%
 \addvspace {10\p@ }
