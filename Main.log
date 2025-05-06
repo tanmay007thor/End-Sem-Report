@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.7)  5 MAY 2025 20:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.7)  5 MAY 2025 21:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1169,6 +1169,36 @@ LaTeX Warning: Label `fig:architechture1' multiply defined.
 
 LaTeX Warning: Label `fig:lstm_accuracy' multiply defined.
 
+
+Package natbib Warning: Citation `han2024classification' multiply defined.
+
+
+Package natbib Warning: Citation `tsinalis2016automatic' multiply defined.
+
+
+Package natbib Warning: Citation `krakovska2011automatic' multiply defined.
+
+
+Package natbib Warning: Citation `biswal2018expert' multiply defined.
+
+
+Package natbib Warning: Citation `ronzhina2012sleep' multiply defined.
+
+
+Package natbib Warning: Citation `alsolai2022systematic' multiply defined.
+
+
+Package natbib Warning: Citation `fiorillo2019automated' multiply defined.
+
+
+Package natbib Warning: Citation `faust2019review' multiply defined.
+
+
+Package natbib Warning: Citation `chriskos2021review' multiply defined.
+
+
+Package natbib Warning: Citation `phan2022sleeptransformer' multiply defined.
+
 )
 \openout1 = `Main.aux'.
 
@@ -2188,9 +2218,12 @@ Underfull \hbox (badness 2435) in paragraph at lines 70--71
 A
  []
 
-[60] [61] [62]) [63] (Main.aux (Title/title.aux) (Title/approval.aux)
-(Title/acknowledgement.aux) (Title/dedication.aux) (Title/declaration.aux)
-(Title/abstract.aux)
+[60] [61] [62]) [63]
+
+Package natbib Warning: There were multiply defined citations.
+
+(Main.aux (Title/title.aux) (Title/approval.aux) (Title/acknowledgement.aux)
+(Title/dedication.aux) (Title/declaration.aux) (Title/abstract.aux)
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
@@ -2214,7 +2247,7 @@ Here is how much of TeX's memory you used:
  53202 multiletter control sequences out of 15000+600000
  593511 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,20n,133p,2511b,1304s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,20n,133p,2511b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmex10.pfb><C:/Users/Tanmay Rathod/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Tanmay Rathod/AppData/Local/Progr
