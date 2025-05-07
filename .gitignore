@@ -1,0 +1,33 @@
+# LaTeX intermediate and output files
+*.aux
+*.lof
+*.log       # <-- if you want to KEEP .log, comment this out!
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.pdf        # remove PDF output
+*.nav
+*.snm
+
+# Temporary files
+*~
+*.swp
+*.bak
+*.tmp
+
+# VS Code and other editor folders
+.vscode/
+.idea/
+
+# latexmk and texlive aux files
+latex.out/
+texlive/
