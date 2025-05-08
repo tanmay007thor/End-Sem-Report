@@ -47,6 +47,441 @@ Epochs of 30-second duration were created from continuous EEG signals to structu
 
 
 
+ 
+  
+	
+
+
+
+\begin{algorithm}
+	\textbf{Input:} raw\_fname, annot\_fname, load\_eeg\_only, crop\_wake\_mins\\
+	\textbf{Output:} raw\\
+	
+	mapping $\gets$ \{'EOG horizontal': 'eog', \dots\}\\
+	exclude $\gets$ mapping.keys() \textbf{if} load\_eeg\_only \textbf{then do nothing}\\
+	raw $\gets$ read\_raw\_edf(raw\_fname, exclude)\\
+	annots $\gets$ read\_annotations(annot\_fname)\\
+	raw.set\_annotations(annots)\\
+	\textbf{if} not load\_eeg\_only \textbf{then}\\
+	\hspace{1cm} raw.set\_channel\_types(mapping)\\
+	\textbf{if} crop\_wake\_mins > 0 \textbf{then}\\
+	\hspace{1cm} mask $\gets$ [x[-1] in \{'1','2','3','4','R'\} for x in annots.description]\\
+	\hspace{1cm} inds $\gets$ where(mask)\\
+	\hspace{1cm} tmin $\gets$ annots[inds[0]].onset - crop\_wake\_mins * 60\\
+	\hspace{1cm} tmax $\gets$ annots[inds[-1]].onset + crop\_wake\_mins * 60\\
+	\hspace{1cm} raw.crop(tmin, tmax)\\
+	rename EEG channel names\\
+	subj\_nb $\gets$ int(fname[3:5]), rec\_nb $\gets$ int(fname[5])\\
+	raw.info.subject\_info $\gets$ \{id: subj\_nb, rec\_id: rec\_nb\}\\
+	\textbf{Return} raw\\
+	\caption{load\_sleep\_physionet\_raw}
+\end{algorithm}
+
+\begin{algorithm}
+	\textbf{Input:} fnames, l\_freq, h\_freq\\
+	\textbf{Output:} raws\\
+	
+	raws $\gets$ [load\_sleep\_physionet\_raw(f[0], f[1]) for f in fnames]\\
+	\textbf{for each} raw \textbf{in} raws \textbf{do}\\
+	\hspace{1cm} raw.load\_data()\\
+	\hspace{1cm} raw.filter(l\_freq, h\_freq)\\
+	\textbf{Return} raws\\
+	\caption{Load and Filter All Files}
+\end{algorithm}
+
+\begin{algorithm}
+	\textbf{Input:} raw\_data\_list, epoch\_length = 30\\
+	\textbf{Output:} epochs\_list, labels\\
+	
+	epochs\_list $\gets$ [\,]\\
+	labels $\gets$ [\,]\\
+	\textbf{for each} raw \textbf{in} raw\_data\_list \textbf{do}\\
+	\hspace{1cm} sfreq $\gets$ int(raw.info['sfreq'])\\
+	\hspace{1cm} (events, event\_ids) $\gets$ events\_from\_annotations(raw)\\
+	\hspace{1cm} sleep\_ids $\gets$ [1,2,3,4,5]\\
+	\hspace{1cm} filtered\_events $\gets$ [event for event in events if event[2] in sleep\_ids]\\
+	\hspace{1cm} filtered\_event\_ids $\gets$ \{k:v for k,v in event\_ids.items() if v in sleep\_ids\}\\
+	\hspace{1cm} filtered\_events $\gets$ np.array(filtered\_events, dtype=int)\\
+	\hspace{1cm} epochs $\gets$ Epochs(raw, filtered\_events, filtered\_event\_ids, 0, epoch\_length - 1/sfreq)\\
+	\hspace{1cm} epochs\_list.append(epochs)\\
+	\hspace{1cm} labels.extend([event[2] for event in filtered\_events])\\
+	\textbf{Return} epochs\_list, labels\\
+	\caption{Epoch Creation}
+\end{algorithm}
+
+\begin{algorithm}
+	\textbf{Input:} epochs\_list, labels\\
+	\textbf{Output:} model performance metrics\\
+	
+	(epochs\_list, labels) $\gets$ create\_epochs(raws)\\
+	X $\gets$ concatenate([epochs.get\_data() for epochs in epochs\_list], axis=0)\\
+	(n\_epochs, n\_channels, n\_times) $\gets$ X.shape\\
+	X $\gets$ reshape(X, (n\_epochs, n\_channels * n\_times))\\
+	y $\gets$ np.array(labels)\\
+	(X\_resampled, y\_resampled) $\gets$ SMOTE().fit\_resample(X, y)\\
+	(X\_train, X\_test, y\_train, y\_test) $\gets$ train\_test\_split(X\_resampled, y\_resampled, 0.2)\\
+	model $\gets$ initialize\_ML\_model()\\
+	model.fit(X\_train, y\_train)\\
+	y\_pred $\gets$ model.predict(X\_test)\\
+	report $\gets$ classification\_report(y\_test, y\_pred)\\
+	cm $\gets$ confusion\_matrix(y\_test, y\_pred)\\
+	display(report)\\
+	display\_confusion\_matrix(cm)\\
+	\caption{ML Training and Evaluation Pipeline}
+\end{algorithm}
+
+	
+	
+	
+	\begin{algorithm}
+		\textbf{Input:} list of (signal\_file, annotation\_file) pairs \\
+		\textbf{Output:} average accuracy, classification report, confusion matrix
+		
+		\vspace{0.3cm}
+		\texttt{epochs\_list = []} \\
+		\texttt{for file\_pair in fnames:} \\
+		\hspace*{0.5cm}\texttt{raw = read\_raw\_edf(file\_pair[0])} \\
+		\hspace*{0.5cm}\texttt{annot = read\_annotations(file\_pair[1])} \\
+		\hspace*{0.5cm}\texttt{raw.set\_annotations(annot)} \\
+		\hspace*{0.5cm}\texttt{annot.crop(annot[1].onset - 1800, annot[-2].onset + 1800)} \\
+		\hspace*{0.5cm}\texttt{events = events\_from\_annotations(raw)} \\
+		\hspace*{0.5cm}\texttt{epochs = Epochs(raw, events)} \\
+		\hspace*{0.5cm}\texttt{epochs\_list.append(epochs)} \\
+		
+		\vspace{0.3cm}
+		\texttt{all\_epochs = concatenate\_epochs(epochs\_list)} \\
+		\texttt{y = all\_epochs.events[:, 2]} \\
+		
+		\vspace{0.3cm}
+		\textbf{Define feature extraction:} \\
+		\texttt{def eeg\_power\_band(epochs):} \\
+		\hspace*{0.5cm}\texttt{psds = compute\_psd(epochs)} \\
+		\hspace*{0.5cm}\texttt{psds = normalize(psds)} \\
+		\hspace*{0.5cm}\texttt{features = []} \\
+		\hspace*{0.5cm}\texttt{for band in freq\_bands:} \\
+		\hspace*{1cm}\texttt{features.append(mean\_psd\_in\_band)} \\
+		\hspace*{0.5cm}\texttt{return concatenate(features)} \\
+		
+		\vspace{0.3cm}
+		\textbf{Train ML pipeline with KFold:} \\
+		\texttt{pipeline = [eeg\_power\_band, Classifier()]} \\
+		\texttt{kf = KFold(n\_splits=5)} \\
+		\texttt{results = \{\}} \\
+		\texttt{for train\_idx, test\_idx in kf.split(all\_epochs):} \\
+		\hspace*{0.5cm}\texttt{X\_train = all\_epochs[train\_idx]} \\
+		\hspace*{0.5cm}\texttt{X\_test = all\_epochs[test\_idx]} \\
+		\hspace*{0.5cm}\texttt{y\_train = y[train\_idx]} \\
+		\hspace*{0.5cm}\texttt{y\_test = y[test\_idx]} \\
+		\hspace*{0.5cm}\texttt{pipeline.fit(X\_train, y\_train)} \\
+		\hspace*{0.5cm}\texttt{y\_pred = pipeline.predict(X\_test)} \\
+		\hspace*{0.5cm}\texttt{store accuracy, y\_true, y\_pred} \\
+		
+	 
+		
+		\caption{General ML Pipeline with K-Fold Cross-Validation}
+	\end{algorithm}
+	
+	
+	
+	
+	
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ \RestyleAlgo{ruled}
+ \SetKwComment{Comment}{/* }{ */}
+ \DontPrintSemicolon
+ 
+ \begin{algorithm*}[!t]
+ 	\caption{Main Pipeline for Sleep Stage Classification}
+ 	\label{alg:main}
+ 	
+ 	\KwData{Raw EEG and annotation file paths}
+ 	\KwResult{Trained SleepGCN\_Transformer model}
+ 	
+ 	fnames $\gets$ \texttt{[('SC4001E0-PSG.edf', 'SC4001EC-Hypnogram.edf')]} \;
+ 	$(X_{\text{all}}, Y_{\text{all}}) \gets$ \texttt{preprocess\_data(fnames)} \;
+ 	$X_{\text{tensor}} \gets \texttt{torch.tensor}(X_{\text{all}}, \texttt{float32})$ \;
+ 	$Y_{\text{tensor}} \gets \texttt{torch.tensor}(Y_{\text{all}}, \texttt{long})$ \;
+ 	
+ 	dataset $\gets$ \texttt{SleepEEGDataset}($X_{\text{tensor}}, Y_{\text{tensor}}$) \;
+ 	$train\_size \gets 0.8 \times \texttt{len}(dataset)$ \;
+ 	$val\_size \gets \texttt{len}(dataset) - train\_size$ \;
+ 	
+ 	$(train\_dataset, val\_dataset) \gets$ \texttt{random\_split}(dataset, [train\_size, val\_size]) \;
+ 	
+ 	model $\gets$ \texttt{SleepGCN\_Transformer}(\;
+ 	\Indp
+ 	input\_dim=4, hidden\_dim=256, output\_dim=5,\;
+ 	num\_layers=5, nhead=4, dropout=0.1)\;
+ 	\Indm
+ 	
+ 	trainer $\gets$ \texttt{SleepTrainer}(\;
+ 	\Indp
+ 	model, train\_dataset, val\_dataset,\;
+ 	batch\_size=32, lr=0.0003,\;
+ 	num\_epochs=20, weight\_decay=1e-4)\;
+ 	\Indm
+ 	
+ 	\texttt{trainer.train()} \;
+ 	
+ \end{algorithm*}
+ 
+ 
+ 
+ 
+ 
+ \RestyleAlgo{ruled}
+ 
+ %% This is needed if you want to add comments in
+ %% your algorithm with \Comment
+ \SetKwComment{Comment}{/* }{ */}
+ 
+ \begin{algorithm*}[!t]
+ 	\caption{SleepEEGDataset Class Definition}
+ 	\label{alg:sleepdataset}
+ 	
+ 	\KwData{Input features $X$, labels $Y$}
+ 	\KwResult{A graph-based dataset with node features and edge structure}
+ 	
+ 	\textbf{class} SleepEEGDataset(Dataset): \\
+ 	\Indp
+ 	\textbf{def} \_\_init\_\_(self, X, Y): \\
+ 	\Indp
+ 	self.X = X \\
+ 	self.Y = Y \\
+ 	A = np.array([ \\
+ 	
+ 	]) \\
+ 	edge\_index = torch.tensor(np.array(np.nonzero(A)), dtype=torch.long) \\
+ 	edge\_weights = torch.tensor(A[A.nonzero()], dtype=torch.float32) \\
+ 	self.edge\_index = edge\_index \\
+ 	self.edge\_weights = edge\_weights \\
+ 	\Indm
+ 	
+ 	\BlankLine
+ 	
+ 	\textbf{def} len(self): \\
+ 	\Indp
+ 	\textbf{return} len(self.X) \\
+ 	\Indm
+ 	
+ 	\BlankLine
+ 	
+ 	\textbf{def} get(self, idx): \\
+ 	\Indp
+ 	
+ 	label = torch.tensor([self.Y[idx]], dtype=torch.long) \\
+ 	\textbf{return} Data(x=node\_features, edge\_index=self.edge\_index, \\
+ 	\hspace{6em}edge\_attr=self.edge\_weights, y=label) \\
+ 	\Indm
+ \end{algorithm*}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ \RestyleAlgo{ruled}
+ \SetKwComment{Comment}{/* }{ */}
+ 
+ \begin{algorithm*}[!t]
+ 	\caption{Preprocess Sleep EEG Data}\label{alg:preprocess_data}
+ 	\KwData{List of file pairs: $(psg\_file, ann\_file)$}
+ 	\KwResult{Preprocessed feature matrix $X$ and labels $Y$}
+ 	$X\_all \gets []$\;
+ 	$Y\_all \gets []$\;
+ 	\ForEach{$(psg\_file, ann\_file)$ in fnames}{ 
+ 		$raw \gets \text{mne.io.read\_raw\_edf}(psg\_file, preload=True)$\;
+ 		$annotations \gets \text{mne.read\_annotations}(ann\_file)$\;
+ 		$raw.set\_annotations(annotations)$\;
+ 		$raw.pick\_channels(channels)$\;
+ 		$raw.filter(0.3, 30., fir\_design='firwin')$\;
+ 		$data \gets raw.get\_data()$\;
+ 		$sfreq \gets raw.info['sfreq']$\;
+ 		
+ 		$epochs\_list \gets []$\;
+ 		$labels\_list \gets []$\;
+ 		
+ 		\ForEach{$annot$ in annotations}{
+ 			$stage \gets annot['description']$\;
+ 			\If{$stage \in stage\_mapping$}{
+ 				$onset\_sample \gets \text{int}(annot['onset'] \times sfreq)$\;
+ 				$duration\_samples \gets \text{int}(annot['duration'] \times sfreq)$\;
+ 				$epoch\_length\_samples \gets \text{int}(30 \times sfreq)$\;
+ 				
+ 				\For{$i \gets 0$ \KwTo $duration\_samples$ with step $epoch\_length\_samples$}{
+ 					$start \gets onset\_sample + i$\;
+ 					$stop \gets start + epoch\_length\_samples$\;
+ 					\If{$stop > data.shape[1]$}{
+ 						\textbf{break}\;
+ 					}
+ 					$epochs\_list.append(data[:, start:stop])$\;
+ 					$labels\_list.append(stage\_mapping[stage])$\;
+ 				}
+ 			}
+ 		}
+ 		
+ 		$X \gets \text{np.array}(epochs\_list)$\;
+ 		$Y \gets \text{np.array}(labels\_list)$\;
+ 		$X\_all.append(X)$\;
+ 		$Y\_all.append(Y)$\;
+ 	}
+ 	$X\_all \gets \texttt{np.concatenate}(X\_all, axis=0)$\;
+ 	$Y\_all \gets \texttt{np.concatenate}(Y\_all, axis=0)$\;
+ 	\KwRet{$X\_all, Y\_all$}
+ \end{algorithm*}
+ 
+ 
+ 
+ 
+ \RestyleAlgo{ruled}
+ \SetKwComment{Comment}{/* }{ */}
+ 
+ \begin{algorithm*}[!t]
+ 	\caption{Training Pipeline for Sleep EEG Model}\label{alg:training_pipeline}
+ 	\KwData{Training and Validation datasets, Model, Learning rate, Epochs, Batch size, Weight decay}
+ 	\KwResult{Trained model with performance metrics on training and validation data}
+ 	\SetKwFunction{FocalLoss}{FocalLoss}
+ 	\SetKwFunction{SleepTrainer}{SleepTrainer}
+ 	\SetKwFunction{Train}{train}
+ 	\SetKwFunction{GetClassWeights}{get\_class\_weights}
+ 	\SetKwFunction{ComputeAccuracy}{compute\_accuracy}
+ 	
+ 	\BlankLine
+ 	
+ 	\SetKwProg{Fn}{Function}{:}{}
+ 	\Fn{\FocalLoss{logits, targets}}{
+ 		probs $\gets$ \texttt{F.softmax(logits, dim=-1)}\;
+ 		targets\_one\_hot $\gets$ \texttt{F.one\_hot(targets, num\_classes=logits.shape[1]).float()}\;
+ 		targets\_one\_hot $\gets$ targets\_one\_hot * (1 - \texttt{label\_smoothing}) + \texttt{label\_smoothing} / logits.shape[1]\;
+ 		ce\_loss $\gets$ -targets\_one\_hot * \texttt{torch.log(probs + 1e-9)}\;
+ 		focal\_loss $\gets$ \texttt{alpha * (1 - probs) ** gamma * ce\_loss}\;
+ 		\KwRet \texttt{focal\_loss.mean()}
+ 	}
+ 	
+ 	\Fn{\SleepTrainer{model, train\_dataset, val\_dataset, batch\_size, lr, num\_epochs, weight\_decay}}{
+ 		class\_weights $\gets$ \texttt{self.get\_class\_weights(train\_dataset).to(device)}\;
+ 		loss\_fn $\gets$ \texttt{FocalLoss(alpha=class\_weights, gamma=3, label\_smoothing=0.1)}\;
+ 		optimizer $\gets$ \texttt{optim.AdamW(model.parameters(), lr=lr, weight\_decay=weight\_decay)}\;
+ 		scheduler $\gets$ \texttt{optim.lr\_scheduler.CosineAnnealingLR(optimizer, T\_max=num\_epochs)}\;
+ 		train\_loader $\gets$ \texttt{DataLoader(train\_dataset, batch\_size=batch\_size, shuffle=True)}\;
+ 		val\_loader $\gets$ \texttt{DataLoader(val\_dataset, batch\_size=batch\_size, shuffle=False)}\;
+ 		
+ 		\For{$epoch \gets 1$ \KwTo num\_epochs}{
+ 			model.train()\;
+ 			total\_train\_loss, total\_train\_accuracy $\gets$ 0, 0\;
+ 			
+ 			\ForEach{$batch$ in train\_loader}{
+ 				batch $\gets$ batch.to(device)\;
+ 				optimizer.zero\_grad()\;
+ 				output $\gets$ model(batch)\;
+ 				target $\gets$ batch.y\;
+ 				loss $\gets$ loss\_fn(output, target)\;
+ 				loss.backward()\;
+ 				optimizer.step()\;
+ 				total\_train\_loss += loss.item()\;
+ 				total\_train\_accuracy += compute\_accuracy(output, target)\;
+ 			}
+ 			
+ 			scheduler.step()\;
+ 			
+ 			\textbf{Validation Phase:}\;
+ 			model.eval()\;
+ 			total\_val\_loss, total\_val\_accuracy $\gets$ 0, 0\;
+ 			\ForEach{$batch$ in val\_loader}{
+ 				batch $\gets$ batch.to(device)\;
+ 				output $\gets$ model(batch)\;
+ 				target $\gets$ batch.y\;
+ 				loss $\gets$ loss\_fn(output, target)\;
+ 				total\_val\_loss += loss.item()\;
+ 				total\_val\_accuracy += compute\_accuracy(output, target)\;
+ 			}
+ 			
+ 			avg\_train\_loss $\gets$ total\_train\_loss / len(train\_loader)\;
+ 			avg\_train\_accuracy $\gets$ total\_train\_accuracy / len(train\_loader)\;
+ 			avg\_val\_loss $\gets$ total\_val\_loss / len(val\_loader)\;
+ 			avg\_val\_accuracy $\gets$ total\_val\_accuracy / len(val\_loader)\;
+ 			
+ 			print(f"Epoch {epoch}/{num\_epochs}: Train Loss: {avg\_train\_loss:.4f}, Train Acc: {avg\_train\_accuracy:.4f} | Val Loss: {avg\_val\_loss:.4f}, Val Acc: {avg\_val\_accuracy:.4f}")
+ 		}
+ 	}
+ 	\KwRet{Trained Model}
+ \end{algorithm*}
+ 
+ 
+ 
+ 
+ \RestyleAlgo{ruled}
+ \SetKwComment{Comment}{/* }{ */}
+ 
+ \begin{algorithm*}[!t]
+ 	\caption{SleepGCN\_Transformer Model Declaration}\label{alg:sleep_gcn_transformer}
+ 	\KwData{Input features of shape (batch size, input\_dim), graph structure with edges (edge\_index), batch information (batch)}
+ 	\KwResult{Predicted outputs for each input, of shape (batch size, output\_dim)}
+ 	\SetKwFunction{SleepGCNTransformer}{SleepGCN\_Transformer}
+ 	\SetKwFunction{Forward}{forward}
+ 	
+ 	\BlankLine
+ 	
+ 	\SetKwProg{Fn}{Function}{:}{}
+ 	\Fn{\SleepGCNTransformer{input\_dim, hidden\_dim, output\_dim, num\_layers, nhead, dropout}}{
+ 		\texttt{gcn\_layers} $\gets$ \texttt{nn.ModuleList()}\;
+ 		\texttt{batch\_norms} $\gets$ \texttt{nn.ModuleList()}\;
+ 		\texttt{gcn\_layers.append(GCNConv(input\_dim, hidden\_dim))}\;
+ 		\texttt{batch\_norms.append(BatchNorm(hidden\_dim))}\;
+ 		\For{$i \gets 1$ \KwTo num\_layers - 1}{
+ 			\texttt{gcn\_layers.append(GCNConv(hidden\_dim, hidden\_dim))}\;
+ 			\texttt{batch\_norms.append(BatchNorm(hidden\_dim))}\;
+ 		}
+ 		\texttt{encoder\_layer} $\gets$ \texttt{TransformerEncoderLayer(d\_model=hidden\_dim, nhead=nhead, dropout=dropout, batch\_first=True)}\;
+ 		\texttt{transformer} $\gets$ \texttt{TransformerEncoder(encoder\_layer, num\_layers=2)}\;
+ 		\texttt{fc} $\gets$ \texttt{nn.Linear(hidden\_dim, output\_dim)}\;
+ 		\texttt{activation} $\gets$ \texttt{ReLU()}\;
+ 		\texttt{dropout} $\gets$ \texttt{Dropout(dropout)}\;
+ 	}
+ 	
+ 	\BlankLine
+ 	
+ 	\Fn{\Forward{data}}{
+ 		\texttt{X, edge\_index, batch} $\gets$ \texttt{data.x, data.edge\_index, data.batch}\;
+ 		\For{$i \gets 0$ \KwTo len(gcn\_layers) - 1}{
+ 			\texttt{X} $\gets$ \texttt{activation(gcn\_layers[i](X, edge\_index))}\;
+ 			\texttt{X} $\gets$ \texttt{batch\_norms[i](X)}\;
+ 			\texttt{X} $\gets$ \texttt{dropout(X)}\;
+ 		}
+ 		\texttt{X} $\gets$ \texttt{global\_mean\_pool(X, batch)}\;
+ 		\texttt{X} $\gets$ \texttt{X.unsqueeze(1)}\;
+ 		\texttt{X} $\gets$ \texttt{transformer(X)}\;
+ 		\texttt{X} $\gets$ \texttt{X.squeeze(1)}\;
+ 		\KwRet \texttt{fc(X)}\;
+ 	}
+ \end{algorithm*}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
 
 \section{Model Architecture and Learning Framework}
 
@@ -82,6 +517,10 @@ K-Fold Cross Validation  5-fold cross-validation approach was employed to evalua
 		Classificatio}
 	\label{fig:architechture1}
 \end{figure}
+
+
+
+
 
 
 
