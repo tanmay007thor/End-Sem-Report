@@ -1,0 +1,14 @@
+
+
+
+\subsection{Principal Contributions}
+This study proposes a novel graph-based representation for sleep EEG data, integrating a hybrid GCN-Transformer architecture to improve the classification of sleep stages. By effectively capturing both spatial and temporal dependencies, our model outperforms traditional deep learning approaches in terms of accuracy and robustness. The incorporation of graph structures, combined with attention mechanisms, facilitates a more nuanced understanding of sleep dynamics.
+
+\subsection{Distinctive Aspects of Our Approach}
+Conventional methods such as CNNs primarily emphasize spatial features, whereas RNNs address temporal dynamics but are limited in handling long-range dependencies. Our model bridges this gap by combining the spatial modeling capabilities of Graph Convolutional Networks (GCNs) with the sequence modeling strengths of Transformers. Moreover, the use of Focal Loss and Label Smoothing addresses class imbalance effectively. The explainability component of our framework, supported by XAI techniques, identifies key EEG channels that influence sleep stage transitions, enhancing interpretability and clinical relevance.
+
+\subsection{Performance Highlights}
+Several components contribute to the model’s success. The graph-based representation enables the retention of spatial relationships across EEG nodes, promoting more effective learning of brain activity patterns. The fusion of GCN and Transformer modules allows the network to model complex spatial-temporal interactions, yielding highly accurate sleep stage predictions. Techniques for mitigating class imbalance—such as Focal Loss and Label Smoothing—enhance reliability, especially in underrepresented stages. Additionally, explainability features provide actionable insights into the neural correlates of sleep, supporting broader medical and neuroscientific applications.
+
+\subsection{Limitations and Future Directions}
+Despite its strengths, the proposed method has notable limitations. The combined GCN-Transformer model incurs higher computational costs compared to lighter architectures like CNNs or LSTMs, which may restrict deployment in resource-constrained environments. The Sleep-EDF dataset, although widely used, includes a limited sample of subjects, potentially affecting generalizability. Furthermore, while acceleration via Apple M1 and Metal APIs improves efficiency, larger models would benefit from more powerful hardware such as GPUs or TPUs. 

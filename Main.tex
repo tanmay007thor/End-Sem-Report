@@ -210,14 +210,14 @@ Stage Classification
 	\cleardoublepage\pagenumbering{arabic}
 	\pagestyle{fancy}
 
-	\chapter[Introduction]{Introduction}
-	\label{chapter1}
-	\input{Chapters/introduction}
-	
-	\chapter[Literature Review]{Literature Review}
-	\label{chapter2}
-	\input{Chapters/Chapter2}
-	
+
+\chapter{Introduction}
+\label{chapter1}
+\input{Chapters/introduction}
+
+\chapter{Literature Review}
+\label{chapter2}
+\input{Chapters/Chapter2}
 
 \chapter{Automated Sleep Staging System with EEG Signal using Machine Learning Techniques}
 \label{chapter_paper1}
@@ -229,18 +229,29 @@ Stage Classification
 
 \chapter{SleepGCN-Transformer: A Hybrid Graph-Convolutional and Transformer Network for Sleep Stage Classification}
 \label{chapter_paper3}
-\input{chapters/paper3}
-	
-	\chapter[Conclusion]{Conclusion}
-	\pagestyle{plain}
- \input{Title/conclusion}
+\input{Chapters/paper3}
 
- 
-	 \input{Chapters/reference}
+\chapter{Discussion}
+\label{chapter_discussion}
+\pagestyle{plain}
+\input{Chapters/discussion}
+
+\chapter{Conclusion}
+\label{chapter_conclusion}
+\pagestyle{plain}
+\input{Title/conclusion}
 
 
 
+\chapter{Appendix: Resources and Dataset Information}
+\label{chapter_appendix}
+\input{Chapters/resources}
 
- 
-        \clearpage\thispagestyle{empty}
+\chapter{References}
+\label{chapter_references}
+\input{Chapters/reference}
+
+\clearpage
+\thispagestyle{empty}
+
 \end{document}
