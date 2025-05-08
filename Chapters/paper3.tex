@@ -106,14 +106,120 @@ The filtering was implemented using a windowed time-domain design via the firwin
 
 
 
+\begin{algorithm}[H]
+	\caption{Main Pipeline for Sleep Stage Classification}
+	\label{alg:main}
+	\textbf{Input:} list of (PSG file, Hypnogram file) pairs\\
+	\textbf{Output:} trained SleepGCN\_Transformer model
+	\begin{enumerate}
+		\item fnames $\leftarrow$ [('SC4001E0-PSG.edf','SC4001EC-Hypnogram.edf')]\label{step:fnames}
+		\item $(X_{\mathrm{all}},Y_{\mathrm{all}}) \leftarrow \texttt{preprocess\_data}(fnames)$
+		\item $X_{\mathrm{tensor}} \leftarrow \texttt{to\_tensor}(X_{\mathrm{all}})$; \quad
+		$Y_{\mathrm{tensor}} \leftarrow \texttt{to\_tensor}(Y_{\mathrm{all}})$
+		\item dataset $\leftarrow$ \texttt{SleepEEGDataset}($X_{\mathrm{tensor}},Y_{\mathrm{tensor}}$)
+		\item train\_size $\leftarrow 0.8\times |\text{dataset}|$; \quad
+		val\_size $\leftarrow |\text{dataset}| - \text{train\_size}$
+		\item $(\text{train\_ds},\text{val\_ds}) \leftarrow \texttt{split}(dataset,\,[\text{train\_size},\text{val\_size}])$
+		\item model $\leftarrow \texttt{init\_model}(4,256,5,5,4,0.1)$
+		\item trainer $\leftarrow \texttt{init\_trainer}(model,\text{train\_ds},\text{val\_ds},32,20,1e-4)$
+		\item \texttt{trainer.train()}
+	\end{enumerate}
+\end{algorithm}
 
+\begin{algorithm}[H]
+	\caption{SleepEEGDataset Class Definition}
+	\label{alg:sleepdataset}
+	\textbf{Input:} feature matrix $X$, labels $Y$\\
+	\textbf{Output:} graph dataset with node features and edges
+	\begin{enumerate}
+		\item \textbf{class} SleepEEGDataset
+		\begin{enumerate}
+			\item \_\_init\_\_(self,$X,Y$):
+			\begin{enumerate}
+				\item self.X$\leftarrow X$; self.Y$\leftarrow Y$
+				\item $A\leftarrow\texttt{build\_adjacency}(X)$
+				\item self.edge\_index$\leftarrow \texttt{find\_edges}(A)$
+				\item self.edge\_weights$\leftarrow \texttt{edge\_weights}(A)$
+			\end{enumerate}
+			\item len(self): \textbf{return} $|\,$self.X$|$
+			\item get(self,idx):
+			\begin{enumerate}
+				\item node\_feat$\leftarrow$ self.X[idx]
+				\item label$\leftarrow$ self.Y[idx]
+				\item \textbf{return} (node\_feat,self.edge\_index,self.edge\_weights,label)
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+\end{algorithm}
 
+\begin{algorithm}[H]
+	\caption{Preprocess Sleep EEG Data}
+	\label{alg:preprocess_data}
+	\textbf{Input:} list of (psg\_file, ann\_file)\\
+	\textbf{Output:} feature matrix $X_{\mathrm{all}}$, labels $Y_{\mathrm{all}}$
+	\begin{enumerate}
+		\item $X_{\mathrm{all}}\leftarrow\emptyset$, $Y_{\mathrm{all}}\leftarrow\emptyset$
+		\item \textbf{for each} $(p,a)$ in fnames:
+		\begin{enumerate}
+			\item raw$\leftarrow$ load PSG from $p$
+			\item annots$\leftarrow$ load annotations from $a$
+			\item raw$\leftarrow$ filter and preprocess(raw)
+			\item $E\leftarrow$ extract epochs(raw,annots)
+			\item $L\leftarrow$ extract labels(annots)
+			\item $X_{\mathrm{all}}\leftarrow X_{\mathrm{all}}\cup E$
+			\item $Y_{\mathrm{all}}\leftarrow Y_{\mathrm{all}}\cup L$
+		\end{enumerate}
+		\item \textbf{return} $X_{\mathrm{all}},Y_{\mathrm{all}}$
+	\end{enumerate}
+\end{algorithm}
 
+\begin{algorithm}[H]
+	\caption{Training Pipeline for Sleep EEG Model}
+	\label{alg:training_pipeline}
+	\textbf{Input:} training set, validation set, model, epochs, batch size \\
+	\textbf{Output:} trained model, performance metrics
+	\begin{enumerate}
+		\item loss\_fn$\leftarrow$ define loss()
+		\item optimizer$\leftarrow$ init optimizer(model)
+		\item scheduler$\leftarrow$ init scheduler(optimizer,epochs)
+		\item \textbf{for} epoch = 1 to epochs:
+		\begin{enumerate}
+			\item model.train()
+			\item \textbf{for each} batch in train\_ds:
+			\begin{enumerate}
+				\item output$\leftarrow$model(batch)
+				\item loss$\leftarrow$loss\_fn(output, batch.y)
+				\item backpropagate and step optimizer
+			\end{enumerate}
+			\item scheduler.step()
+			\item model.eval()
+			\item \textbf{for each} batch in val\_ds:
+			\begin{enumerate}
+				\item output$\leftarrow$model(batch)
+				\item compute validation metrics
+			\end{enumerate}
+		\end{enumerate}
+		\item \textbf{return} trained model, metrics
+	\end{enumerate}
+\end{algorithm}
 
-
-
-
-
+\begin{algorithm}[H]
+	\caption{SleepGCN\_Transformer Model Declaration}
+	\label{alg:sleep_gcn_transformer}
+	\textbf{Input:} input\_dim, hidden\_dim, output\_dim, num\_layers, nhead, dropout \\
+	\textbf{Output:} network layers initialized
+	\begin{enumerate}
+		\item Initialize list of GCN layers and batch norms
+		\item \textbf{for} $i$ in $1\ldots$num\_layers:
+		\begin{enumerate}
+			\item append GCNConv layer
+			\item append BatchNorm layer
+		\end{enumerate}
+		\item Initialize Transformer encoder with nhead and dropout
+		\item Initialize final fully‐connected layer
+		\item \textbf{return} model components
+	\end{enumerate}
+\end{algorithm}
 
 
 
