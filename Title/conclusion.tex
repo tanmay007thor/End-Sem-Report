@@ -1,10 +1,17 @@
+\section{Discussion}
 
+\subsection{Principal Contributions}
+This study proposes a novel graph-based representation for sleep EEG data, integrating a hybrid GCN-Transformer architecture to improve the classification of sleep stages. By effectively capturing both spatial and temporal dependencies, our model outperforms traditional deep learning approaches in terms of accuracy and robustness. The incorporation of graph structures, combined with attention mechanisms, facilitates a more nuanced understanding of sleep dynamics.
 
-Our proposed SleepGCN-Transformer model achieves 93.12\% training accuracy and
-93.04\% validation accuracy, demonstrating its effectiveness in sleep stage classification.
-The integration of Graph Convolution Networks (GCN) captures spatial dependencies
-across EEG, EOG, and EMG channels, while the Transformer extracts temporal patterns. The
-use of Focal Loss enhances class balancing, improving performance on underrepresented sleep
-stages. Feature importance analysis highlights EMG and EEG Pz-Oz as key predictors. This
-robust approach lays the foundation for future work in Explainable AI, enabling medical
-professionals to interpret AI-driven sleep diagnostics effectively.
+\subsection{Distinctive Aspects of Our Approach}
+Conventional methods such as CNNs primarily emphasize spatial features, whereas RNNs address temporal dynamics but are limited in handling long-range dependencies. Our model bridges this gap by combining the spatial modeling capabilities of Graph Convolutional Networks (GCNs) with the sequence modeling strengths of Transformers. Moreover, the use of Focal Loss and Label Smoothing addresses class imbalance effectively. The explainability component of our framework, supported by XAI techniques, identifies key EEG channels that influence sleep stage transitions, enhancing interpretability and clinical relevance.
+
+\subsection{Performance Highlights}
+Several components contribute to the model’s success. The graph-based representation enables the retention of spatial relationships across EEG nodes, promoting more effective learning of brain activity patterns. The fusion of GCN and Transformer modules allows the network to model complex spatial-temporal interactions, yielding highly accurate sleep stage predictions. Techniques for mitigating class imbalance—such as Focal Loss and Label Smoothing—enhance reliability, especially in underrepresented stages. Additionally, explainability features provide actionable insights into the neural correlates of sleep, supporting broader medical and neuroscientific applications.
+
+\subsection{Limitations and Future Directions}
+Despite its strengths, the proposed method has notable limitations. The combined GCN-Transformer model incurs higher computational costs compared to lighter architectures like CNNs or LSTMs, which may restrict deployment in resource-constrained environments. The Sleep-EDF dataset, although widely used, includes a limited sample of subjects, potentially affecting generalizability. Furthermore, while acceleration via Apple M1 and Metal APIs improves efficiency, larger models would benefit from more powerful hardware such as GPUs or TPUs. Future work may explore more scalable architectures and validate the approach on larger, more diverse datasets.
+
+\section{Conclusion}
+
+The proposed SleepGCN-Transformer architecture demonstrates superior performance in sleep stage classification, achieving 93.12\% training accuracy and 93.04\% validation accuracy. By integrating GCNs to model spatial interdependencies and Transformers to extract temporal patterns, the model effectively captures the complexity of sleep physiology. The application of Focal Loss contributes to robust handling of class imbalance, improving classification across all stages. Feature importance analysis indicates that EMG and the EEG Pz-Oz channel play a critical role in prediction. This approach not only improves predictive performance but also enhances interpretability, laying a foundation for future work in explainable and clinically applicable sleep analysis tools.
